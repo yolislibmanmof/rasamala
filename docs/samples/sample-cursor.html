@@ -1,0 +1,1423 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>10 Cursor Animations · Trail Lab</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@700;900&family=Space+Grotesk:wght@400;600;700&display=swap');
+
+    :root {
+      --bg: #05060f;
+      --panel: rgba(12, 16, 32, 0.78);
+      --line: rgba(255, 255, 255, 0.08);
+      --text: #eef2ff;
+      --muted: #93a0c2;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    html, body {
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+      background: var(--bg);
+      color: var(--text);
+      font-family: 'Space Grotesk', system-ui, sans-serif;
+      cursor: none;
+      user-select: none;
+      -webkit-tap-highlight-color: transparent;
+    }
+
+    body::before {
+      content: '';
+      position: fixed;
+      inset: 0;
+      background:
+        radial-gradient(ellipse 80% 60% at 20% 20%, rgba(124, 92, 255, 0.16), transparent 55%),
+        radial-gradient(ellipse 70% 50% at 80% 70%, rgba(34, 211, 238, 0.1), transparent 50%),
+        linear-gradient(180deg, #07091a 0%, #05060f 100%);
+      z-index: 0;
+      pointer-events: none;
+    }
+
+    .grid-overlay {
+      position: fixed;
+      inset: 0;
+      background-image:
+        linear-gradient(rgba(255,255,255,0.025) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255,255,255,0.025) 1px, transparent 1px);
+      background-size: 48px 48px;
+      z-index: 0;
+      pointer-events: none;
+      opacity: 0.4;
+    }
+
+    /* Disable heavy CSS effects on low-power class */
+    body.low-power .grid-overlay { display: none; }
+    body.low-power .orb { display: none !important; }
+    body.low-power .stage,
+    body.low-power .controls,
+    body.low-power .hint-card {
+      backdrop-filter: none !important;
+      -webkit-backdrop-filter: none !important;
+    }
+
+    #fx-canvas {
+      position: fixed;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 5;
+      pointer-events: none;
+    }
+
+    .ui {
+      position: relative;
+      z-index: 10;
+      width: min(1120px, 100%);
+      height: 100%;
+      margin: 0 auto;
+      padding: 24px 16px 18px;
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+      pointer-events: none;
+    }
+
+    .ui * { pointer-events: auto; }
+
+    .header {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: flex-start;
+      justify-content: space-between;
+      gap: 12px;
+    }
+
+    .brand { display: flex; flex-direction: column; gap: 6px; }
+
+    .badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      width: fit-content;
+      padding: 6px 12px;
+      border-radius: 999px;
+      border: 1px solid rgba(124, 92, 255, 0.35);
+      background: rgba(124, 92, 255, 0.12);
+      color: #c4b5fd;
+      font-size: 12px;
+      font-weight: 600;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+
+    .badge-dot {
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      background: #22d3ee;
+      box-shadow: 0 0 10px #22d3ee;
+    }
+
+    h1 {
+      font-family: 'Orbitron', sans-serif;
+      font-size: clamp(1.4rem, 3vw, 2.2rem);
+      font-weight: 900;
+      letter-spacing: 0.04em;
+      line-height: 1.1;
+      background: linear-gradient(120deg, #fff 10%, #a78bfa 45%, #22d3ee 90%);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+    }
+
+    .subtitle {
+      max-width: 520px;
+      color: var(--muted);
+      font-size: 0.92rem;
+      line-height: 1.5;
+    }
+
+    .hint-card {
+      min-width: 210px;
+      padding: 12px 14px;
+      border-radius: 16px;
+      border: 1px solid var(--line);
+      background: var(--panel);
+      backdrop-filter: blur(10px);
+    }
+
+    .hint-card strong {
+      display: block;
+      margin-bottom: 6px;
+      font-size: 0.75rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: #a5b4fc;
+    }
+
+    .hint-card p {
+      color: var(--muted);
+      font-size: 0.88rem;
+      line-height: 1.45;
+    }
+
+    kbd {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-width: 22px;
+      height: 22px;
+      padding: 0 6px;
+      border-radius: 6px;
+      border: 1px solid rgba(255,255,255,0.14);
+      background: rgba(255,255,255,0.06);
+      color: #fff;
+      font-family: 'Orbitron', monospace;
+      font-size: 0.72rem;
+      font-weight: 700;
+    }
+
+    .stage {
+      flex: 1;
+      min-height: 0;
+      display: grid;
+      place-items: center;
+      border-radius: 24px;
+      border: 1px solid var(--line);
+      background: rgba(8, 10, 22, 0.4);
+      backdrop-filter: blur(6px);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .stage-content {
+      text-align: center;
+      padding: 20px;
+      max-width: 560px;
+      z-index: 1;
+    }
+
+    .mode-label {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 12px;
+      padding: 7px 12px;
+      border-radius: 999px;
+      border: 1px solid rgba(255,255,255,0.08);
+      background: rgba(0,0,0,0.28);
+      font-size: 0.78rem;
+      color: #c7d2fe;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+
+    .mode-index {
+      font-family: 'Orbitron', sans-serif;
+      color: #22d3ee;
+      font-weight: 700;
+    }
+
+    .stage-title {
+      font-family: 'Orbitron', sans-serif;
+      font-size: clamp(1.3rem, 2.8vw, 1.9rem);
+      font-weight: 700;
+      margin-bottom: 8px;
+    }
+
+    .stage-desc {
+      color: var(--muted);
+      font-size: 0.95rem;
+      line-height: 1.55;
+    }
+
+    .float-orbs {
+      position: absolute;
+      inset: 0;
+      overflow: hidden;
+      pointer-events: none;
+    }
+
+    .orb {
+      position: absolute;
+      border-radius: 50%;
+      filter: blur(28px);
+      opacity: 0.28;
+      will-change: transform;
+      animation: floaty 12s ease-in-out infinite;
+    }
+
+    .orb-1 { width: 150px; height: 150px; left: 12%; top: 20%; background: #7c5cff; }
+    .orb-2 { width: 120px; height: 120px; right: 14%; bottom: 18%; background: #22d3ee; animation-delay: -4s; }
+    .orb-3 { width: 90px; height: 90px; left: 45%; top: 55%; background: #ff4d94; animation-delay: -7s; }
+
+    @keyframes floaty {
+      0%, 100% { transform: translate(0, 0); }
+      50% { transform: translate(18px, -14px); }
+    }
+
+    .controls {
+      border-radius: 20px;
+      border: 1px solid var(--line);
+      background: var(--panel);
+      backdrop-filter: blur(12px);
+      padding: 14px;
+    }
+
+    .controls-top {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 10px;
+      margin-bottom: 12px;
+      flex-wrap: wrap;
+    }
+
+    .controls-top h2 {
+      font-size: 0.8rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: #a5b4fc;
+    }
+
+    .nav-actions { display: flex; gap: 8px; flex-wrap: wrap; }
+
+    .nav-btn {
+      height: 36px;
+      padding: 0 12px;
+      border-radius: 10px;
+      border: 1px solid rgba(255,255,255,0.1);
+      background: rgba(255,255,255,0.04);
+      color: #e2e8f0;
+      font-family: inherit;
+      font-size: 0.82rem;
+      font-weight: 600;
+      cursor: none;
+      transition: background 0.15s ease, border-color 0.15s ease;
+    }
+
+    .nav-btn:hover,
+    .nav-btn.active-quality {
+      background: rgba(124, 92, 255, 0.22);
+      border-color: rgba(124, 92, 255, 0.45);
+      color: white;
+    }
+
+    .effect-panel {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      margin-bottom: 12px;
+      padding: 10px 12px;
+      border-radius: 14px;
+      border: 1px solid rgba(255,255,255,0.07);
+      background: rgba(255,255,255,0.025);
+    }
+
+    .effect-panel-top {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+
+    .effect-panel-top span {
+      font-size: 0.75rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: #a5b4fc;
+      font-weight: 600;
+    }
+
+    .effect-panel-top small {
+      color: var(--muted);
+      font-size: 0.78rem;
+    }
+
+    .effect-grid {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 8px;
+    }
+
+    @media (max-width: 640px) {
+      .effect-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    }
+
+    .effect-btn {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 2px;
+      min-height: 58px;
+      padding: 10px 12px;
+      border-radius: 12px;
+      border: 1px solid rgba(255,255,255,0.08);
+      background: rgba(255,255,255,0.03);
+      color: #dbe4ff;
+      font-family: inherit;
+      cursor: none;
+      text-align: left;
+      transition: border-color 0.15s ease, background 0.15s ease, transform 0.15s ease;
+    }
+
+    .effect-btn:hover {
+      transform: translateY(-1px);
+      border-color: rgba(124, 92, 255, 0.4);
+      background: rgba(124, 92, 255, 0.12);
+    }
+
+    .effect-btn.active {
+      border-color: rgba(34, 211, 238, 0.55);
+      background: rgba(34, 211, 238, 0.12);
+      box-shadow: 0 0 0 1px rgba(34, 211, 238, 0.2);
+    }
+
+    .effect-btn .fx-title {
+      font-size: 0.88rem;
+      font-weight: 700;
+      line-height: 1.2;
+    }
+
+    .effect-btn .fx-sub {
+      font-size: 0.72rem;
+      color: #93a0c2;
+      line-height: 1.3;
+    }
+
+    .effect-btn.active .fx-sub {
+      color: #a5f3fc;
+    }
+
+    .mode-grid {
+      display: grid;
+      grid-template-columns: repeat(5, minmax(0, 1fr));
+      gap: 8px;
+    }
+
+    @media (max-width: 900px) {
+      .mode-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+      .orb { opacity: 0.18; }
+    }
+
+    .mode-btn {
+      position: relative;
+      overflow: hidden;
+      text-align: left;
+      padding: 10px 10px 10px 12px;
+      border-radius: 14px;
+      border: 1px solid rgba(255,255,255,0.08);
+      background: rgba(255,255,255,0.03);
+      color: #dbe4ff;
+      font-family: inherit;
+      cursor: none;
+      transition: border-color 0.15s ease, background 0.15s ease;
+      min-height: 66px;
+    }
+
+    .mode-btn:hover {
+      border-color: color-mix(in srgb, var(--c) 50%, rgba(255,255,255,0.1));
+      background: color-mix(in srgb, var(--c) 12%, transparent);
+    }
+
+    .mode-btn.active {
+      border-color: color-mix(in srgb, var(--c) 70%, white 10%);
+      background: color-mix(in srgb, var(--c) 18%, transparent);
+      box-shadow: 0 0 0 1px color-mix(in srgb, var(--c) 30%, transparent);
+    }
+
+    .mode-btn .num {
+      display: block;
+      font-family: 'Orbitron', sans-serif;
+      font-size: 0.68rem;
+      letter-spacing: 0.1em;
+      color: color-mix(in srgb, var(--c) 80%, white 20%);
+      margin-bottom: 4px;
+    }
+
+    .mode-btn .name {
+      display: block;
+      font-size: 0.88rem;
+      font-weight: 700;
+      line-height: 1.25;
+    }
+
+    .footer-note {
+      text-align: center;
+      color: rgba(147, 160, 194, 0.8);
+      font-size: 0.78rem;
+      margin-top: 8px;
+    }
+
+    .perf-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      margin-left: 8px;
+      padding: 2px 8px;
+      border-radius: 999px;
+      background: rgba(34, 211, 238, 0.12);
+      color: #67e8f9;
+      font-size: 0.7rem;
+      letter-spacing: 0.04em;
+      vertical-align: middle;
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      .orb { animation: none; }
+    }
+  </style>
+</head>
+<body>
+  <div class="grid-overlay"></div>
+  <canvas id="fx-canvas"></canvas>
+
+  <div class="ui">
+    <header class="header">
+      <div class="brand">
+        <div class="badge"><span class="badge-dot"></span> Cursor Trail Lab <span class="perf-pill" id="perf-label">AUTO</span></div>
+        <h1>10 Animasi Kursor Epic</h1>
+        <p class="subtitle">
+          Gerakkan mouse di mana saja. Ganti animasi dengan <kbd>Z</kbd>,
+          ganti level efek dengan <kbd>X</kbd> (Lemah → Sedang → Optimal → Auto).
+        </p>
+      </div>
+      <div class="hint-card">
+        <strong>Kontrol</strong>
+        <p>
+          Klik mode · <kbd>Z</kbd> next · <kbd>X</kbd> efek ·
+          <kbd>←</kbd><kbd>→</kbd> · klik untuk burst
+        </p>
+      </div>
+    </header>
+
+    <section class="stage" id="stage">
+      <div class="float-orbs" id="orbs">
+        <div class="orb orb-1"></div>
+        <div class="orb orb-2"></div>
+        <div class="orb orb-3"></div>
+      </div>
+      <div class="stage-content">
+        <div class="mode-label">
+          Mode <span class="mode-index" id="mode-index">01</span>
+        </div>
+        <h2 class="stage-title" id="mode-title">Neon Comet</h2>
+        <p class="stage-desc" id="mode-desc">
+          Kursor berbentuk bola neon dengan trail komet yang panjang dan glowing.
+        </p>
+      </div>
+    </section>
+
+    <section class="controls">
+      <div class="effect-panel" id="effect-panel">
+        <div class="effect-panel-top">
+          <span>Level Efek · tekan <kbd>X</kbd></span>
+          <small id="effect-hint">Pilih sesuai spek perangkat</small>
+        </div>
+        <div class="effect-grid" id="effect-grid" role="group" aria-label="Level efek">
+          <button class="effect-btn" type="button" data-fx="low" id="fx-low">
+            <span class="fx-title">Lemah</span>
+            <span class="fx-sub">Hemat daya · 30 FPS</span>
+          </button>
+          <button class="effect-btn" type="button" data-fx="medium" id="fx-medium">
+            <span class="fx-title">Sedang</span>
+            <span class="fx-sub">Seimbang · 45 FPS</span>
+          </button>
+          <button class="effect-btn" type="button" data-fx="high" id="fx-high">
+            <span class="fx-title">Optimal</span>
+            <span class="fx-sub">Efek penuh · 60 FPS</span>
+          </button>
+          <button class="effect-btn" type="button" data-fx="auto" id="fx-auto">
+            <span class="fx-title">Auto</span>
+            <span class="fx-sub">Sesuaikan FPS</span>
+          </button>
+        </div>
+      </div>
+
+      <div class="controls-top">
+        <h2>Pilih Animasi</h2>
+        <div class="nav-actions">
+          <button class="nav-btn" id="prev-btn" type="button">← Prev</button>
+          <button class="nav-btn" id="next-btn" type="button">Next → / Z</button>
+        </div>
+      </div>
+      <div class="mode-grid" id="mode-grid"></div>
+      <p class="footer-note" id="footer-note">Adaptive performance aktif · partikel & trail menyesuaikan FPS</p>
+    </section>
+  </div>
+
+  <script>
+    (() => {
+      'use strict';
+
+      const MODES = [
+        { id: 'neon-comet', name: 'Neon Comet', desc: 'Kursor bola neon dengan trail komet panjang yang glowing seperti meluncur di luar angkasa.', color: '#22d3ee', accent: '#7c5cff' },
+        { id: 'fire-phoenix', name: 'Fire Phoenix', desc: 'Api berpijar dengan partikel ember panas. Semakin cepat gerak, semakin besar nyala.', color: '#ff6b2c', accent: '#ffd166' },
+        { id: 'pixel-sword', name: 'Pixel Sword', desc: 'Pedang pixel art 8-bit dengan jejak pixel kotak-kotak retro game.', color: '#a3e635', accent: '#4ade80' },
+        { id: 'galaxy-orb', name: 'Galaxy Orb', desc: 'Bola galaksi berputar dengan orbit bintang dan debu kosmik yang menempel.', color: '#c084fc', accent: '#60a5fa' },
+        { id: 'electric-bolt', name: 'Electric Bolt', desc: 'Petir listrik dengan spark acak dan trail bergetar seperti arus tegangan tinggi.', color: '#fde047', accent: '#38bdf8' },
+        { id: 'ink-brush', name: 'Ink Brush', desc: 'Kuas tinta kaligrafi modern dengan stroke basah yang memudar elegan.', color: '#f472b6', accent: '#e2e8f0' },
+        { id: 'cyber-drone', name: 'Cyber Drone', desc: 'Drone futuristik dengan ring HUD, scanline, dan trail digital glitch.', color: '#34d399', accent: '#22d3ee' },
+        { id: 'rainbow-ribbon', name: 'Rainbow Ribbon', desc: 'Pita pelangi lembut yang melilit kursor seperti sutra holografik.', color: '#f472b6', accent: '#22d3ee' },
+        { id: 'ghost-spirit', name: 'Ghost Spirit', desc: 'Arwah lembut semi-transparan dengan jejak asap yang melayang pelan.', color: '#a5b4fc', accent: '#e0e7ff' },
+        { id: 'crystal-shard', name: 'Crystal Shard', desc: 'Kristal prismatik berkilau dengan serpihan cahaya dan trail faceted.', color: '#67e8f9', accent: '#f0abfc' }
+      ];
+
+      // Pre-parse hex colors once (avoid repeated string parsing)
+      function hexToRGB(hex) {
+        const c = hex.replace('#', '');
+        const full = c.length === 3 ? c.split('').map(ch => ch + ch).join('') : c;
+        const n = parseInt(full, 16);
+        return [(n >> 16) & 255, (n >> 8) & 255, n & 255];
+      }
+
+      MODES.forEach(m => {
+        m.rgb = hexToRGB(m.color);
+        m.rgbA = hexToRGB(m.accent);
+      });
+
+      const rgba = (rgb, a) => `rgba(${rgb[0]},${rgb[1]},${rgb[2]},${a < 0 ? 0 : a > 1 ? 1 : a})`;
+
+      // ---- Quality / device detection ----
+      const cores = navigator.hardwareConcurrency || 4;
+      const mem = navigator.deviceMemory || 4;
+      const isMobile = /Mobi|Android|iPhone|iPad/i.test(navigator.userAgent) ||
+        (navigator.maxTouchPoints > 1 && Math.min(screen.width, screen.height) < 900);
+      const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+      const saveData = !!(navigator.connection && navigator.connection.saveData);
+
+      // quality: 0 low, 1 medium, 2 high — auto starts based on device
+      let qualityMode = 'auto'; // auto | low | medium | high
+      let quality = 2;
+      if (reducedMotion || saveData || mem <= 2 || cores <= 2 || isMobile) quality = 0;
+      else if (mem <= 4 || cores <= 4) quality = 1;
+
+      const Q = {
+        // dynamic caps based on quality tier
+        get dpr() { return quality === 0 ? 1 : quality === 1 ? Math.min(window.devicePixelRatio || 1, 1.25) : Math.min(window.devicePixelRatio || 1, 1.5); },
+        get maxParticles() { return [70, 140, 220][quality]; },
+        get maxTrail() { return [18, 32, 48][quality]; },
+        get spawnScale() { return [0.35, 0.65, 1][quality]; },
+        get glow() { return quality > 0; },
+        get softSpot() { return quality === 2; },
+        get trailDecay() { return [0.045, 0.03, 0.022][quality]; },
+        get targetFps() { return [30, 45, 60][quality]; }
+      };
+
+      const canvas = document.getElementById('fx-canvas');
+      const ctx = canvas.getContext('2d', { alpha: true, desynchronized: true });
+      const modeGrid = document.getElementById('mode-grid');
+      const modeTitle = document.getElementById('mode-title');
+      const modeDesc = document.getElementById('mode-desc');
+      const modeIndex = document.getElementById('mode-index');
+      const perfLabel = document.getElementById('perf-label');
+      const footerNote = document.getElementById('footer-note');
+      const effectHint = document.getElementById('effect-hint');
+      const effectButtons = {
+        low: document.getElementById('fx-low'),
+        medium: document.getElementById('fx-medium'),
+        high: document.getElementById('fx-high'),
+        auto: document.getElementById('fx-auto')
+      };
+
+      let width = 0, height = 0, dpr = 1;
+      let mode = 0;
+      let mouseX = window.innerWidth / 2, mouseY = window.innerHeight / 2;
+      let smoothX = mouseX, smoothY = mouseY;
+      let velX = 0, velY = 0, speed = 0;
+      let time = 0, angle = 0, clickBurst = 0;
+      let visible = true;
+      let frameInterval = 1000 / 60;
+      let lastFrame = 0;
+      let fpsAcc = 0, fpsCount = 0, lastFpsCheck = 0;
+      let adaptiveCooldown = 0;
+
+      // Object pools — reuse objects, no GC thrash
+      const trail = [];
+      const particles = [];
+      const trailPool = [];
+      const particlePool = [];
+
+      function acquireTrail(x, y, size) {
+        const p = trailPool.pop() || {};
+        p.x = x; p.y = y; p.life = 1; p.size = size;
+        return p;
+      }
+
+      function releaseTrail(p) { trailPool.push(p); }
+
+      function acquireParticle() {
+        return particlePool.pop() || {};
+      }
+
+      function releaseParticle(p) { particlePool.push(p); }
+
+      const FX_META = {
+        low:    { label: 'LEMAH',   hint: 'Mode hemat untuk perangkat lemah', note: 'Efek Lemah aktif · partikel minimal · target 30 FPS' },
+        medium: { label: 'SEDANG',  hint: 'Seimbang untuk spek menengah', note: 'Efek Sedang aktif · partikel seimbang · target 45 FPS' },
+        high:   { label: 'OPTIMAL', hint: 'Efek penuh untuk spek optimal', note: 'Efek Optimal aktif · partikel & trail maksimal · target 60 FPS' },
+        auto:   { label: 'AUTO',    hint: 'Otomatis menyesuaikan FPS perangkat', note: 'Auto aktif · level efek menyesuaikan FPS secara real-time' }
+      };
+
+      function applyQualityClass() {
+        document.body.classList.toggle('low-power', quality === 0);
+        const labels = ['LEMAH', 'SEDANG', 'OPTIMAL'];
+        const activeKey = qualityMode === 'auto' ? 'auto' : (quality === 0 ? 'low' : quality === 1 ? 'medium' : 'high');
+        const meta = FX_META[activeKey];
+        perfLabel.textContent = qualityMode === 'auto' ? `AUTO·${labels[quality]}` : labels[quality];
+        frameInterval = 1000 / Q.targetFps;
+        footerNote.textContent = qualityMode === 'auto'
+          ? `${meta.note} · sekarang: ${labels[quality]}`
+          : meta.note;
+        if (effectHint) effectHint.textContent = meta.hint;
+
+        // highlight active effect button
+        Object.keys(effectButtons).forEach((key) => {
+          const btn = effectButtons[key];
+          if (!btn) return;
+          const isActive = key === 'auto'
+            ? qualityMode === 'auto'
+            : qualityMode !== 'auto' && (
+                (key === 'low' && quality === 0) ||
+                (key === 'medium' && quality === 1) ||
+                (key === 'high' && quality === 2)
+              );
+          btn.classList.toggle('active', isActive);
+        });
+
+        resize();
+      }
+
+      function setEffectLevel(level) {
+        // level: 'low' | 'medium' | 'high' | 'auto'
+        if (level === 'auto') {
+          qualityMode = 'auto';
+          // keep current adaptive quality tier
+        } else if (level === 'low') {
+          qualityMode = 'low';
+          quality = 0;
+        } else if (level === 'medium') {
+          qualityMode = 'medium';
+          quality = 1;
+        } else {
+          qualityMode = 'high';
+          quality = 2;
+        }
+        while (particles.length > Q.maxParticles) releaseParticle(particles.pop());
+        while (trail.length > Q.maxTrail) releaseTrail(trail.shift());
+        applyQualityClass();
+      }
+
+      function cycleEffect() {
+        // Cycle: auto -> lemah -> sedang -> optimal -> auto
+        if (qualityMode === 'auto') setEffectLevel('low');
+        else if (qualityMode === 'low') setEffectLevel('medium');
+        else if (qualityMode === 'medium') setEffectLevel('high');
+        else setEffectLevel('auto');
+      }
+
+      function resize() {
+        width = window.innerWidth;
+        height = window.innerHeight;
+        dpr = Q.dpr;
+        canvas.width = Math.max(1, (width * dpr) | 0);
+        canvas.height = Math.max(1, (height * dpr) | 0);
+        canvas.style.width = width + 'px';
+        canvas.style.height = height + 'px';
+        ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+        // cheaper compositing defaults
+        ctx.imageSmoothingEnabled = quality > 0;
+      }
+
+      function setMode(index) {
+        mode = (index + MODES.length) % MODES.length;
+        const m = MODES[mode];
+        modeTitle.textContent = m.name;
+        modeDesc.textContent = m.desc;
+        modeIndex.textContent = String(mode + 1).padStart(2, '0');
+        modeTitle.style.color = m.color;
+        // recycle all
+        while (particles.length) releaseParticle(particles.pop());
+        while (trail.length) releaseTrail(trail.shift());
+        clickBurst = 0.6;
+        const buttons = modeGrid.children;
+        for (let i = 0; i < buttons.length; i++) {
+          buttons[i].classList.toggle('active', i === mode);
+        }
+      }
+
+      function buildButtons() {
+        const frag = document.createDocumentFragment();
+        for (let i = 0; i < MODES.length; i++) {
+          const m = MODES[i];
+          const btn = document.createElement('button');
+          btn.type = 'button';
+          btn.className = 'mode-btn' + (i === 0 ? ' active' : '');
+          btn.style.setProperty('--c', m.color);
+          btn.innerHTML = `<span class="num">0${i + 1}</span><span class="name">${m.name}</span>`;
+          btn.addEventListener('click', () => setMode(i));
+          frag.appendChild(btn);
+        }
+        modeGrid.appendChild(frag);
+      }
+
+      function pushTrail(x, y) {
+        const last = trail[trail.length - 1];
+        if (last) {
+          const dx = x - last.x;
+          const dy = y - last.y;
+          // larger threshold on low quality = fewer points
+          const minDist = quality === 0 ? 10 : quality === 1 ? 7 : 5;
+          if (dx * dx + dy * dy < minDist * minDist) return;
+        }
+        trail.push(acquireTrail(x, y, 6 + speed * 0.25));
+        while (trail.length > Q.maxTrail) releaseTrail(trail.shift());
+      }
+
+      function spawnParticles(count, opts) {
+        count = Math.max(0, Math.round(count * Q.spawnScale));
+        if (count === 0) return;
+        const m = MODES[mode];
+        const room = Q.maxParticles - particles.length;
+        if (room <= 0) return;
+        if (count > room) count = room;
+
+        for (let i = 0; i < count; i++) {
+          const p = acquireParticle();
+          const spread = opts.spread != null ? opts.spread : 1.2;
+          const a = opts.angle != null
+            ? opts.angle + (Math.random() - 0.5) * spread
+            : Math.random() * Math.PI * 2;
+          const spMin = opts.speedMin || 0.5;
+          const spMax = opts.speedMax || 3;
+          const sp = spMin + Math.random() * (spMax - spMin);
+          p.x = opts.x != null ? opts.x : smoothX;
+          p.y = opts.y != null ? opts.y : smoothY;
+          p.vx = Math.cos(a) * sp + (opts.vx || 0);
+          p.vy = Math.sin(a) * sp + (opts.vy || 0);
+          p.life = 1;
+          p.decay = opts.decay || (0.02 + Math.random() * 0.02);
+          const sMin = opts.sizeMin != null ? opts.sizeMin : 2;
+          const sMax = opts.sizeMax != null ? opts.sizeMax : 5;
+          p.size = sMin + Math.random() * (sMax - sMin);
+          p.rgb = Math.random() > 0.5 ? m.rgb : m.rgbA;
+          p.type = opts.type || 0; // 0 circle, 1 pixel, 2 spark, 3 shard
+          p.rot = Math.random() * Math.PI * 2;
+          p.vr = (Math.random() - 0.5) * 0.2;
+          p.gravity = opts.gravity || 0;
+          p.friction = opts.friction || 0.97;
+          particles.push(p);
+        }
+      }
+
+      // Throttle move handling — process at most ~60Hz input
+      let movePending = false;
+      let latestMoveX = mouseX, latestMoveY = mouseY;
+
+      function onMove(e) {
+        latestMoveX = e.clientX;
+        latestMoveY = e.clientY;
+        if (!movePending) {
+          movePending = true;
+          requestAnimationFrame(processMove);
+        }
+      }
+
+      function processMove() {
+        movePending = false;
+        const x = latestMoveX;
+        const y = latestMoveY;
+        velX = x - mouseX;
+        velY = y - mouseY;
+        speed = Math.hypot(velX, velY);
+        mouseX = x;
+        mouseY = y;
+        pushTrail(x, y);
+
+        // spawn scaled by speed & quality
+        if (speed < 0.8) return;
+        const rate = Math.min(4, speed * 0.12) * Q.spawnScale;
+        const moveAng = Math.atan2(velY, velX);
+
+        switch (mode) {
+          case 0:
+            spawnParticles(rate * 0.5, { x, y, angle: moveAng + Math.PI, spread: 0.5, speedMin: 0.2, speedMax: 1.4 + speed * 0.05, sizeMin: 1.5, sizeMax: 3.5, decay: 0.03, type: 0 });
+            break;
+          case 1:
+            spawnParticles(rate * 0.7, { x, y, angle: moveAng + Math.PI, spread: 0.8, speedMin: 0.3, speedMax: 2 + speed * 0.08, sizeMin: 2, sizeMax: 5, gravity: -0.03, decay: 0.025, type: 0 });
+            break;
+          case 2:
+            if (Math.random() < 0.4) spawnParticles(1, { x, y, speedMin: 0.1, speedMax: 0.9, sizeMin: 3, sizeMax: 6, decay: 0.035, type: 1, friction: 0.92 });
+            break;
+          case 3:
+            if (Math.random() < 0.25) spawnParticles(1, { x, y, speedMin: 0.15, speedMax: 1, sizeMin: 1, sizeMax: 2.2, decay: 0.015, type: 0 });
+            break;
+          case 4:
+            if (speed > 2 && Math.random() < 0.3) spawnParticles(1, { x, y, speedMin: 1, speedMax: 3.5, sizeMin: 1, sizeMax: 2, decay: 0.045, type: 2, friction: 0.9 });
+            break;
+          case 5:
+            spawnParticles(rate * 0.35, { x, y, angle: moveAng + Math.PI, spread: 0.35, speedMin: 0.1, speedMax: 1, sizeMin: 3, sizeMax: 8, decay: 0.02, type: 0, friction: 0.96 });
+            break;
+          case 6:
+            if (Math.random() < 0.25) spawnParticles(1, { x: x + (Math.random() - 0.5) * 14, y: y + (Math.random() - 0.5) * 14, speedMin: 0, speedMax: 0.6, sizeMin: 2, sizeMax: 4, decay: 0.035, type: 1 });
+            break;
+          case 7:
+            break; // ribbon uses trail only
+          case 8:
+            if (Math.random() < 0.2) spawnParticles(1, { x, y, speedMin: 0.05, speedMax: 0.4, sizeMin: 5, sizeMax: 12, decay: 0.014, type: 0, gravity: -0.02, friction: 0.99 });
+            break;
+          case 9:
+            if (Math.random() < 0.25) spawnParticles(1, { x, y, speedMin: 0.25, speedMax: 1.6, sizeMin: 2, sizeMax: 4, decay: 0.025, type: 3 });
+            break;
+        }
+      }
+
+      function onClick(e) {
+        clickBurst = 1;
+        const burst = quality === 0 ? 10 : quality === 1 ? 16 : 22;
+        spawnParticles(burst, {
+          x: e.clientX, y: e.clientY,
+          speedMin: 1.5, speedMax: 6,
+          sizeMin: 2, sizeMax: 5,
+          decay: 0.025,
+          type: mode === 2 ? 1 : mode === 9 ? 3 : 0
+        });
+      }
+
+      // Cheap glow: only 1 radial fill when quality allows
+      function drawGlow(x, y, r, rgb, alpha) {
+        if (!Q.glow || alpha < 0.05) return;
+        const g = ctx.createRadialGradient(x, y, 0, x, y, r);
+        g.addColorStop(0, rgba(rgb, alpha));
+        g.addColorStop(1, rgba(rgb, 0));
+        ctx.fillStyle = g;
+        ctx.beginPath();
+        ctx.arc(x, y, r, 0, 6.283185307179586);
+        ctx.fill();
+      }
+
+      function rainbowRGB(t) {
+        const h = ((t % 1) + 1) % 1 * 6;
+        const i = h | 0;
+        const f = h - i;
+        const q = 1 - f;
+        let r, g, b;
+        switch (i % 6) {
+          case 0: r = 1; g = f; b = 0; break;
+          case 1: r = q; g = 1; b = 0; break;
+          case 2: r = 0; g = 1; b = f; break;
+          case 3: r = 0; g = q; b = 1; break;
+          case 4: r = f; g = 0; b = 1; break;
+          default: r = 1; g = 0; b = q;
+        }
+        return [(r * 255) | 0, (g * 255) | 0, (b * 255) | 0];
+      }
+
+      function drawCursorShape() {
+        const m = MODES[mode];
+        const x = smoothX, y = smoothY;
+        const moveAngle = Math.atan2(velY || 0.001, velX || 0.001);
+        angle += 0.035 + speed * 0.0015;
+        const pulse = 1 + Math.sin(time * 0.006) * 0.07 + clickBurst * 0.3;
+
+        ctx.save();
+
+        if (mode === 0) {
+          drawGlow(x, y, 28 * pulse, m.rgb, 0.4);
+          ctx.fillStyle = '#fff';
+          ctx.beginPath();
+          ctx.arc(x, y, 4.5 * pulse, 0, 6.283185307179586);
+          ctx.fill();
+          ctx.strokeStyle = rgba(m.rgb, 0.9);
+          ctx.lineWidth = 2;
+          ctx.beginPath();
+          ctx.arc(x, y, 10 * pulse, 0, 6.283185307179586);
+          ctx.stroke();
+        } else if (mode === 1) {
+          drawGlow(x, y, 32 * pulse, m.rgb, 0.4);
+          ctx.translate(x, y);
+          ctx.rotate(moveAngle + 1.5707963267948966);
+          ctx.fillStyle = m.color;
+          ctx.beginPath();
+          ctx.moveTo(0, -20 * pulse);
+          ctx.bezierCurveTo(12, -2, 8, 16, 0, 18);
+          ctx.bezierCurveTo(-8, 16, -12, -2, 0, -20 * pulse);
+          ctx.fill();
+          ctx.fillStyle = '#fff7ed';
+          ctx.beginPath();
+          ctx.ellipse(0, -3, 3.5, 8, 0, 0, 6.283185307179586);
+          ctx.fill();
+        } else if (mode === 2) {
+          ctx.translate(x, y);
+          ctx.rotate(moveAngle + 0.7853981633974483);
+          const s = 4;
+          // simplified pixel sword (fewer rects)
+          ctx.fillStyle = '#e2e8f0';
+          ctx.fillRect(-s / 2, -6 * s, s, 5 * s);
+          ctx.fillStyle = m.color;
+          ctx.fillRect(-s / 2, -s, s, 2 * s);
+          ctx.fillRect(-1.5 * s, 0, 3 * s, s);
+          ctx.fillStyle = '#ca8a04';
+          ctx.fillRect(-s / 2, 2 * s, s, 3 * s);
+        } else if (mode === 3) {
+          drawGlow(x, y, 30 * pulse, m.rgb, 0.3);
+          ctx.translate(x, y);
+          ctx.rotate(angle);
+          ctx.fillStyle = m.color;
+          ctx.beginPath();
+          ctx.arc(0, 0, 12 * pulse, 0, 6.283185307179586);
+          ctx.fill();
+          ctx.fillStyle = '#fff';
+          ctx.beginPath();
+          ctx.arc(-3, -3, 4, 0, 6.283185307179586);
+          ctx.fill();
+          ctx.globalAlpha = 0.7;
+          ctx.strokeStyle = m.accent;
+          ctx.lineWidth = 1.5;
+          ctx.beginPath();
+          ctx.ellipse(0, 0, 22, 8, 0.4, 0, 6.283185307179586);
+          ctx.stroke();
+          // only 3 orbit dots on low
+          const dots = quality === 0 ? 2 : 4;
+          ctx.fillStyle = '#fff';
+          ctx.globalAlpha = 1;
+          for (let i = 0; i < dots; i++) {
+            const a = angle * 2 + i * (6.283185307179586 / dots);
+            ctx.beginPath();
+            ctx.arc(Math.cos(a) * 20, Math.sin(a) * 7, 1.3, 0, 6.283185307179586);
+            ctx.fill();
+          }
+        } else if (mode === 4) {
+          drawGlow(x, y, 26 * pulse, m.rgb, 0.35);
+          ctx.translate(x, y);
+          ctx.rotate(moveAngle);
+          // deterministic zigzag (no Math.random in render)
+          const seed = (time * 0.02) | 0;
+          ctx.strokeStyle = m.color;
+          ctx.lineWidth = 2.2;
+          ctx.beginPath();
+          ctx.moveTo(-14, 0);
+          for (let i = 0; i < 5; i++) {
+            const jag = ((seed + i * 17) % 7) - 3;
+            ctx.lineTo(-14 + (i + 1) * 5.5, jag * 1.5);
+          }
+          ctx.stroke();
+          ctx.fillStyle = '#fff';
+          ctx.beginPath();
+          ctx.arc(0, 0, 3 * pulse, 0, 6.283185307179586);
+          ctx.fill();
+        } else if (mode === 5) {
+          ctx.translate(x, y);
+          ctx.rotate(moveAngle + 1.5707963267948966);
+          ctx.fillStyle = '#1e1b4b';
+          ctx.fillRect(-2.5, -2, 5, 18);
+          ctx.fillStyle = m.color;
+          ctx.beginPath();
+          ctx.moveTo(-5, -2);
+          ctx.quadraticCurveTo(0, -22 * pulse, 5, -2);
+          ctx.closePath();
+          ctx.fill();
+          ctx.fillStyle = '#f8fafc';
+          ctx.fillRect(-3.5, 16, 7, 5);
+        } else if (mode === 6) {
+          drawGlow(x, y, 26 * pulse, m.rgb, 0.3);
+          ctx.translate(x, y);
+          ctx.strokeStyle = m.accent;
+          ctx.lineWidth = 1.4;
+          ctx.beginPath();
+          ctx.arc(0, 0, 16, 0, 6.283185307179586);
+          ctx.stroke();
+          ctx.beginPath();
+          ctx.arc(0, 0, 10, angle, angle + 3.5);
+          ctx.stroke();
+          ctx.fillStyle = rgba([15, 23, 42], 0.9);
+          ctx.strokeStyle = m.color;
+          ctx.lineWidth = 2;
+          ctx.beginPath();
+          ctx.rect(-7, -5, 14, 10);
+          ctx.fill();
+          ctx.stroke();
+          ctx.fillStyle = m.accent;
+          ctx.fillRect(-4, -1.5, 3, 3);
+          ctx.fillRect(1, -1.5, 3, 3);
+        } else if (mode === 7) {
+          ctx.translate(x, y);
+          const n = quality === 0 ? 4 : 6;
+          for (let i = 0; i < n; i++) {
+            const a = angle + i * (6.283185307179586 / n);
+            const c = rainbowRGB(time * 0.0015 + i / n);
+            ctx.fillStyle = rgba(c, 1);
+            ctx.beginPath();
+            ctx.arc(Math.cos(a) * 7, Math.sin(a) * 7, 3, 0, 6.283185307179586);
+            ctx.fill();
+          }
+          ctx.fillStyle = '#fff';
+          ctx.beginPath();
+          ctx.arc(0, 0, 4 * pulse, 0, 6.283185307179586);
+          ctx.fill();
+        } else if (mode === 8) {
+          drawGlow(x, y, 30 * pulse, m.rgb, 0.25);
+          ctx.translate(x, y);
+          const bob = Math.sin(time * 0.005) * 2.5;
+          ctx.globalAlpha = 0.8;
+          ctx.fillStyle = rgba(m.rgbA, 0.75);
+          ctx.beginPath();
+          ctx.ellipse(0, bob, 11 * pulse, 14 * pulse, 0, Math.PI, 0);
+          ctx.lineTo(11 * pulse, 12 + bob);
+          ctx.quadraticCurveTo(5, 18 + bob, 0, 12 + bob);
+          ctx.quadraticCurveTo(-5, 18 + bob, -11 * pulse, 12 + bob);
+          ctx.closePath();
+          ctx.fill();
+          ctx.globalAlpha = 1;
+          ctx.fillStyle = '#1e1b4b';
+          ctx.beginPath();
+          ctx.arc(-3.5, bob - 2, 2, 0, 6.283185307179586);
+          ctx.arc(3.5, bob - 2, 2, 0, 6.283185307179586);
+          ctx.fill();
+        } else if (mode === 9) {
+          drawGlow(x, y, 28 * pulse, m.rgb, 0.35);
+          ctx.translate(x, y);
+          ctx.rotate(angle * 0.6 + moveAngle * 0.15);
+          const sc = pulse;
+          ctx.fillStyle = m.color;
+          ctx.strokeStyle = rgba([255, 255, 255], 0.75);
+          ctx.lineWidth = 1.1;
+          ctx.beginPath();
+          ctx.moveTo(0, -16 * sc);
+          ctx.lineTo(9 * sc, -1 * sc);
+          ctx.lineTo(5 * sc, 14 * sc);
+          ctx.lineTo(-7 * sc, 9 * sc);
+          ctx.lineTo(-10 * sc, -5 * sc);
+          ctx.closePath();
+          ctx.fill();
+          ctx.stroke();
+          ctx.fillStyle = rgba([255, 255, 255], 0.45);
+          ctx.beginPath();
+          ctx.moveTo(0, -16 * sc);
+          ctx.lineTo(3 * sc, -1 * sc);
+          ctx.lineTo(-2 * sc, 1 * sc);
+          ctx.closePath();
+          ctx.fill();
+        }
+
+        ctx.restore();
+      }
+
+      function drawTrails() {
+        const m = MODES[mode];
+        const len = trail.length;
+        if (len < 2) return;
+
+        ctx.lineCap = 'round';
+        ctx.lineJoin = 'round';
+
+        // Single-pass polyline for most modes (much cheaper than per-segment stroke)
+        if (mode === 0 || mode === 1 || mode === 3 || mode === 5 || mode === 8 || mode === 9) {
+          // outer soft trail (skip on low)
+          if (Q.glow && (mode === 0 || mode === 1 || mode === 8)) {
+            ctx.beginPath();
+            ctx.moveTo(trail[0].x, trail[0].y);
+            for (let i = 1; i < len; i++) ctx.lineTo(trail[i].x, trail[i].y);
+            ctx.strokeStyle = rgba(mode === 1 ? m.rgb : mode === 8 ? m.rgbA : m.rgbA, 0.18);
+            ctx.lineWidth = mode === 8 ? 16 : 12;
+            ctx.stroke();
+          }
+          // main trail as one path with average alpha
+          ctx.beginPath();
+          ctx.moveTo(trail[0].x, trail[0].y);
+          for (let i = 1; i < len; i++) ctx.lineTo(trail[i].x, trail[i].y);
+          const alpha = mode === 8 ? 0.35 : 0.7;
+          ctx.strokeStyle = rgba(mode === 1 ? m.rgbA : m.rgb, alpha);
+          ctx.lineWidth = mode === 5 ? 10 : mode === 0 ? 6 : mode === 8 ? 8 : 4;
+          ctx.stroke();
+
+          // bright core tip
+          if (len > 3) {
+            ctx.beginPath();
+            const start = Math.max(0, len - 6);
+            ctx.moveTo(trail[start].x, trail[start].y);
+            for (let i = start + 1; i < len; i++) ctx.lineTo(trail[i].x, trail[i].y);
+            ctx.strokeStyle = rgba([255, 255, 255], 0.55);
+            ctx.lineWidth = 2;
+            ctx.stroke();
+          }
+          return;
+        }
+
+        if (mode === 2) {
+          // pixel blocks — step through fewer points
+          const step = quality === 0 ? 2 : 1;
+          for (let i = 0; i < len; i += step) {
+            const p = trail[i];
+            const t = i / len;
+            const size = Math.max(3, (p.size * 0.4) | 0);
+            ctx.fillStyle = rgba(m.rgb, p.life * t * 0.8);
+            ctx.fillRect(((p.x / size) | 0) * size - size / 2, ((p.y / size) | 0) * size - size / 2, size, size);
+          }
+          return;
+        }
+
+        if (mode === 4) {
+          ctx.beginPath();
+          ctx.moveTo(trail[0].x, trail[0].y);
+          for (let i = 1; i < len; i++) {
+            // light deterministic jitter, not random each frame
+            const jag = ((i * 13 + (time * 0.01) | 0) % 5) - 2;
+            ctx.lineTo(trail[i].x + jag, trail[i].y - jag);
+          }
+          ctx.strokeStyle = rgba(m.rgb, 0.75);
+          ctx.lineWidth = 2.2;
+          ctx.stroke();
+          return;
+        }
+
+        if (mode === 6) {
+          ctx.setLineDash([5, 7]);
+          ctx.beginPath();
+          ctx.moveTo(trail[0].x, trail[0].y);
+          for (let i = 1; i < len; i++) ctx.lineTo(trail[i].x, trail[i].y);
+          ctx.strokeStyle = rgba(m.rgb, 0.75);
+          ctx.lineWidth = 2;
+          ctx.stroke();
+          ctx.setLineDash([]);
+          // few scan boxes
+          const step = quality === 0 ? 6 : 4;
+          for (let i = 0; i < len; i += step) {
+            const p = trail[i];
+            const t = i / len;
+            const s = 5 + t * 6;
+            ctx.strokeStyle = rgba(m.rgbA, p.life * t * 0.6);
+            ctx.lineWidth = 1;
+            ctx.strokeRect(p.x - s / 2, p.y - s / 2, s, s);
+          }
+          return;
+        }
+
+        if (mode === 7) {
+          // rainbow ribbon — 1 layer on low, 2 otherwise
+          const layers = quality === 0 ? 1 : 2;
+          for (let layer = 0; layer < layers; layer++) {
+            ctx.beginPath();
+            for (let i = 1; i < len; i++) {
+              const p = trail[i];
+              const prev = trail[i - 1];
+              const t = i / len;
+              const n = Math.atan2(p.y - prev.y, p.x - prev.x) + 1.5707963267948966;
+              const offset = (layer - (layers - 1) * 0.5) * 4 * t;
+              const ox = Math.cos(n) * offset;
+              const oy = Math.sin(n) * offset;
+              if (i === 1) ctx.moveTo(prev.x + ox, prev.y + oy);
+              ctx.lineTo(p.x + ox, p.y + oy);
+            }
+            const c = rainbowRGB(time * 0.001 + layer * 0.2);
+            ctx.strokeStyle = rgba(c, 0.75);
+            ctx.lineWidth = 5 - layer;
+            ctx.stroke();
+          }
+        }
+      }
+
+      function updateAndDrawParticles() {
+        for (let i = particles.length - 1; i >= 0; i--) {
+          const p = particles[i];
+          p.x += p.vx;
+          p.y += p.vy;
+          p.vx *= p.friction;
+          p.vy *= p.friction;
+          p.vy += p.gravity;
+          p.rot += p.vr;
+          p.life -= p.decay;
+
+          if (p.life <= 0) {
+            releaseParticle(particles[i]);
+            particles[i] = particles[particles.length - 1];
+            particles.pop();
+            continue;
+          }
+
+          const a = p.life;
+          if (p.type === 1) {
+            // pixel
+            ctx.fillStyle = rgba(p.rgb, a);
+            const s = p.size;
+            ctx.fillRect(p.x - s / 2, p.y - s / 2, s, s);
+          } else if (p.type === 2) {
+            // spark cross
+            ctx.strokeStyle = rgba(p.rgb, a);
+            ctx.lineWidth = 1.4;
+            ctx.beginPath();
+            ctx.moveTo(p.x - p.size, p.y);
+            ctx.lineTo(p.x + p.size, p.y);
+            ctx.moveTo(p.x, p.y - p.size);
+            ctx.lineTo(p.x, p.y + p.size);
+            ctx.stroke();
+          } else if (p.type === 3) {
+            // shard diamond
+            ctx.save();
+            ctx.translate(p.x, p.y);
+            ctx.rotate(p.rot);
+            ctx.fillStyle = rgba(p.rgb, a);
+            ctx.beginPath();
+            ctx.moveTo(0, -p.size);
+            ctx.lineTo(p.size * 0.55, 0);
+            ctx.lineTo(0, p.size);
+            ctx.lineTo(-p.size * 0.55, 0);
+            ctx.closePath();
+            ctx.fill();
+            ctx.restore();
+          } else {
+            // simple circle — skip glow for tiny/low life particles
+            if (Q.glow && p.size > 2.5 && a > 0.35) {
+              drawGlow(p.x, p.y, p.size * 1.8, p.rgb, a * 0.5);
+            }
+            ctx.fillStyle = rgba(p.rgb, a);
+            ctx.beginPath();
+            ctx.arc(p.x, p.y, Math.max(0.8, p.size * 0.45), 0, 6.283185307179586);
+            ctx.fill();
+          }
+        }
+      }
+
+      function updateTrailLife() {
+        const decay = Q.trailDecay;
+        for (let i = trail.length - 1; i >= 0; i--) {
+          trail[i].life -= decay;
+          if (trail[i].life <= 0) {
+            releaseTrail(trail[i]);
+            trail.splice(i, 1);
+          }
+        }
+      }
+
+      function maybeAdaptQuality(now) {
+        if (qualityMode !== 'auto') return;
+        if (now - lastFpsCheck < 1000) return;
+        const fps = fpsCount / ((now - lastFpsCheck) / 1000);
+        lastFpsCheck = now;
+        fpsCount = 0;
+        adaptiveCooldown--;
+
+        if (adaptiveCooldown > 0) return;
+
+        if (fps < 28 && quality > 0) {
+          quality--;
+          adaptiveCooldown = 3;
+          while (particles.length > Q.maxParticles) releaseParticle(particles.pop());
+          while (trail.length > Q.maxTrail) releaseTrail(trail.shift());
+          applyQualityClass();
+        } else if (fps > 55 && quality < 2) {
+          // only step up if device seems capable
+          if (!(isMobile && quality >= 1)) {
+            quality++;
+            adaptiveCooldown = 4;
+            applyQualityClass();
+          }
+        }
+      }
+
+      function frame(ts) {
+        requestAnimationFrame(frame);
+        if (!visible) return;
+
+        // FPS cap for low quality
+        const elapsed = ts - lastFrame;
+        if (elapsed < frameInterval - 1) return;
+        lastFrame = ts - (elapsed % frameInterval);
+        time = ts;
+        fpsCount++;
+
+        // smooth follow — slightly snappier on low to hide fewer trail points
+        const ease = quality === 0 ? 0.45 : 0.32;
+        smoothX += (mouseX - smoothX) * ease;
+        smoothY += (mouseY - smoothY) * ease;
+        velX *= 0.88;
+        velY *= 0.88;
+        speed *= 0.88;
+        clickBurst *= 0.88;
+
+        if (Math.hypot(mouseX - smoothX, mouseY - smoothY) > 2) {
+          pushTrail(smoothX, smoothY);
+        }
+
+        ctx.clearRect(0, 0, width, height);
+
+        // soft spotlight only on high quality
+        if (Q.softSpot) {
+          const m = MODES[mode];
+          const spot = ctx.createRadialGradient(smoothX, smoothY, 0, smoothX, smoothY, 180);
+          spot.addColorStop(0, rgba(m.rgb, 0.06));
+          spot.addColorStop(1, 'rgba(0,0,0,0)');
+          ctx.fillStyle = spot;
+          ctx.fillRect(0, 0, width, height);
+        }
+
+        updateTrailLife();
+        drawTrails();
+        updateAndDrawParticles();
+        drawCursorShape();
+        maybeAdaptQuality(ts);
+      }
+
+      // Events
+      window.addEventListener('resize', resize, { passive: true });
+      window.addEventListener('mousemove', onMove, { passive: true });
+      window.addEventListener('click', onClick);
+      window.addEventListener('touchstart', (e) => {
+        const t = e.touches[0];
+        if (!t) return;
+        mouseX = t.clientX; mouseY = t.clientY;
+        latestMoveX = mouseX; latestMoveY = mouseY;
+        onClick({ clientX: t.clientX, clientY: t.clientY });
+      }, { passive: true });
+      window.addEventListener('touchmove', (e) => {
+        const t = e.touches[0];
+        if (!t) return;
+        onMove({ clientX: t.clientX, clientY: t.clientY });
+      }, { passive: true });
+
+      document.addEventListener('visibilitychange', () => {
+        visible = document.visibilityState === 'visible';
+        if (visible) {
+          lastFrame = performance.now();
+          lastFpsCheck = lastFrame;
+          fpsCount = 0;
+        }
+      });
+
+      window.addEventListener('keydown', (e) => {
+        if (e.key === 'z' || e.key === 'Z') {
+          e.preventDefault();
+          setMode(mode + 1);
+        } else if (e.key === 'x' || e.key === 'X') {
+          e.preventDefault();
+          cycleEffect();
+        } else if (e.key === 'ArrowRight') setMode(mode + 1);
+        else if (e.key === 'ArrowLeft') setMode(mode - 1);
+        else if (e.key >= '1' && e.key <= '9') setMode(parseInt(e.key, 10) - 1);
+        else if (e.key === '0') setMode(9);
+      });
+
+      document.getElementById('prev-btn').addEventListener('click', () => setMode(mode - 1));
+      document.getElementById('next-btn').addEventListener('click', () => setMode(mode + 1));
+
+      // Effect level buttons
+      Object.keys(effectButtons).forEach((key) => {
+        const btn = effectButtons[key];
+        if (btn) btn.addEventListener('click', () => setEffectLevel(key));
+      });
+
+      // Init
+      buildButtons();
+      applyQualityClass();
+      setMode(0);
+      lastFrame = performance.now();
+      lastFpsCheck = lastFrame;
+      requestAnimationFrame(frame);
+    })();
+  </script>
+</body>
+</html>
