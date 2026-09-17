@@ -1,0 +1,443 @@
+/* Kiosk Mode Visitor Styles */
+.visitor-bg-gradient {
+  background: linear-gradient(135deg, #f5f6f8 0%, #e2e5e9 100%) !important;
+}
+
+body.rasamala-dark .visitor-bg-gradient {
+  background: linear-gradient(135deg, #0c0f14 0%, #151922 100%) !important;
+}
+
+.visitor-kiosk-card {
+  width: 90% !important;
+  max-width: 500px !important;
+  background: rgba(255, 255, 255, 0.95) !important;
+  backdrop-filter: blur(20px) !important;
+  border: 1px solid rgba(255, 255, 255, 0.4) !important;
+  border-radius: 20px !important;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.15) !important;
+  transition: background-color 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease, transform 0.3s ease, opacity 0.3s ease !important;
+  margin: auto !important;
+}
+
+body.rasamala-dark .visitor-kiosk-card {
+  background: rgba(20, 24, 32, 0.95) !important;
+  border-color: rgba(255, 255, 255, 0.08) !important;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.35) !important;
+}
+
+.visitor-kiosk-card .visitor-welcome-title {
+  color: var(--rasamala-accent) !important;
+  font-size: 26px !important;
+  letter-spacing: -0.02em !important;
+}
+
+.visitor-kiosk-card .visitor-subtitle {
+  font-size: 14px !important;
+  letter-spacing: 0.05em !important;
+  text-transform: uppercase !important;
+  font-weight: 600 !important;
+  opacity: 0.6 !important;
+}
+
+.visitor-input {
+  background: rgba(0, 0, 0, 0.02) !important;
+  border: 1.5px solid rgba(0, 0, 0, 0.08) !important;
+  border-radius: 12px !important;
+  padding: 14px 20px !important;
+  font-size: 16px !important;
+  height: auto !important;
+  color: var(--rasamala-text-primary) !important;
+  transition: background-color 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease, color 0.25s ease !important;
+}
+
+body.rasamala-dark .visitor-input {
+  background: rgba(255, 255, 255, 0.03) !important;
+  border-color: rgba(255, 255, 255, 0.1) !important;
+}
+
+.visitor-input:focus {
+  border-color: var(--rasamala-accent) !important;
+  box-shadow: 0 0 0 4px rgba(var(--theme-accent-rgb), 0.12) !important;
+  background: transparent !important;
+}
+
+.visitor-label {
+  font-size: 12px !important;
+  letter-spacing: 0.08em !important;
+  color: var(--rasamala-text-secondary) !important;
+}
+
+.btn-visitor-checkin {
+  border-radius: var(--rasamala-radius-button) !important;
+  font-weight: 700 !important;
+  padding: 14px !important;
+  font-size: 16px !important;
+  background-color: var(--rasamala-accent) !important;
+  border-color: var(--rasamala-accent) !important;
+  transition: background-color 0.25s ease, border-color 0.25s ease, color 0.25s ease, box-shadow 0.25s ease, transform 0.25s ease, opacity 0.25s ease !important;
+  letter-spacing: 0.02em !important;
+}
+
+.btn-visitor-checkin:hover,
+.btn-visitor-checkin:focus {
+  background-color: var(--rasamala-accent-hover) !important;
+  border-color: var(--rasamala-accent-hover) !important;
+  transform: translateY(-1px) !important;
+}
+
+.btn-visitor-checkin:disabled {
+  opacity: 0.6 !important;
+  transform: none !important;
+}
+
+/* Feedback Layout */
+.feedback-container {
+  min-height: 180px !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+}
+
+.feedback-card {
+  width: 100% !important;
+  border-radius: 14px !important;
+  padding: 24px !important;
+  transition: background-color 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease, transform 0.3s ease, opacity 0.3s ease !important;
+}
+
+.feedback-success {
+  background: rgba(40, 167, 69, 0.08) !important;
+  border: 1px solid rgba(40, 167, 69, 0.2) !important;
+  color: #28a745 !important;
+}
+
+.feedback-danger {
+  background: rgba(220, 53, 69, 0.08) !important;
+  border: 1px solid rgba(220, 53, 69, 0.2) !important;
+  color: #dc3545 !important;
+}
+
+.feedback-warning {
+  background: rgba(255, 193, 7, 0.08) !important;
+  border: 1px solid rgba(255, 193, 7, 0.2) !important;
+  color: #ffc107 !important;
+}
+
+.feedback-info {
+  background: rgba(23, 162, 184, 0.08) !important;
+  border: 1px solid rgba(23, 162, 184, 0.2) !important;
+  color: #17a2b8 !important;
+}
+
+.visitor-avatar-wrap {
+  width: 100px !important;
+  height: 100px !important;
+  border: 4px solid #ffffff !important;
+  border-radius: 50% !important;
+  overflow: hidden !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+}
+
+body.rasamala-dark .visitor-avatar-wrap {
+  border-color: rgba(255, 255, 255, 0.15) !important;
+}
+
+.visitor-feedback-text {
+  font-size: 20px !important;
+  color: inherit !important;
+  line-height: 1.3 !important;
+}
+
+.visitor-clock {
+  font-family: monospace, sans-serif !important;
+  font-size: 42px !important;
+  font-weight: 700 !important;
+  letter-spacing: 0.05em !important;
+  color: var(--rasamala-accent) !important;
+  text-shadow: 0 0 12px rgba(var(--theme-accent-rgb), 0.18) !important;
+  text-align: center !important;
+  margin: 4px auto !important;
+  display: inline-block !important;
+}
+
+.visitor-toggle-btn {
+  position: absolute !important;
+  right: 0 !important;
+  bottom: 12px !important;
+  opacity: 0.25 !important;
+  color: var(--rasamala-text-secondary) !important;
+  background: transparent !important;
+  border: none !important;
+  padding: 4px 8px !important;
+  transition: color 0.25s ease, background-color 0.25s ease, opacity 0.25s ease !important;
+  font-size: 14px !important;
+  cursor: pointer !important;
+}
+
+.visitor-toggle-btn:hover {
+  opacity: 0.9 !important;
+  color: var(--rasamala-accent) !important;
+}
+
+.visitor-has-running-text {
+  padding-bottom: 54px !important;
+}
+
+.visitor-latest-content-ticker {
+  bottom: 0 !important;
+  z-index: 1050 !important;
+}
+
+/* Split Layout Custom Styles (Following Theme) */
+.main-split-container {
+  display: flex;
+  flex-direction: row;
+  gap: 40px;
+  max-width: 1000px;
+  width: 92%;
+  margin: 40px auto !important;
+  align-items: stretch;
+  z-index: 10;
+}
+
+.left-form-section,
+.right-instruction-section {
+  flex: 1;
+  background: rgba(255, 255, 255, 0.95) !important;
+  backdrop-filter: blur(20px) !important;
+  border: 1px solid rgba(255, 255, 255, 0.4) !important;
+  padding: 40px !important;
+  border-radius: 20px !important;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.15) !important;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  transition: background-color 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease, transform 0.3s ease, opacity 0.3s ease !important;
+}
+
+body.rasamala-dark .left-form-section,
+body.rasamala-dark .right-instruction-section {
+  background: rgba(20, 24, 32, 0.95) !important;
+  border-color: rgba(255, 255, 255, 0.08) !important;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.35) !important;
+}
+
+/* Tabs styling */
+.tabs {
+  display: flex;
+  margin-bottom: 30px;
+  border-bottom: 2px solid rgba(0, 0, 0, 0.06);
+  justify-content: center;
+  gap: 20px;
+}
+
+body.rasamala-dark .tabs {
+  border-bottom-color: rgba(255, 255, 255, 0.08);
+}
+
+.tab-link {
+  background: none;
+  border: none;
+  color: var(--rasamala-text-secondary);
+  padding: 12px 20px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 600;
+  transition: color 0.2s ease, border-color 0.2s ease, background-color 0.2s ease, opacity 0.2s ease;
+  border-bottom: 4px solid transparent;
+  margin-bottom: -2px;
+}
+
+.tab-link.active {
+  color: var(--rasamala-accent);
+  border-bottom-color: var(--rasamala-accent);
+}
+
+.tab-link:focus {
+  outline: none;
+}
+
+/* Instructions */
+.inst-title {
+  font-size: 22px;
+  font-weight: 700;
+  margin-bottom: 25px;
+  color: var(--rasamala-text-primary);
+  text-align: center;
+}
+
+.inst-steps {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.inst-step {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+  padding: 15px;
+  border-radius: 12px;
+  background: rgba(var(--theme-accent-rgb), 0.03);
+  border: 1px solid transparent;
+  transition: background-color 0.25s ease, border-color 0.25s ease, color 0.25s ease, box-shadow 0.25s ease, transform 0.25s ease;
+}
+
+.inst-step:hover {
+  border-color: rgba(0, 0, 0, 0.08);
+  background: rgba(255, 255, 255, 0.5);
+}
+
+.inst-step-featured {
+  border-color: var(--rasamala-accent);
+  background: rgba(var(--theme-accent-rgb), 0.06);
+}
+
+body.rasamala-dark .inst-step:hover {
+  border-color: rgba(255, 255, 255, 0.08);
+  background: rgba(255, 255, 255, 0.02);
+}
+
+.inst-icon-box {
+  flex-shrink: 0;
+  width: 44px;
+  height: 44px;
+  background: var(--rasamala-accent);
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px;
+  color: white;
+  box-shadow: 0 4px 10px rgba(var(--theme-accent-rgb), 0.25);
+}
+
+.inst-icon-box i {
+  font-size: 18px;
+  line-height: 1;
+}
+
+.inst-icon-box-scan {
+  background: transparent;
+  box-shadow: none;
+  overflow: hidden;
+  color: var(--rasamala-accent);
+}
+
+.inst-content h3 {
+  font-size: 16px;
+  font-weight: 700;
+  margin-bottom: 6px;
+  color: var(--rasamala-text-primary);
+}
+
+.inst-content {
+  color: var(--rasamala-text-secondary);
+  font-size: 13px;
+  line-height: 1.5;
+}
+
+.inst-content p {
+  font-size: 13px;
+  color: var(--rasamala-text-secondary);
+  line-height: 1.5;
+}
+
+.inst-steps > p,
+.inst-steps li {
+  color: var(--rasamala-text-secondary);
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+.inst-steps ul,
+.inst-steps ol {
+  margin: 0;
+  padding-left: 1.25rem;
+}
+
+.inst-steps a {
+  color: var(--rasamala-accent);
+  font-weight: 700;
+}
+
+.highlight {
+  color: var(--rasamala-accent);
+  font-weight: 700;
+}
+
+/* Scan laser animation theme colors */
+.scan-anim-container {
+  position: relative;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.barcode-svg {
+  width: 100%;
+  height: auto;
+  fill: var(--rasamala-text-primary);
+  opacity: 0.2;
+}
+
+.scan-laser {
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  background: var(--rasamala-accent);
+  box-shadow: 0 0 8px var(--rasamala-accent), 0 0 15px var(--rasamala-accent);
+  top: 5px;
+  animation: laserMove 2.5s ease-in-out infinite alternate;
+}
+
+html.rasamala-page-hidden .scan-laser {
+  animation-play-state: paused !important;
+}
+
+@keyframes laserMove {
+  0% {
+    transform: translate3d(0, 0, 0);
+    opacity: 0.7;
+  }
+
+  100% {
+    transform: translate3d(0, 40px, 0);
+    opacity: 1;
+  }
+}
+
+@media (max-width: 900px) {
+  .main-split-container {
+    flex-direction: column;
+    gap: 20px;
+    margin-top: 20px;
+    margin-bottom: 40px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .visitor-kiosk-card,
+  .left-form-section,
+  .right-instruction-section,
+  .feedback-card,
+  .visitor-input,
+  .btn-visitor-checkin,
+  .visitor-toggle-btn,
+  .inst-step,
+  .tab-link,
+  .scan-laser {
+    animation: none !important;
+    transition-duration: 0.01ms !important;
+    transition-delay: 0s !important;
+    transform: none !important;
+  }
+
+  .scan-laser {
+    top: 50% !important;
+    opacity: 0.85 !important;
+  }
+}

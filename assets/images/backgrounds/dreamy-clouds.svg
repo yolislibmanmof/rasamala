@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%">
+  <defs>
+    <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#7dd3fc" />
+      <stop offset="100%" stop-color="#e0f2fe" />
+    </linearGradient>
+    <pattern id="clouds" width="130" height="90" patternUnits="userSpaceOnUse">
+      <g fill="#ffffff" fill-opacity="0.75">
+        <circle cx="38" cy="48" r="15" />
+        <circle cx="60" cy="42" r="19" />
+        <circle cx="84" cy="49" r="14" />
+        <rect x="33" y="48" width="56" height="15" rx="7" />
+      </g>
+      <animateTransform attributeName="patternTransform" type="translate" values="0 0; 130 0" dur="18s" repeatCount="indefinite" />
+    </pattern>
+  </defs>
+  <rect width="100%" height="100%" fill="url(#sky)" />
+  <rect width="100%" height="100%" fill="url(#clouds)" />
+</svg>

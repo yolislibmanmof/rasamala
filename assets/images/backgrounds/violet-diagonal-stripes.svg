@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%">
+  <defs>
+    <pattern id="stripes" width="14" height="14" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
+      <rect width="7" height="14" fill="#ffffff" fill-opacity="0.08" />
+      <animateTransform attributeName="patternTransform" type="translate" values="0 0; 14 0" dur="6s" repeatCount="indefinite" additive="sum" />
+    </pattern>
+  </defs>
+  <rect width="100%" height="100%" fill="#4f46e5" />
+  <rect width="100%" height="100%" fill="url(#stripes)" />
+</svg>

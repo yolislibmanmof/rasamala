@@ -1,0 +1,150 @@
+/*!
+ * Rasamala theme - header runtime support.
+ */
+
+html.rasamala-dark {
+  background-color: var(--theme-dark-background) !important;
+}
+
+body.rasamala-dark {
+  --theme-primary: var(--theme-dark-primary);
+  --theme-primary-hover: var(--theme-dark-primary-hover);
+  --theme-secondary: var(--theme-dark-secondary);
+  --theme-accent: var(--theme-dark-accent);
+  --theme-background: var(--theme-dark-background);
+  --theme-surface: var(--theme-dark-surface);
+  --theme-text: var(--theme-dark-text);
+  --theme-muted: var(--theme-dark-muted);
+  --theme-muted-on-background: var(--theme-dark-muted-on-background);
+  --theme-muted-on-surface: var(--theme-dark-muted-on-surface);
+  --theme-primary-rgb: var(--theme-dark-primary-rgb);
+  --theme-on-primary: var(--theme-dark-on-primary);
+  --theme-on-primary-hover: var(--theme-dark-on-primary-hover);
+  --theme-on-secondary: var(--theme-dark-on-secondary);
+  --theme-on-accent: var(--theme-dark-on-accent);
+  --theme-on-background: var(--theme-dark-on-background);
+  --theme-on-surface: var(--theme-dark-on-surface);
+  --color-primary: var(--theme-primary);
+  --color-secondary: var(--theme-secondary);
+  --color-accent: var(--theme-accent);
+  --color-background: var(--theme-background);
+  --color-surface: var(--theme-surface);
+  --color-text: var(--theme-on-background);
+  --color-muted: var(--theme-muted-on-background);
+  --color-on-primary: var(--theme-on-primary);
+  --color-on-secondary: var(--theme-on-secondary);
+  --color-on-accent: var(--theme-on-accent);
+  --rasamala-light-bg: var(--theme-dark-background);
+  --rasamala-text-primary: var(--theme-on-background);
+  --rasamala-text-secondary: var(--theme-dark-muted);
+  --rasamala-text-muted: var(--theme-muted-on-background);
+  --rasamala-surface: var(--theme-dark-surface);
+  --rasamala-accent: var(--theme-dark-accent);
+  --rasamala-accent-hover: color-mix(in srgb, var(--theme-dark-accent) 84%, #000 16%);
+  --rasamala-readable-accent: color-mix(in srgb, var(--theme-dark-accent) 62%, var(--theme-dark-text) 38%);
+  --theme-accent-color: var(--theme-dark-accent);
+  --theme-accent-rgb: var(--theme-dark-accent-rgb-value);
+  --theme-accent-glow: rgba(var(--theme-dark-accent-rgb-value), 0.8);
+  --theme-accent-glow-half: rgba(var(--theme-dark-accent-rgb-value), 0.4);
+  --rasamala-chrome-bg: color-mix(in srgb, var(--theme-dark-primary) 88%, #000 12%);
+  --rasamala-chrome-border: color-mix(in srgb, var(--theme-dark-primary) 38%, transparent);
+  --rasamala-chrome-text: var(--theme-on-primary);
+  --rasamala-chrome-text-muted: color-mix(in srgb, var(--theme-on-primary) 76%, transparent);
+  --rasamala-dark-surface: var(--theme-dark-surface);
+  --rasamala-dark-surface-strong: color-mix(in srgb, var(--theme-dark-surface) 88%, #000 12%);
+  --rasamala-dark-surface-soft: color-mix(in srgb, var(--theme-dark-surface) 72%, transparent);
+  --rasamala-dark-text: var(--theme-on-surface);
+  --rasamala-dark-muted: var(--theme-muted-on-surface);
+  --rasamala-dark-link: color-mix(in srgb, var(--theme-dark-accent) 58%, #ffffff 42%);
+  --rasamala-dark-link-strong: color-mix(in srgb, var(--theme-dark-accent) 38%, #ffffff 62%);
+  --rasamala-dark-action-bg: color-mix(in srgb, var(--theme-dark-primary) 82%, #05070a 18%);
+  --rasamala-dark-action-hover-bg: color-mix(in srgb, var(--theme-dark-primary) 82%, #ffffff 18%);
+  --rasamala-dark-action-border: color-mix(in srgb, var(--theme-dark-accent) 46%, rgba(255, 255, 255, 0.22) 54%);
+  --rasamala-dark-accent-text: var(--rasamala-dark-link);
+  --rasamala-dark-accent-text-strong: var(--rasamala-dark-link-strong);
+  --rasamala-dark-accent-bg: color-mix(in srgb, var(--theme-dark-primary) 30%, transparent 70%);
+  --rasamala-dark-accent-border: var(--rasamala-dark-action-border);
+  --bs-body-bg: var(--theme-dark-background);
+  --bs-body-color: var(--theme-on-background);
+  --bs-secondary-color: var(--theme-muted-on-background);
+  background-color: var(--theme-dark-background) !important;
+  color: var(--theme-on-background) !important;
+}
+
+body,
+button,
+input,
+select,
+textarea,
+.form-control,
+.btn,
+.dropdown-menu,
+.modal-content {
+  font-family: var(--rasamala-font-stack) !important;
+}
+
+.mr-1 { margin-right: 0.25rem !important; }
+.mr-2 { margin-right: 0.5rem !important; }
+.mr-3 { margin-right: 1rem !important; }
+.mr-4 { margin-right: 1.5rem !important; }
+.mr-5 { margin-right: 3rem !important; }
+.mr-auto { margin-right: auto !important; }
+.ml-1 { margin-left: 0.25rem !important; }
+.ml-2 { margin-left: 0.5rem !important; }
+.ml-3 { margin-left: 1rem !important; }
+.ml-4 { margin-left: 1.5rem !important; }
+.ml-5 { margin-left: 3rem !important; }
+.ml-auto { margin-left: auto !important; }
+.pr-1 { padding-right: 0.25rem !important; }
+.pr-2 { padding-right: 0.5rem !important; }
+.pr-3 { padding-right: 1rem !important; }
+.pr-4 { padding-right: 1.5rem !important; }
+.pr-5 { padding-right: 3rem !important; }
+.pl-0 { padding-left: 0 !important; }
+.pl-1 { padding-left: 0.25rem !important; }
+.pl-2 { padding-left: 0.5rem !important; }
+.pl-3 { padding-left: 1rem !important; }
+.pl-4 { padding-left: 1.5rem !important; }
+.pl-5 { padding-left: 3rem !important; }
+.float-left { float: left !important; }
+.float-right { float: right !important; }
+.text-left { text-align: left !important; }
+.text-right { text-align: right !important; }
+.btn-block { display: block; width: 100%; }
+
+.custom-select {
+  display: block;
+  width: 100%;
+  padding: 0.375rem 2.25rem 0.375rem 0.75rem;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+  color: var(--bs-body-color);
+  background-color: var(--bs-body-bg);
+  border: var(--bs-border-width) solid var(--bs-border-color);
+  border-radius: var(--bs-border-radius);
+  appearance: none;
+}
+
+.close {
+  float: right;
+  font-size: 1.5rem;
+  font-weight: 700;
+  line-height: 1;
+  color: #000;
+  text-shadow: 0 1px 0 #fff;
+  opacity: .5;
+  background-color: transparent;
+  border: 0;
+}
+
+.close:hover {
+  color: #000;
+  text-decoration: none;
+  opacity: .75;
+}
+
+body.rasamala-debug-hidden .result-search .wrapper .debug,
+body.rasamala-debug-hidden .debug {
+  display: none !important;
+}

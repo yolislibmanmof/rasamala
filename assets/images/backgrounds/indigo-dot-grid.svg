@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%">
+  <defs>
+    <pattern id="dots" width="22" height="22" patternUnits="userSpaceOnUse">
+      <circle cx="2" cy="2" r="1.6" fill="#818cf8" />
+      <animateTransform attributeName="patternTransform" type="translate" values="0 0; 22 22" dur="9s" repeatCount="indefinite" />
+    </pattern>
+  </defs>
+  <rect width="100%" height="100%" fill="#eef2ff" />
+  <rect width="100%" height="100%" fill="url(#dots)" />
+</svg>

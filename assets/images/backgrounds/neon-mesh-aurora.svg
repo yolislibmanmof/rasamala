@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%">
+  <defs>
+    <radialGradient id="g1" cx="18%" cy="22%" r="60%">
+      <stop offset="0%" stop-color="#a78bfa" />
+      <stop offset="100%" stop-color="#a78bfa" stop-opacity="0" />
+      <animate attributeName="cx" values="18%;27%;18%" dur="13s" repeatCount="indefinite" />
+      <animate attributeName="cy" values="22%;33%;22%" dur="15s" repeatCount="indefinite" />
+    </radialGradient>
+    <radialGradient id="g2" cx="82%" cy="28%" r="55%">
+      <stop offset="0%" stop-color="#f472b6" />
+      <stop offset="100%" stop-color="#f472b6" stop-opacity="0" />
+      <animate attributeName="cx" values="82%;73%;82%" dur="14s" repeatCount="indefinite" />
+      <animate attributeName="cy" values="28%;19%;28%" dur="12s" repeatCount="indefinite" />
+    </radialGradient>
+    <radialGradient id="g3" cx="60%" cy="82%" r="60%">
+      <stop offset="0%" stop-color="#38bdf8" />
+      <stop offset="100%" stop-color="#38bdf8" stop-opacity="0" />
+      <animate attributeName="cx" values="60%;69%;60%" dur="16s" repeatCount="indefinite" />
+      <animate attributeName="cy" values="82%;73%;82%" dur="11s" repeatCount="indefinite" />
+    </radialGradient>
+  </defs>
+  <rect width="100%" height="100%" fill="#0f172a" />
+  <rect width="100%" height="100%" fill="url(#g1)" />
+  <rect width="100%" height="100%" fill="url(#g2)" />
+  <rect width="100%" height="100%" fill="url(#g3)" />
+</svg>

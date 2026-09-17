@@ -1,0 +1,4066 @@
+
+
+body.rasamala-dark .detail-author-footer a {
+  background: transparent;
+  background-color: transparent;
+  color: var(--rasamala-accent) !important;
+  border-color: rgba(var(--theme-accent-rgb), 0.28) !important;
+}
+
+body.rasamala-dark .detail-author-footer a:hover,
+body.rasamala-dark .detail-author-footer a:focus {
+  background: transparent;
+  background-color: transparent;
+  color: var(--rasamala-accent) !important;
+  border-color: var(--rasamala-accent) !important;
+  box-shadow: none !important;
+}
+
+/* Dark Mode Overrides */
+body.rasamala-dark .alert-theme {
+  background-color: rgba(var(--theme-accent-rgb), 0.16) !important;
+  border-color: rgba(var(--theme-accent-rgb), 0.38) !important;
+  color: #f4f6f8 !important;
+}
+body.rasamala-dark .alert-theme a,
+body.rasamala-dark .alert-theme strong {
+  color: #ffffff !important;
+  text-decoration: underline;
+}
+body.rasamala-dark .alert-theme .close {
+  color: #ffffff !important;
+}
+
+body.rasamala-dark .hero-orb {
+  opacity: 0.78 !important;
+}
+
+body.rasamala-dark .news-list-thumbnail {
+  background: rgba(255, 255, 255, 0.06) !important;
+  border-color: var(--rasamala-dark-border) !important;
+  box-shadow: none !important;
+}
+
+body.rasamala-dark .news-list-summary,
+body.rasamala-dark .news-list-date {
+  color: var(--rasamala-dark-muted) !important;
+}
+
+body.rasamala-dark .news-list-card--title_only {
+  background: rgba(22, 26, 34, 0.5) !important;
+  border-color: rgba(255, 255, 255, 0.1) !important;
+}
+
+body.rasamala-dark .news-list-card--title_only:hover {
+  border-color: rgba(var(--theme-accent-rgb), 0.42) !important;
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.18) !important;
+}/* Color Mode: Dark styles */
+html.rasamala-dark {
+  background-color: var(--theme-background) !important;
+}
+
+
+body.rasamala-dark {
+  --rasamala-light-bg: var(--theme-background);
+  --rasamala-text-primary: var(--theme-text);
+  --rasamala-text-secondary: var(--theme-muted);
+  --rasamala-border: rgba(255, 255, 255, 0.11);
+  --rasamala-card-shadow: 0 18px 46px rgba(0, 0, 0, 0.32);
+  --rasamala-pagination-bg: rgba(255, 255, 255, 0.06);
+  --rasamala-pagination-border: rgba(255, 255, 255, 0.12);
+  --rasamala-pagination-text: var(--theme-text);
+  --rasamala-pagination-hover-bg: color-mix(in srgb, var(--theme-primary) 18%, transparent);
+  --rasamala-pagination-hover-border: color-mix(in srgb, var(--theme-primary) 42%, transparent);
+  --rasamala-pagination-hover-text: var(--theme-on-primary);
+  --rasamala-pagination-active-bg: var(--theme-primary);
+  --rasamala-pagination-active-border: color-mix(in srgb, var(--theme-accent) 36%, var(--theme-primary) 64%);
+  --rasamala-pagination-active-text: var(--theme-on-primary);
+  --rasamala-pagination-shadow: 0 6px 18px rgba(0, 0, 0, 0.24);
+  --rasamala-button-bg: var(--theme-primary);
+  --rasamala-button-border: color-mix(in srgb, var(--theme-accent) 34%, var(--theme-primary) 66%);
+  --rasamala-button-text: var(--theme-on-primary);
+  --rasamala-button-hover-bg: var(--theme-primary-hover);
+  --rasamala-button-hover-border: color-mix(in srgb, var(--theme-accent) 28%, var(--theme-primary-hover) 72%);
+  --rasamala-button-hover-text: var(--theme-on-primary-hover);
+  --rasamala-outline-bg: transparent;
+  --rasamala-outline-border: rgba(255, 255, 255, 0.18);
+  --rasamala-outline-text: var(--theme-text);
+  --rasamala-control-bg: rgba(255, 255, 255, 0.06);
+  --rasamala-control-border: rgba(255, 255, 255, 0.12);
+  --rasamala-control-text: var(--theme-text);
+  --rasamala-control-hover-bg: color-mix(in srgb, var(--theme-primary) 16%, transparent);
+  --rasamala-control-hover-border: color-mix(in srgb, var(--theme-primary) 38%, transparent);
+  background-color: var(--theme-background) !important;
+  color: var(--theme-text) !important;
+}
+
+
+body.rasamala-dark .bg-light {
+  background-color: #151922 !important;
+}
+
+
+body.rasamala-dark .bg-rasamala-light {
+  background-color: #151922 !important;
+}
+
+
+body.rasamala-dark .card {
+  background-color: rgba(22, 26, 34, 0.94) !important;
+  color: #e7ebef !important;
+  border-color: rgba(255, 255, 255, 0.1) !important;
+}
+
+
+body.rasamala-dark .text-dark,
+body.rasamala-dark h1,
+body.rasamala-dark h2,
+body.rasamala-dark h3,
+body.rasamala-dark h4,
+body.rasamala-dark h5,
+body.rasamala-dark h6 {
+  color: #f7f9fb !important;
+}
+
+
+body.rasamala-dark .text-muted {
+  color: #8c9ba5 !important;
+}
+
+
+body.rasamala-dark .rasamala-divider {
+  border-color: rgba(255, 255, 255, 0.1) !important;
+}
+
+
+body.rasamala-dark a {
+  color: var(--rasamala-accent) !important;
+}
+
+
+body.rasamala-dark.rasamala-background-animation-active:not([class*="rasamala-background-style-image-"]) {
+  background-color: #000000 !important;
+  background-image: none !important;
+  background: #000000 !important;
+}
+
+
+body.rasamala-dark .rasamala-hero-section,
+body.rasamala-dark .rasamala-search-banner-section,
+body.rasamala-dark .rasamala-subpage-wrapper,
+body.rasamala-dark #slims-home,
+body.rasamala-dark .result-search,
+body.rasamala-dark .member-area {
+  background: #101318 !important;
+  background-color: #101318 !important;
+  color: #e7ebef !important;
+  border-color: rgba(255, 255, 255, 0.1) !important;
+}
+
+
+body.rasamala-dark.rasamala-background-animation-active #slims-home,
+body.rasamala-dark.rasamala-background-animation-active .rasamala-subpage-wrapper,
+body.rasamala-dark.rasamala-background-animation-active .rasamala-hero-section,
+body.rasamala-dark.rasamala-background-animation-active .rasamala-search-banner-section,
+body.rasamala-dark.rasamala-background-animation-active .result-search,
+body.rasamala-dark.rasamala-background-animation-active .member-area,
+body.rasamala-dark.rasamala-background-animation-active .page-member-area {
+  background: transparent !important;
+  background-color: transparent !important;
+}
+
+body.rasamala-dark.rasamala-background-animation-active.rasamala-search-panels-transparent .rasamala-main-content-card,
+body.rasamala-dark.rasamala-background-animation-active.rasamala-search-panels-transparent .member-area .rasamala-main-content-card,
+body.rasamala-dark.rasamala-background-animation-active.rasamala-search-panels-transparent .page-member-area .rasamala-main-content-card {
+  background-color: rgba(0, 0, 0, 0.72) !important;
+  border-color: rgba(255, 255, 255, 0.08) !important;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.5) !important;
+}
+
+body.rasamala-dark.rasamala-background-animation-active.rasamala-search-panels-transparent .card:not(#card-container) {
+  background-color: rgba(0, 0, 0, 0.5) !important;
+  border-color: rgba(255, 255, 255, 0.08) !important;
+}
+
+body.rasamala-dark.rasamala-background-animation-active.rasamala-search-panels-solid .rasamala-main-content-card,
+body.rasamala-dark.rasamala-background-animation-active.rasamala-search-panels-solid .member-area .rasamala-main-content-card,
+body.rasamala-dark.rasamala-background-animation-active.rasamala-search-panels-solid .page-member-area .rasamala-main-content-card,
+body.rasamala-dark.rasamala-background-animation-active.rasamala-search-panels-solid .card:not(#card-container) {
+  background-color: var(--rasamala-dark-surface, #161a22) !important;
+  border-color: var(--rasamala-dark-border, rgba(255, 255, 255, 0.12)) !important;
+}
+
+
+body.rasamala-dark.rasamala-home-hero-only:not([class*="rasamala-background-style-image-"]),
+body.rasamala-dark.rasamala-home-hero-only.rasamala-background-animation-active:not([class*="rasamala-background-style-image-"]) {
+  background: var(--theme-dark-background) !important;
+  background-color: var(--theme-dark-background) !important;
+}
+
+
+body.rasamala-dark.rasamala-home-hero-only .rasamala-hero-section-only,
+body.rasamala-dark.rasamala-home-hero-only .rasamala-search-banner-section.rasamala-search-banner-hero-only,
+body.rasamala-dark.rasamala-home-hero-only.rasamala-background-animation-active .rasamala-hero-section-only,
+body.rasamala-dark.rasamala-home-hero-only.rasamala-background-animation-active .rasamala-search-banner-section.rasamala-search-banner-hero-only {
+  background: transparent !important;
+  background-color: transparent !important;
+}
+
+/* Keep the selected Background Style visible in dark mode. Animated
+   backgrounds still intentionally use transparency so their canvas remains
+   the visual layer. */
+body.rasamala-dark.rasamala-home-hero-only:not(.rasamala-background-animation-active).rasamala-hero-bg-style-soft-gradient .rasamala-search-banner-section.rasamala-search-banner-hero-only {
+  background: linear-gradient(145deg, color-mix(in srgb, var(--theme-dark-primary) 46%, var(--theme-dark-background)) 0%, color-mix(in srgb, var(--theme-dark-secondary) 28%, var(--theme-dark-surface)) 48%, color-mix(in srgb, var(--theme-dark-accent) 34%, var(--theme-dark-background)) 100%) !important;
+}
+
+body.rasamala-dark.rasamala-home-hero-only:not(.rasamala-background-animation-active).rasamala-hero-bg-style-aurora-glow .rasamala-search-banner-section.rasamala-search-banner-hero-only {
+  background:
+    radial-gradient(circle at 15% 15%, color-mix(in srgb, var(--theme-dark-accent) 42%, transparent), transparent 36%),
+    radial-gradient(circle at 86% 72%, color-mix(in srgb, var(--theme-dark-secondary) 34%, transparent), transparent 42%),
+    linear-gradient(145deg, var(--theme-dark-background), var(--theme-dark-surface)) !important;
+}
+
+/* The Background Style control applies to the full page canvas. Keep this
+   layer below the global animation canvas and above the dark-mode base color. */
+body.rasamala-dark.rasamala-background-style-soft-gradient {
+  background: transparent !important;
+}
+
+body.rasamala-dark.rasamala-background-style-aurora-glow {
+  background: transparent !important;
+}
+
+body.rasamala-dark.rasamala-background-style-image-bg-ocean-waves {
+  background: var(--theme-dark-background) !important;
+  background-attachment: fixed !important;
+}
+
+body.rasamala-dark.rasamala-background-style-custom {
+  background: var(--theme-dark-background) !important;
+  background-attachment: fixed !important;
+}
+
+body.rasamala-dark[class*="rasamala-background-style-"] .rasamala-hero-section,
+body.rasamala-dark[class*="rasamala-background-style-"] .rasamala-search-banner-section,
+body.rasamala-dark[class*="rasamala-background-style-"] #slims-home,
+body.rasamala-dark[class*="rasamala-background-style-"] .rasamala-subpage-wrapper,
+body.rasamala-dark[class*="rasamala-background-style-"] .result-search,
+body.rasamala-dark[class*="rasamala-background-style-"] .member-area {
+  background: transparent !important;
+  background-color: transparent !important;
+}
+
+body.rasamala-dark.rasamala-home-few-sections .rasamala-hero-section,
+body.rasamala-dark.rasamala-home-few-sections .rasamala-search-banner-section,
+body.rasamala-dark.rasamala-home-few-sections #slims-home {
+  background: transparent !important;
+  background-color: transparent !important;
+}
+
+
+body.rasamala-dark .background-animation-layer.hero-animation-layer {
+  opacity: 0.86 !important;
+}
+
+body.rasamala-dark .background-animation-layer.hero-animation-particles,
+body.rasamala-dark .background-animation-layer.hero-animation-constellation,
+body.rasamala-dark .background-animation-layer.hero-animation-rain,
+body.rasamala-dark .background-animation-layer.hero-animation-zen-ripples,
+body.rasamala-dark .background-animation-layer.hero-animation-neural-network,
+body.rasamala-dark .background-animation-layer.hero-animation-starfield-warp,
+body.rasamala-dark .background-animation-layer.hero-animation-floating-embers {
+  background: transparent !important;
+}
+
+
+body.rasamala-dark .hero-line {
+  background: linear-gradient(90deg, transparent 0%, currentColor 42%, rgba(var(--theme-accent-rgb), 0.4) 50%, currentColor 58%, transparent 100%) !important;
+}
+
+body.rasamala-dark .hero-neural-line {
+  background: linear-gradient(90deg, transparent 0%, currentColor 36%, rgba(var(--theme-accent-rgb), 0.72) 50%, currentColor 64%, transparent 100%) !important;
+}
+
+body.rasamala-dark .hero-ripple {
+  border-color: rgba(var(--theme-accent-rgb), 0.36) !important;
+}
+
+
+body.rasamala-dark .rasamala-header-dark,
+body.rasamala-dark .c-header {
+  background: rgba(13, 16, 22, 0.86) !important;
+  border-bottom: none !important;
+  -webkit-backdrop-filter: blur(20px) !important;
+  backdrop-filter: blur(20px) !important;
+}
+
+
+body.rasamala-dark .c-header .navbar-nav .nav-link,
+body.rasamala-dark .navbar-light .navbar-nav .nav-link {
+  color: var(--rasamala-chrome-text-muted) !important;
+}
+
+
+body.rasamala-dark .c-header .navbar-nav .nav-link:hover,
+body.rasamala-dark .c-header .navbar-nav .nav-item.active .nav-link,
+body.rasamala-dark .c-header .navbar-nav .nav-link.active {
+  color: var(--rasamala-chrome-text) !important;
+}
+
+
+body.rasamala-dark .navbar-light .navbar-toggler-icon {
+  filter: invert(1) grayscale(1) brightness(1.6) !important;
+}
+
+
+body.rasamala-dark .navbar-toggler {
+  border-color: rgba(255, 255, 255, 0.12) !important;
+}
+
+
+@media (max-width: 991.98px) {
+  body.rasamala-dark .c-header .navbar-collapse {
+    border-top-color: rgba(255, 255, 255, 0.12) !important;
+  }
+
+  body.rasamala-dark .c-header .navbar-nav .nav-link:hover,
+  body.rasamala-dark .c-header .navbar-nav .nav-item.active .nav-link,
+  body.rasamala-dark .c-header .navbar-nav .nav-link.active {
+    background: rgba(var(--theme-accent-rgb), 0.16) !important;
+    color: #ffffff !important;
+  }
+}
+
+
+body.rasamala-dark .c-header .dropdown-menu,
+body.rasamala-dark .dropdown-menu {
+  background: #141820 !important;
+  border-color: rgba(255, 255, 255, 0.12) !important;
+  box-shadow: 0 20px 44px rgba(0, 0, 0, 0.34) !important;
+}
+
+
+body.rasamala-dark .c-header .dropdown-item,
+body.rasamala-dark .dropdown-item {
+  color: #dce2e8 !important;
+}
+
+
+body.rasamala-dark .c-header .dropdown-item:hover,
+body.rasamala-dark .dropdown-item:hover,
+body.rasamala-dark .dropdown-item:focus {
+  background: rgba(var(--theme-accent-rgb), 0.18) !important;
+  color: #ffffff !important;
+}
+
+
+body.rasamala-dark .c-header .dropdown-header,
+body.rasamala-dark .dropdown-header {
+  color: rgba(231, 235, 239, 0.56) !important;
+}
+
+
+body.rasamala-dark .dropdown-divider {
+  border-top-color: rgba(255, 255, 255, 0.1) !important;
+}
+
+
+body.rasamala-dark footer {
+  background: #0c0f14 !important;
+  border-top-color: rgba(255, 255, 255, 0.1) !important;
+  color: #dce2e8 !important;
+}
+
+
+body.rasamala-dark .footer-section-title,
+body.rasamala-dark .footer-about-text,
+body.rasamala-dark .footer-action-btn {
+  color: #dce2e8 !important;
+}
+
+
+body.rasamala-dark .footer-link:hover {
+  color: #ffffff !important;
+}
+
+
+body.rasamala-dark .footer-next-prayer {
+  color: #aeb7c2 !important;
+}
+
+
+body.rasamala-dark .footer-next-prayer strong,
+body.rasamala-dark .footer-powered-link code {
+  color: var(--theme-accent-color) !important;
+}
+
+
+body.rasamala-dark .prayer-reminder-toast {
+  background: rgba(22, 26, 34, 0.92) !important;
+  border-color: rgba(var(--theme-accent-rgb), 0.34) !important;
+  color: #e7ebef !important;
+  box-shadow: 0 18px 46px rgba(0, 0, 0, 0.34) !important;
+}
+
+
+body.rasamala-dark .prayer-reminder-icon,
+body.rasamala-dark .prayer-reminder-close {
+  background: rgba(var(--theme-accent-rgb), 0.22) !important;
+  color: var(--theme-accent-color) !important;
+}
+
+
+body.rasamala-dark .prayer-reminder-text strong {
+  color: #f2f5f8 !important;
+}
+
+
+body.rasamala-dark .prayer-reminder-countdown {
+  color: var(--theme-accent-color) !important;
+}
+
+
+body.rasamala-dark .footer-social-btn,
+body.rasamala-dark .footer-search-input,
+body.rasamala-dark .footer-search-btn {
+  background: rgba(255, 255, 255, 0.08) !important;
+  border-color: rgba(255, 255, 255, 0.12) !important;
+  color: #e7ebef !important;
+}
+
+
+body.rasamala-dark .footer-social-btn:hover {
+  background: var(--rasamala-accent) !important;
+  color: #ffffff !important;
+}
+
+
+body.rasamala-dark #search-wraper .card,
+body.rasamala-dark #section1 #search-wraper .card {
+  background: rgba(21, 25, 33, 0.94) !important;
+  border-color: rgba(255, 255, 255, 0.13) !important;
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.28) !important;
+}
+
+
+body.rasamala-dark #search-input,
+body.rasamala-dark .search .input-transparent {
+  color: #f4f6f8 !important;
+}
+
+
+body.rasamala-dark #search-input::placeholder,
+body.rasamala-dark #section1 #search-wraper #search-input::placeholder {
+  color: rgba(231, 235, 239, 0.58) !important;
+}
+
+
+body.rasamala-dark .advanced-wraper {
+  background: #161a22 !important;
+  border-color: rgba(255, 255, 255, 0.12) !important;
+  box-shadow: 0 22px 48px rgba(0, 0, 0, 0.36) !important;
+  z-index: var(--z-emergency-panel) !important;
+}
+
+
+body.rasamala-dark .form-control,
+body.rasamala-dark .custom-select,
+body.rasamala-dark select,
+body.rasamala-dark input,
+body.rasamala-dark textarea {
+  background-color: rgba(255, 255, 255, 0.07) !important;
+  border-color: rgba(255, 255, 255, 0.13) !important;
+  color: #f4f6f8 !important;
+}
+
+
+body.rasamala-dark select option,
+body.rasamala-dark select optgroup,
+body.rasamala-dark .form-control option,
+body.rasamala-dark .custom-select option,
+body.rasamala-dark datalist option {
+  background-color: #151922 !important;
+  color: #f4f6f8 !important;
+}
+
+
+body.rasamala-dark select option:checked,
+body.rasamala-dark .form-control option:checked,
+body.rasamala-dark .custom-select option:checked {
+  background-color: var(--rasamala-accent) !important;
+  color: #ffffff !important;
+}
+
+
+body.rasamala-dark #adv-modal select,
+body.rasamala-dark #search-filter select,
+body.rasamala-dark #desktop-filter-container select,
+body.rasamala-dark #mobile-filter-container select,
+body.rasamala-dark .SearchFilter select,
+body.rasamala-dark .filter-item select {
+  background-color: rgba(255, 255, 255, 0.07) !important;
+  border-color: rgba(255, 255, 255, 0.13) !important;
+  color: #f4f6f8 !important;
+}
+
+
+body.rasamala-dark .select2-container--default .select2-selection--single,
+body.rasamala-dark .select2-container--default .select2-selection--multiple,
+body.rasamala-dark .chosen-container-single .chosen-single,
+body.rasamala-dark .chosen-container-multi .chosen-choices,
+body.rasamala-dark .bootstrap-select > .dropdown-toggle,
+body.rasamala-dark .choices__inner,
+body.rasamala-dark .selectize-input,
+body.rasamala-dark .ts-control {
+  background: rgba(255, 255, 255, 0.07) !important;
+  border-color: rgba(255, 255, 255, 0.13) !important;
+  color: #f4f6f8 !important;
+  box-shadow: none !important;
+}
+
+
+body.rasamala-dark .select2-container--default .select2-selection--single .select2-selection__rendered,
+body.rasamala-dark .select2-container--default .select2-selection--multiple .select2-selection__choice,
+body.rasamala-dark .chosen-container-single .chosen-single span,
+body.rasamala-dark .bootstrap-select > .dropdown-toggle,
+body.rasamala-dark .choices__item,
+body.rasamala-dark .selectize-input,
+body.rasamala-dark .selectize-input input,
+body.rasamala-dark .ts-control,
+body.rasamala-dark .ts-control input {
+  color: #f4f6f8 !important;
+}
+
+
+body.rasamala-dark .select2-dropdown,
+body.rasamala-dark .chosen-container .chosen-drop,
+body.rasamala-dark .bootstrap-select .dropdown-menu,
+body.rasamala-dark .choices__list--dropdown,
+body.rasamala-dark .choices__list[aria-expanded],
+body.rasamala-dark .selectize-dropdown,
+body.rasamala-dark .ts-dropdown {
+  background: rgba(20, 24, 32, 0.98) !important;
+  border-color: rgba(255, 255, 255, 0.12) !important;
+  color: #f4f6f8 !important;
+  box-shadow: 0 20px 44px rgba(0, 0, 0, 0.34) !important;
+}
+
+
+body.rasamala-dark .select2-search--dropdown .select2-search__field,
+body.rasamala-dark .chosen-container .chosen-search input[type="text"],
+body.rasamala-dark .choices__input,
+body.rasamala-dark .selectize-dropdown .selectize-input,
+body.rasamala-dark .ts-dropdown input {
+  background: rgba(255, 255, 255, 0.08) !important;
+  border-color: rgba(255, 255, 255, 0.13) !important;
+  color: #f4f6f8 !important;
+}
+
+
+body.rasamala-dark .select2-results__option,
+body.rasamala-dark .chosen-container .chosen-results li,
+body.rasamala-dark .bootstrap-select .dropdown-menu li a,
+body.rasamala-dark .choices__list--dropdown .choices__item,
+body.rasamala-dark .choices__list[aria-expanded] .choices__item,
+body.rasamala-dark .selectize-dropdown .option,
+body.rasamala-dark .ts-dropdown .option {
+  background: transparent !important;
+  color: #dce2e8 !important;
+}
+
+
+body.rasamala-dark .select2-container--default .select2-results__option--highlighted[aria-selected],
+body.rasamala-dark .select2-container--default .select2-results__option--selected,
+body.rasamala-dark .chosen-container .chosen-results li.highlighted,
+body.rasamala-dark .bootstrap-select .dropdown-menu li.selected a,
+body.rasamala-dark .bootstrap-select .dropdown-menu li a:hover,
+body.rasamala-dark .choices__list--dropdown .choices__item--selectable.is-highlighted,
+body.rasamala-dark .choices__list[aria-expanded] .choices__item--selectable.is-highlighted,
+body.rasamala-dark .selectize-dropdown .active,
+body.rasamala-dark .ts-dropdown .active {
+  background: rgba(var(--theme-accent-rgb), 0.22) !important;
+  color: #ffffff !important;
+}
+
+
+body.rasamala-dark .form-control:focus,
+body.rasamala-dark .custom-select:focus,
+body.rasamala-dark select:focus,
+body.rasamala-dark input:focus,
+body.rasamala-dark textarea:focus {
+  background-color: rgba(255, 255, 255, 0.1) !important;
+  border-color: var(--rasamala-accent) !important;
+  box-shadow: 0 0 0 4px rgba(var(--theme-accent-rgb), 0.22) !important;
+}
+
+
+body.rasamala-dark .form-control::placeholder,
+body.rasamala-dark input::placeholder,
+body.rasamala-dark textarea::placeholder {
+  color: rgba(231, 235, 239, 0.52) !important;
+}
+
+
+body.rasamala-dark .btn-light,
+body.rasamala-dark .btn-modern-filter,
+body.rasamala-dark .btn-switcher:not(.active) {
+  background: rgba(255, 255, 255, 0.08) !important;
+  border-color: rgba(255, 255, 255, 0.12) !important;
+  color: #dce2e8 !important;
+}
+
+
+body.rasamala-dark .btn-light:hover,
+body.rasamala-dark .btn-switcher:not(.active):hover {
+  background: rgba(var(--theme-accent-rgb), 0.18) !important;
+  border-color: rgba(var(--theme-accent-rgb), 0.32) !important;
+  color: #ffffff !important;
+}
+
+
+body.rasamala-dark .btn,
+body.rasamala-dark button.btn,
+body.rasamala-dark a.btn {
+  box-shadow: none !important;
+}
+
+
+body.rasamala-dark .btn-primary,
+body.rasamala-dark .btn-info,
+body.rasamala-dark .btn-success,
+body.rasamala-dark .btn-secondary,
+body.rasamala-dark .search-type-btn.btn-primary,
+body.rasamala-dark .btn-news-readmore,
+body.rasamala-dark .btn-modal-action,
+body.rasamala-dark .libinfo-modal-btn {
+  background-color: var(--rasamala-accent) !important;
+  border-color: var(--rasamala-accent) !important;
+  color: var(--theme-on-primary) !important;
+}
+
+
+body.rasamala-dark .btn-primary:hover,
+body.rasamala-dark .btn-primary:focus,
+body.rasamala-dark .btn-info:hover,
+body.rasamala-dark .btn-info:focus,
+body.rasamala-dark .btn-success:hover,
+body.rasamala-dark .btn-success:focus,
+body.rasamala-dark .btn-secondary:hover,
+body.rasamala-dark .btn-secondary:focus,
+body.rasamala-dark .search-type-btn.btn-primary:hover,
+body.rasamala-dark .search-type-btn.btn-primary:focus,
+body.rasamala-dark .btn-news-readmore:hover,
+body.rasamala-dark .btn-news-readmore:focus,
+body.rasamala-dark .btn-modal-action:hover,
+body.rasamala-dark .btn-modal-action:focus,
+body.rasamala-dark .libinfo-modal-btn:hover,
+body.rasamala-dark .libinfo-modal-btn:focus {
+  background-color: var(--rasamala-accent-hover) !important;
+  border-color: var(--rasamala-accent-hover) !important;
+  color: var(--theme-on-primary-hover) !important;
+}
+
+
+body.rasamala-dark .btn-outline-primary,
+body.rasamala-dark .btn-outline-secondary,
+body.rasamala-dark .detail-link-btn,
+body.rasamala-dark .authors a.btn-outline-secondary,
+body.rasamala-dark .search-type-btn.btn-outline-primary,
+body.rasamala-dark .search-type-btn.btn-outline-secondary {
+  background-color: rgba(255, 255, 255, 0.05) !important;
+  border-color: rgba(var(--theme-accent-rgb), 0.48) !important;
+  color: #f2f5f8 !important;
+}
+
+
+body.rasamala-dark .btn-outline-primary:hover,
+body.rasamala-dark .btn-outline-primary:focus,
+body.rasamala-dark .btn-outline-secondary:hover,
+body.rasamala-dark .btn-outline-secondary:focus,
+body.rasamala-dark .detail-link-btn:hover,
+body.rasamala-dark .detail-link-btn:focus,
+body.rasamala-dark .authors a.btn-outline-secondary:hover,
+body.rasamala-dark .authors a.btn-outline-secondary:focus,
+body.rasamala-dark .search-type-btn.btn-outline-primary:hover,
+body.rasamala-dark .search-type-btn.btn-outline-primary:focus,
+body.rasamala-dark .search-type-btn.btn-outline-secondary:hover,
+body.rasamala-dark .search-type-btn.btn-outline-secondary:focus {
+  background-color: var(--rasamala-accent) !important;
+  border-color: var(--rasamala-accent) !important;
+  color: #ffffff !important;
+}
+
+
+body.rasamala-dark .btn-light,
+body.rasamala-dark .btn-modern-filter,
+body.rasamala-dark .btn-switcher:not(.active),
+body.rasamala-dark .search-type-btn.btn-light {
+  background-color: rgba(255, 255, 255, 0.08) !important;
+  border-color: rgba(255, 255, 255, 0.16) !important;
+  color: #e7ebef !important;
+}
+
+
+body.rasamala-dark .btn-light:hover,
+body.rasamala-dark .btn-light:focus,
+body.rasamala-dark .btn-modern-filter:hover,
+body.rasamala-dark .btn-modern-filter:focus,
+body.rasamala-dark .btn-switcher:not(.active):hover,
+body.rasamala-dark .btn-switcher:not(.active):focus,
+body.rasamala-dark .search-type-btn.btn-light:hover,
+body.rasamala-dark .search-type-btn.btn-light:focus {
+  background-color: rgba(var(--theme-accent-rgb), 0.2) !important;
+  border-color: rgba(var(--theme-accent-rgb), 0.42) !important;
+  color: #ffffff !important;
+}
+
+
+body.rasamala-dark .btn-danger {
+  background-color: #dc3545 !important;
+  border-color: #dc3545 !important;
+  color: #ffffff !important;
+}
+
+
+body.rasamala-dark .btn-danger:hover,
+body.rasamala-dark .btn-danger:focus {
+  background-color: #bd2130 !important;
+  border-color: #bd2130 !important;
+  color: #ffffff !important;
+}
+
+
+body.rasamala-dark .btn-warning {
+  background-color: #f6c343 !important;
+  border-color: #f6c343 !important;
+  color: #21180f !important;
+}
+
+
+body.rasamala-dark .btn-warning:hover,
+body.rasamala-dark .btn-warning:focus {
+  background-color: #e0aa1f !important;
+  border-color: #e0aa1f !important;
+  color: #21180f !important;
+}
+
+
+body.rasamala-dark .btn.disabled,
+body.rasamala-dark .btn:disabled,
+body.rasamala-dark .search-type-btn:disabled {
+  background-color: rgba(255, 255, 255, 0.08) !important;
+  border-color: rgba(255, 255, 255, 0.12) !important;
+  color: rgba(231, 235, 239, 0.62) !important;
+  opacity: 1 !important;
+}
+
+
+
+
+body.rasamala-dark .border,
+body.rasamala-dark .border-top,
+body.rasamala-dark .border-right,
+body.rasamala-dark .border-bottom,
+body.rasamala-dark .border-left {
+  border-color: rgba(255, 255, 255, 0.1) !important;
+}
+
+
+body.rasamala-dark .rasamala-main-content-card,
+body.rasamala-dark .detail-record,
+body.rasamala-dark .card.item.border-0,
+body.rasamala-dark .desktop-sort-bar,
+body.rasamala-dark .slims-book-card,
+body.rasamala-dark .visitor-info-card {
+  background: rgba(22, 26, 34, 0.94) !important;
+  border-color: transparent !important;
+  color: #e7ebef !important;
+  box-shadow: 0 18px 46px rgba(0, 0, 0, 0.28) !important;
+}
+
+
+body.rasamala-dark .rasamala-home-section-top-reader,
+body.rasamala-dark .rasamala-home-section-top-reader > .container {
+  background: transparent !important;
+  background-color: transparent !important;
+}
+
+
+body.rasamala-dark .member-card {
+  background: rgba(22, 26, 34, 0.66) !important;
+  border-color: rgba(var(--theme-accent-rgb), 0.32) !important;
+  color: #e7ebef !important;
+  box-shadow: 0 18px 42px rgba(0, 0, 0, 0.24) !important;
+}
+
+
+body.rasamala-dark .member-card:hover {
+  border-color: rgba(var(--theme-accent-rgb), 0.5) !important;
+  box-shadow: 0 24px 52px rgba(0, 0, 0, 0.32) !important;
+}
+
+
+body.rasamala-dark .detail-cover-wrapper {
+  background: transparent;
+  background-color: transparent;
+  border-color: transparent;
+}
+
+body.rasamala-dark .slims-book-card .card-image,
+body.rasamala-dark .member-card .card-image-rounded {
+  background: rgba(255, 255, 255, 0.045) !important;
+  background-color: rgba(255, 255, 255, 0.045) !important;
+  border-color: transparent !important;
+}
+
+
+body.rasamala-dark .availability-summary-card {
+  background: transparent;
+  background-color: transparent;
+  border-color: rgba(255, 255, 255, 0.1) !important;
+  box-shadow: none !important;
+}
+
+
+body.rasamala-dark .availability-summary-location,
+body.rasamala-dark .availability-summary-count strong {
+  color: #f2f5f8 !important;
+}
+
+
+body.rasamala-dark .availability-summary-count {
+  background: transparent;
+  background-color: transparent;
+  color: #ffffff !important;
+}
+
+
+body.rasamala-dark .availability-summary-callnumber,
+body.rasamala-dark .availability-summary-statuses {
+  color: #aeb7c2 !important;
+}
+
+
+body.rasamala-dark .detail-callnumber-label {
+  color: #ffffff !important;
+}
+
+body.rasamala-dark .detail-avail-more-btn {
+  color: var(--theme-muted-on-surface) !important;
+}
+
+body.rasamala-dark .detail-callnumber-tag {
+  background: transparent !important;
+  background-color: transparent !important;
+  border: none !important;
+  border-color: transparent !important;
+  color: #ffffff !important;
+  font-weight: 700 !important;
+  font-size: 13.5px !important;
+  letter-spacing: 0.03em !important;
+  padding: 4px 0 !important;
+}
+
+
+body.rasamala-dark .detail-avail-row {
+  background: transparent !important;
+  background-color: transparent !important;
+  border-top: none !important;
+  border-left: none !important;
+  border-right: none !important;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1) !important;
+  border-radius: 0 !important;
+  padding: 8px 2px !important;
+  margin-bottom: 2px !important;
+}
+
+body.rasamala-dark .detail-avail-row::before {
+  display: none !important;
+  content: none !important;
+}
+
+body.rasamala-dark .detail-avail-row:hover,
+body.rasamala-dark .detail-avail-row:focus-within {
+  background: transparent !important;
+  background-color: transparent !important;
+  border-top: none !important;
+  border-left: none !important;
+  border-right: none !important;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.22) !important;
+  border-radius: 0 !important;
+}
+
+
+body.rasamala-dark .detail-avail-popover {
+  background: #171c25 !important;
+  border-color: rgba(255, 255, 255, 0.12) !important;
+  box-shadow: none !important;
+}
+
+
+body.rasamala-dark .detail-avail-popover-title,
+body.rasamala-dark .detail-record .detail-avail-popover-table td {
+  color: #f2f5f8 !important;
+}
+
+
+body.rasamala-dark .detail-record .detail-avail-popover-table th {
+  color: #aeb7c2 !important;
+}
+
+
+body.rasamala-dark .detail-record .detail-avail-popover-table th,
+body.rasamala-dark .detail-record .detail-avail-popover-table td {
+  border-bottom-color: rgba(255, 255, 255, 0.1) !important;
+}
+
+
+body.rasamala-dark .detail-description,
+body.rasamala-dark .detail-record table td,
+body.rasamala-dark .detail-record dl.row dd,
+body.rasamala-dark .member-area table.table td,
+body.rasamala-dark .member-area table.memberDetail td.value,
+body.rasamala-dark .news-card-title,
+body.rasamala-dark .biblio-simple-title,
+body.rasamala-dark .card.item.border-0 h5 a.card-link,
+body.rasamala-dark .topic li span {
+  color: #f4f6f8 !important;
+}
+
+
+body.rasamala-dark .detail-record table,
+body.rasamala-dark .member-area table.table {
+  background-color: rgba(18, 22, 30, 0.96) !important;
+  border-color: rgba(255, 255, 255, 0.1) !important;
+}
+
+
+body.rasamala-dark .detail-record table th,
+body.rasamala-dark .member-area table.table th,
+body.rasamala-dark .member-area table.memberDetail td.key {
+  background-color: rgba(255, 255, 255, 0.06) !important;
+  border-color: rgba(255, 255, 255, 0.1) !important;
+  color: #b6bec8 !important;
+}
+
+body.rasamala-dark #memberChangePassword input[type="submit"],
+body.rasamala-dark #memberChangePassword #loginButton,
+body.rasamala-dark .member-area table.memberDetail input[type="submit"],
+body.rasamala-dark input[name="SaveComment"],
+body.rasamala-dark input[name="comment"],
+body.rasamala-dark .comment-form input[type="submit"],
+body.rasamala-dark #comment-container input[type="submit"] {
+  background-color: var(--rasamala-accent, #0d6efd) !important;
+  color: #ffffff !important;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4) !important;
+}
+
+body.rasamala-dark #memberChangePassword input[type="submit"]:hover,
+body.rasamala-dark #memberChangePassword #loginButton:hover,
+body.rasamala-dark .member-area table.memberDetail input[type="submit"]:hover,
+body.rasamala-dark input[name="SaveComment"]:hover,
+body.rasamala-dark input[name="comment"]:hover,
+body.rasamala-dark .comment-form input[type="submit"]:hover,
+body.rasamala-dark #comment-container input[type="submit"]:hover {
+  background-color: var(--rasamala-accent-hover, var(--rasamala-accent, #2b7fff)) !important;
+  color: #ffffff !important;
+  filter: brightness(1.1) !important;
+}
+
+
+body.rasamala-dark .detail-record table td,
+body.rasamala-dark .detail-record table th,
+body.rasamala-dark .detail-record dl.row,
+body.rasamala-dark .detail-record dl.row dt,
+body.rasamala-dark .detail-record dl.row dd,
+body.rasamala-dark .member-area table.table td,
+body.rasamala-dark .member-area table.table th,
+body.rasamala-dark .member-area table.memberDetail td {
+  border-color: rgba(255, 255, 255, 0.1) !important;
+}
+
+
+body.rasamala-dark .detail-record table tr:hover td {
+  background-color: rgba(var(--theme-accent-rgb), 0.1) !important;
+}
+
+
+body.rasamala-dark .detail-link-btn,
+body.rasamala-dark .authors a.btn-outline-secondary {
+  background: rgba(255, 255, 255, 0.06) !important;
+  border-color: rgba(255, 255, 255, 0.12) !important;
+  color: #e7ebef !important;
+}
+
+
+body.rasamala-dark .detail-link-btn:hover,
+body.rasamala-dark .authors a.btn-outline-secondary:hover {
+  background: var(--rasamala-accent) !important;
+  border-color: var(--rasamala-accent) !important;
+  color: #ffffff !important;
+}
+
+
+body.rasamala-dark .topic li {
+  background: rgba(22, 26, 34, 0.92) !important;
+  border-color: rgba(255, 255, 255, 0.1) !important;
+  box-shadow: 0 14px 34px rgba(0, 0, 0, 0.24) !important;
+}
+
+
+body.rasamala-dark .topic-icon-fa {
+  background: rgba(var(--theme-accent-rgb), 0.18) !important;
+}
+
+
+body.rasamala-dark .biblio-simple-item {
+  border-bottom-color: rgba(255, 255, 255, 0.1) !important;
+}
+
+
+body.rasamala-dark .biblio-simple-author,
+body.rasamala-dark .biblio-simple-availability,
+body.rasamala-dark .parallel-title-alt,
+body.rasamala-dark .desktop-sort-title,
+body.rasamala-dark .member-area .memberLoanListInfo,
+body.rasamala-dark .page-member-area .loginInfo,
+body.rasamala-dark .visitor-label {
+  color: #b6bec8 !important;
+}
+
+
+body.rasamala-dark .biblio-avail-popover {
+  background: rgba(20, 24, 32, 0.98) !important;
+  border-color: rgba(255, 255, 255, 0.12) !important;
+  box-shadow: 0 22px 48px rgba(0, 0, 0, 0.36) !important;
+}
+
+
+body.rasamala-dark .biblio-avail-popover::before {
+  background: rgba(20, 24, 32, 0.98) !important;
+  border-color: rgba(255, 255, 255, 0.12) !important;
+}
+
+
+body.rasamala-dark .biblio-avail-popover-title,
+body.rasamala-dark .biblio-avail-popover-table th {
+  color: #f4f6f8 !important;
+}
+
+
+body.rasamala-dark .biblio-avail-popover-table td {
+  color: #b6bec8 !important;
+  border-color: rgba(255, 255, 255, 0.08) !important;
+}
+
+
+body.rasamala-dark .card.availability {
+  background: rgba(22, 26, 34, 0.94) !important;
+  border-color: rgba(255, 255, 255, 0.1) !important;
+}
+
+
+body.rasamala-dark .rasamala-subpage-wrapper .librarian.row-fluid {
+  background: rgba(22, 26, 34, 0.94) !important;
+  border-color: rgba(255, 255, 255, 0.1) !important;
+  color: #e7ebef !important;
+  box-shadow: 0 18px 46px rgba(0, 0, 0, 0.28) !important;
+}
+
+
+body.rasamala-dark .rasamala-subpage-wrapper .librarian.row-fluid:hover {
+  box-shadow: 0 22px 52px rgba(0, 0, 0, 0.38) !important;
+}
+
+
+body.rasamala-dark .rasamala-subpage-wrapper .librarian.row-fluid .span2 img {
+  background-color: rgba(255, 255, 255, 0.08) !important;
+  border-color: rgba(255, 255, 255, 0.16) !important;
+  box-shadow: 0 10px 28px rgba(0, 0, 0, 0.3) !important;
+}
+
+
+body.rasamala-dark .rasamala-subpage-wrapper .librarian.row-fluid .rasamala-librarian-initials {
+  color: #f4f6f8 !important;
+  border-color: rgba(var(--theme-accent-rgb), 0.28) !important;
+  background: rgba(var(--theme-accent-rgb), 0.16) !important;
+  box-shadow: inset 0 0 0 8px rgba(255, 255, 255, 0.04), 0 10px 24px rgba(0, 0, 0, 0.24) !important;
+}
+
+
+body.rasamala-dark .rasamala-subpage-wrapper .librarian.row-fluid .span8 .row-fluid {
+  border-bottom-color: rgba(255, 255, 255, 0.1) !important;
+}
+
+
+body.rasamala-dark .rasamala-subpage-wrapper .librarian.row-fluid .span8 .row-fluid .span3.key {
+  color: var(--rasamala-accent) !important;
+}
+
+
+body.rasamala-dark .rasamala-subpage-wrapper .librarian.row-fluid .span8 .row-fluid .span7,
+body.rasamala-dark .rasamala-subpage-wrapper .librarian.row-fluid .span8 .row-fluid .span9 {
+  color: #f4f6f8 !important;
+}
+
+
+body.rasamala-dark .rasamala-subpage-wrapper .librarian.row-fluid ul.librarian-social li {
+  background: rgba(255, 255, 255, 0.08) !important;
+  border-color: rgba(255, 255, 255, 0.12) !important;
+  color: #e7ebef !important;
+}
+
+
+body.rasamala-dark .rasamala-subpage-wrapper .librarian.row-fluid .librarian-social-value {
+  color: #e7ebef !important;
+}
+
+
+body.rasamala-dark .rasamala-librarian-empty {
+  color: #b6bec8 !important;
+  border-color: rgba(255, 255, 255, 0.1) !important;
+  background: rgba(22, 26, 34, 0.94) !important;
+}
+
+
+body.rasamala-dark .list-group-item,
+body.rasamala-dark #search-filter li.list-group-item {
+  background: rgba(22, 26, 34, 0.94) !important;
+  border-color: rgba(255, 255, 255, 0.1) !important;
+  color: #e7ebef !important;
+}
+
+
+body.rasamala-dark #desktop-filter-container,
+body.rasamala-dark #mobile-filter-container,
+body.rasamala-dark #search-filter,
+body.rasamala-dark .mobile-filter-modal-body {
+  color: #e7ebef !important;
+}
+
+
+body.rasamala-dark #desktop-filter-container .card,
+body.rasamala-dark #mobileFilterModal .modal-content {
+  background: rgba(22, 26, 34, 0.96) !important;
+  border-color: rgba(255, 255, 255, 0.1) !important;
+  color: #e7ebef !important;
+}
+
+
+body.rasamala-dark #desktop-filter-container label,
+body.rasamala-dark #mobile-filter-container label,
+body.rasamala-dark .filter-item label,
+body.rasamala-dark .SearchFilter label,
+body.rasamala-dark #search-filter .custom-control-label,
+body.rasamala-dark #search-filter .form-check-label {
+  background: rgba(255, 255, 255, 0.08) !important;
+  border-color: rgba(255, 255, 255, 0.14) !important;
+  color: #f4f6f8 !important;
+}
+
+
+body.rasamala-dark #desktop-filter-container label:hover,
+body.rasamala-dark #mobile-filter-container label:hover,
+body.rasamala-dark .filter-item label:hover,
+body.rasamala-dark .SearchFilter label:hover,
+body.rasamala-dark #search-filter .custom-control-label:hover,
+body.rasamala-dark #search-filter .form-check-label:hover {
+  background: rgba(var(--theme-accent-rgb), 0.18) !important;
+  border-color: rgba(var(--theme-accent-rgb), 0.36) !important;
+  color: #ffffff !important;
+}
+
+
+body.rasamala-dark #desktop-filter-container input[type="checkbox"]:checked + label,
+body.rasamala-dark #desktop-filter-container input[type="radio"]:checked + label,
+body.rasamala-dark #mobile-filter-container input[type="checkbox"]:checked + label,
+body.rasamala-dark #mobile-filter-container input[type="radio"]:checked + label {
+  background: var(--rasamala-accent) !important;
+  border-color: var(--rasamala-accent) !important;
+  color: #ffffff !important;
+}
+
+
+body.rasamala-dark #search-filter .cursor-pointer,
+body.rasamala-dark #search-filter .cursor-pointer strong,
+body.rasamala-dark #search-filter .row .px-3,
+body.rasamala-dark #search-filter a,
+body.rasamala-dark #search-filter span,
+body.rasamala-dark #search-filter small,
+body.rasamala-dark #search-filter .text-dark,
+body.rasamala-dark #search-filter .text-muted,
+body.rasamala-dark #desktop-filter-container .text-dark,
+body.rasamala-dark #desktop-filter-container .text-muted,
+body.rasamala-dark #mobile-filter-container .text-dark,
+body.rasamala-dark #mobile-filter-container .text-muted {
+  color: #e7ebef !important;
+}
+
+
+body.rasamala-dark #search-filter .cursor-pointer strong,
+body.rasamala-dark #mobileFilterModal .modal-title {
+  color: #f4f6f8 !important;
+}
+
+
+body.rasamala-dark #search-filter .js-input-from,
+body.rasamala-dark #search-filter .js-input-to,
+body.rasamala-dark #search-filter input[type="text"],
+body.rasamala-dark #search-filter input[type="number"] {
+  background-color: rgba(255, 255, 255, 0.08) !important;
+  border-color: rgba(255, 255, 255, 0.14) !important;
+  color: #f4f6f8 !important;
+}
+
+
+body.rasamala-dark #search-filter .js-input-from:focus,
+body.rasamala-dark #search-filter .js-input-to:focus,
+body.rasamala-dark #search-filter input[type="text"]:focus,
+body.rasamala-dark #search-filter input[type="number"]:focus {
+  background-color: rgba(255, 255, 255, 0.11) !important;
+  border-color: var(--rasamala-accent) !important;
+  box-shadow: 0 0 0 3px rgba(var(--theme-accent-rgb), 0.24) !important;
+}
+
+
+body.rasamala-dark .irs-line,
+body.rasamala-dark .irs-grid-pol {
+  background-color: rgba(255, 255, 255, 0.16) !important;
+}
+
+
+body.rasamala-dark .irs-min,
+body.rasamala-dark .irs-max,
+body.rasamala-dark .irs-grid-text {
+  color: #b6bec8 !important;
+}
+
+
+body.rasamala-dark .irs-handle {
+  background-color: #151922 !important;
+  border-color: rgba(255, 255, 255, 0.22) !important;
+}
+
+
+body.rasamala-dark .sort-chip,
+body.rasamala-dark #desktop-sort-chips .sort-chip,
+body.rasamala-dark #mobile-sort-options .list-group-item {
+  background: rgba(255, 255, 255, 0.08) !important;
+  border-color: rgba(255, 255, 255, 0.14) !important;
+  color: #f4f6f8 !important;
+}
+
+
+body.rasamala-dark .sort-chip:hover,
+body.rasamala-dark #desktop-sort-chips .sort-chip:hover,
+body.rasamala-dark #mobile-sort-options .list-group-item:hover {
+  background: rgba(var(--theme-accent-rgb), 0.18) !important;
+  border-color: rgba(var(--theme-accent-rgb), 0.36) !important;
+  color: #ffffff !important;
+}
+
+
+body.rasamala-dark .sort-chip.active,
+body.rasamala-dark #desktop-sort-chips .sort-chip.active,
+body.rasamala-dark #mobile-sort-options .list-group-item.active {
+  background: var(--rasamala-accent) !important;
+  border-color: var(--rasamala-accent) !important;
+  color: #ffffff !important;
+}
+
+body.rasamala-dark .result-search .search-sort-bar {
+  border-color: rgba(255, 255, 255, 0.1);
+  background: rgba(22, 26, 34, 0.78);
+  box-shadow: 0 16px 38px rgba(0, 0, 0, 0.24);
+}
+
+body.rasamala-dark .result-search .search-sort-label {
+  color: var(--theme-muted-on-surface);
+}
+
+body.rasamala-dark .result-search .search-sort-chip,
+body.rasamala-dark .result-search .search-view-toggle {
+  border-color: rgba(255, 255, 255, 0.12);
+  background: rgba(255, 255, 255, 0.07);
+  color: var(--theme-on-surface);
+}
+
+body.rasamala-dark .result-search .search-sort-chip:hover,
+body.rasamala-dark .result-search .search-sort-chip:focus,
+body.rasamala-dark .result-search .search-view-toggle:hover,
+body.rasamala-dark .result-search .search-view-toggle:focus,
+body.rasamala-dark .result-search .show>.search-view-toggle.dropdown-toggle {
+  border-color: rgba(var(--theme-accent-rgb), 0.42);
+  background: rgba(var(--theme-accent-rgb), 0.16);
+  color: var(--theme-on-surface);
+  box-shadow: 0 10px 22px rgba(0, 0, 0, 0.2);
+}
+
+body.rasamala-dark .result-search .search-sort-chip.active {
+  border-color: transparent;
+  background: var(--theme-accent);
+  color: var(--theme-on-accent);
+  box-shadow: 0 10px 24px rgba(var(--theme-accent-rgb), 0.24);
+}
+
+body.rasamala-dark.rasamala-search-panels-transparent .result-search .search-sort-bar {
+  border-color: rgba(var(--theme-accent-rgb), 0.18);
+  background: rgba(22, 26, 34, 0.52);
+  box-shadow: none;
+}
+
+
+body.rasamala-dark #mobileFilterModal .modal-footer,
+body.rasamala-dark #mobileSortModal .modal-body {
+  background: rgba(16, 19, 24, 0.96) !important;
+  border-color: rgba(255, 255, 255, 0.1) !important;
+}
+
+
+body.rasamala-dark .latest-content-strip {
+  background: rgba(16, 19, 24, 0.96) !important;
+  border-color: rgba(255, 255, 255, 0.1) !important;
+  color: #e7ebef !important;
+}
+
+body.rasamala-dark .mobile-more-menu-sheet {
+  background: var(--rasamala-chrome-bg) !important;
+  background-color: var(--rasamala-chrome-bg) !important;
+  border-color: var(--rasamala-chrome-border) !important;
+  color: var(--rasamala-chrome-text) !important;
+}
+
+
+body.rasamala-dark .latest-content-link {
+  background: rgba(255, 255, 255, 0.06) !important;
+  border-color: rgba(255, 255, 255, 0.1) !important;
+  color: #e0e0e0 !important;
+}
+
+
+body.rasamala-dark .latest-content-link:hover {
+  background: var(--rasamala-accent) !important;
+  color: #ffffff !important;
+}
+
+
+body.rasamala-dark .latest-content-ticker {
+  background: rgba(20, 24, 32, 0.95) !important;
+  border-top-color: rgba(var(--theme-accent-rgb), 0.4) !important;
+  box-shadow: 0 -10px 30px rgba(0, 0, 0, 0.35) !important;
+}
+
+
+body.rasamala-dark #search-wraper .latest-content-ticker {
+  background: rgba(20, 24, 32, 0.6) !important;
+  border-color: rgba(var(--theme-accent-rgb), 0.35) !important;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.28) !important;
+}
+
+
+body.rasamala-dark .latest-content-ticker-item,
+body.rasamala-dark #search-wraper .latest-content-ticker-item {
+  color: #b6bec8 !important;
+}
+
+
+body.rasamala-dark .latest-content-ticker-item:hover,
+body.rasamala-dark #search-wraper .latest-content-ticker-item:hover {
+  color: #ffffff !important;
+}
+
+
+body.rasamala-dark .latest-content-ticker-item .latest-content-icon,
+body.rasamala-dark #search-wraper .latest-content-ticker-item .latest-content-icon {
+  color: var(--rasamala-accent) !important;
+}
+
+
+body.rasamala-dark .mobile-bottom-nav {
+  background-color: rgba(12, 15, 20, 0.92) !important;
+  border-top-color: rgba(255, 255, 255, 0.1) !important;
+}
+
+body.rasamala-dark .palette-switcher-ai-hint {
+  background-color: rgba(255, 255, 255, 0.05) !important;
+  border-color: rgba(255, 255, 255, 0.12) !important;
+  color: #e2e8f0 !important;
+}
+
+
+body.rasamala-dark .btn-floating-info,
+body.rasamala-dark .btn-color-mode-toggle,
+body.rasamala-dark .btn-back-to-top {
+  background: rgba(6, 8, 12, 0.94) !important;
+  border-color: rgba(255, 255, 255, 0.14) !important;
+  color: #ffffff !important;
+  box-shadow: 0 12px 34px rgba(0, 0, 0, 0.42) !important;
+}
+
+
+body.rasamala-dark .btn-floating-info:hover,
+body.rasamala-dark .btn-color-mode-toggle:hover,
+body.rasamala-dark .btn-back-to-top:hover {
+  background: rgba(21, 25, 33, 0.98) !important;
+  border-color: rgba(255, 255, 255, 0.2) !important;
+  color: #ffffff !important;
+  box-shadow: 0 14px 38px rgba(0, 0, 0, 0.5) !important;
+}
+
+
+body.rasamala-dark .mobile-more-menu-overlay {
+  background: rgba(0, 0, 0, 0.58) !important;
+}
+
+
+body.rasamala-dark .mobile-more-item,
+body.rasamala-dark .mobile-language-item,
+body.rasamala-dark .mobile-language-title,
+body.rasamala-dark .mobile-more-menu-title {
+  color: var(--rasamala-chrome-text) !important;
+}
+
+
+body.rasamala-dark .mobile-language-select {
+  background-color: color-mix(in srgb, var(--rasamala-chrome-text, #ffffff) 10%, transparent) !important;
+  border-color: var(--rasamala-chrome-border) !important;
+  color: var(--rasamala-chrome-text) !important;
+}
+
+
+body.rasamala-dark .mobile-language-select option {
+  background-color: #151922 !important;
+  color: #f4f6f8 !important;
+}
+
+
+body.rasamala-dark .pagingList a {
+  background: rgba(255, 255, 255, 0.06) !important;
+  border-color: rgba(255, 255, 255, 0.12) !important;
+  color: #b6bec8 !important;
+}
+
+
+body.rasamala-dark .pagingList a:hover {
+  background: rgba(var(--theme-accent-rgb), 0.18) !important;
+  border-color: rgba(var(--theme-accent-rgb), 0.34) !important;
+  color: #ffffff !important;
+}
+
+
+body.rasamala-dark .pagingList b {
+  background: var(--rasamala-accent) !important;
+  border-color: var(--rasamala-accent) !important;
+  color: #ffffff !important;
+}
+
+
+body.rasamala-dark .pagination .page-link {
+  background: rgba(255, 255, 255, 0.06) !important;
+  border-color: rgba(255, 255, 255, 0.12) !important;
+  color: #b6bec8 !important;
+}
+
+
+body.rasamala-dark .pagination .page-link:hover {
+  background: rgba(var(--theme-accent-rgb), 0.18) !important;
+  border-color: rgba(var(--theme-accent-rgb), 0.34) !important;
+  color: #ffffff !important;
+}
+
+
+body.rasamala-dark .pagination .page-item.active .page-link {
+  background: var(--rasamala-accent) !important;
+  border-color: var(--rasamala-accent) !important;
+  color: #ffffff !important;
+}
+
+
+body.rasamala-dark .mobile-more-item:hover,
+body.rasamala-dark .mobile-language-item:hover,
+body.rasamala-dark .mobile-language-item.active {
+  background: color-mix(in srgb, var(--rasamala-chrome-text, #ffffff) 16%, transparent) !important;
+  color: var(--rasamala-chrome-text) !important;
+}
+
+
+body.rasamala-dark .page-member-area .rasamala-main-content-card,
+body.rasamala-dark .member-area .rasamala-main-content-card {
+  background: rgba(22, 26, 34, 0.94) !important;
+  border-color: rgba(255, 255, 255, 0.1) !important;
+}
+
+
+body.rasamala-dark .page-member-area .tagline,
+body.rasamala-dark .page-member-area .fieldLabel {
+  color: #f4f6f8 !important;
+}
+
+
+body.rasamala-dark #member_sidebar {
+  background-color: rgba(255, 255, 255, 0.06) !important;
+  border-color: rgba(255, 255, 255, 0.1) !important;
+}
+
+
+body.rasamala-dark #member_sidebar img {
+  border-color: rgba(255, 255, 255, 0.16) !important;
+}
+
+
+body.rasamala-dark #member_content .nav-tabs {
+  border-bottom-color: rgba(255, 255, 255, 0.12) !important;
+}
+
+
+body.rasamala-dark #member_content .nav-tabs .nav-link {
+  color: #b6bec8 !important;
+}
+
+
+body.rasamala-dark #member_content .nav-tabs .nav-link:hover,
+body.rasamala-dark #member_content .nav-tabs .nav-link.active {
+  color: var(--rasamala-accent) !important;
+}
+
+
+body.rasamala-dark .visitor-bg-gradient {
+  background: linear-gradient(135deg, #0c0f14 0%, #151922 100%) !important;
+}
+
+
+body.rasamala-dark .visitor-backdrop {
+  background: rgba(0, 0, 0, 0.34) !important;
+}
+
+
+body.rasamala-dark .visitor-sidebar {
+  background: rgba(16, 19, 24, 0.96) !important;
+  border-right-color: rgba(255, 255, 255, 0.1) !important;
+}
+
+
+body.rasamala-dark .visitor-quotes-text {
+  color: #f4f6f8 !important;
+  text-shadow: 0 2px 14px rgba(0, 0, 0, 0.36) !important;
+}
+
+
+body.rasamala-dark .visitor-avatar-wrap {
+  border-color: rgba(255, 255, 255, 0.16) !important;
+  background: rgba(255, 255, 255, 0.08) !important;
+}
+
+
+body.rasamala-dark .modal-content,
+body.rasamala-dark .libinfo-modal-content {
+  background: rgba(20, 24, 32, 0.96) !important;
+  color: #e7ebef !important;
+  border-color: rgba(255, 255, 255, 0.12) !important;
+  box-shadow: 0 28px 60px rgba(0, 0, 0, 0.4) !important;
+}
+
+
+body.rasamala-dark .modal-header,
+body.rasamala-dark .modal-footer,
+body.rasamala-dark .libinfo-modal-header,
+body.rasamala-dark .libinfo-modal-footer {
+  border-color: rgba(255, 255, 255, 0.1) !important;
+}
+
+
+body.rasamala-dark .modal-body,
+body.rasamala-dark .modal-header .modal-title,
+body.rasamala-dark .libinfo-modal-desc {
+  color: #e7ebef !important;
+}
+
+
+body.rasamala-dark .table,
+body.rasamala-dark table {
+  color: #e7ebef !important;
+}
+
+
+body.rasamala-dark .table-striped tbody tr:nth-of-type(odd),
+body.rasamala-dark .table-hover tbody tr:hover {
+  background-color: rgba(var(--theme-accent-rgb), 0.1) !important;
+}
+
+
+body.rasamala-dark .alert {
+  background: rgba(255, 255, 255, 0.08) !important;
+  border-color: rgba(255, 255, 255, 0.12) !important;
+  color: #e7ebef !important;
+}
+
+
+body.rasamala-dark .badge-light {
+  background: rgba(255, 255, 255, 0.1) !important;
+  color: #e7ebef !important;
+}
+
+
+/* --- Dynamic Dark Mode Additional Overrides --- */
+body.rasamala-dark,
+body.rasamala-dark.bg-light {
+  background-color: #101318 !important;
+  color: #e7ebef !important;
+}
+
+
+body.rasamala-dark .bg-white,
+body.rasamala-dark.bg-white {
+  background-color: #151922 !important;
+  color: #e7ebef !important;
+}
+
+
+body.rasamala-dark .c-header .dropdown-item.active,
+body.rasamala-dark .c-header .dropdown-item:active,
+body.rasamala-dark .dropdown-item.active,
+body.rasamala-dark .dropdown-item:active {
+  background: var(--rasamala-accent) !important;
+  color: #ffffff !important;
+}
+
+
+body.rasamala-dark .footer-link {
+  color: #b6bec8 !important;
+}
+
+
+body.rasamala-dark .footer-link:hover {
+  color: #ffffff !important;
+}
+
+
+body.rasamala-dark .detail-record dl.row dt {
+  color: #b6bec8 !important;
+  border-bottom-color: rgba(255, 255, 255, 0.1) !important;
+}
+
+
+body.rasamala-dark .detail-record dl.row dd {
+  color: #f4f6f8 !important;
+  border-bottom-color: rgba(255, 255, 255, 0.1) !important;
+}
+
+
+body.rasamala-dark .detail-gmd-label {
+  color: #b6bec8 !important;
+}
+
+
+body.rasamala-dark .table th,
+body.rasamala-dark .table td,
+body.rasamala-dark table th,
+body.rasamala-dark table td {
+  border-color: rgba(255, 255, 255, 0.1) !important;
+  color: #e7ebef !important;
+}
+
+
+body.rasamala-dark .table thead th,
+body.rasamala-dark table thead th {
+  background-color: rgba(255, 255, 255, 0.06) !important;
+  border-bottom-color: rgba(255, 255, 255, 0.15) !important;
+  color: #ffffff !important;
+}
+
+
+body.rasamala-dark .close {
+  color: #ffffff !important;
+  opacity: 0.8 !important;
+  text-shadow: none !important;
+}
+
+
+body.rasamala-dark .close:hover {
+  color: #ffffff !important;
+  opacity: 1 !important;
+}
+
+
+body.rasamala-dark .alert-info,
+body.rasamala-dark .alert-success,
+body.rasamala-dark .alert-danger,
+body.rasamala-dark .alert-warning {
+  background: rgba(255, 255, 255, 0.05) !important;
+  color: #ffffff !important;
+  border-color: rgba(255, 255, 255, 0.12) !important;
+}
+
+
+body.rasamala-dark #loginForm input.login_input {
+  background-color: rgba(255, 255, 255, 0.05) !important;
+  border-color: rgba(255, 255, 255, 0.1) !important;
+  color: #f4f6f8 !important;
+}
+
+
+body.rasamala-dark #loginForm input.homeButton {
+  color: #ffffff !important;
+  border-color: rgba(255, 255, 255, 0.2) !important;
+}
+
+
+body.rasamala-dark #loginForm input.homeButton:hover {
+  background-color: rgba(255, 255, 255, 0.08) !important;
+}
+
+
+body.rasamala-dark #search-wraper .latest-content-strip {
+  background: transparent !important;
+  background-color: transparent !important;
+  border: none !important;
+  box-shadow: none !important;
+}
+
+
+/* Dark Mode overrides for Latest News List under Searchbox */
+body.rasamala-dark #search-wraper .latest-content-link {
+  background: rgba(255, 255, 255, 0.04) !important;
+  border-color: rgba(255, 255, 255, 0.08) !important;
+  color: #b6bec8 !important;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15) !important;
+}
+
+
+body.rasamala-dark #search-wraper .latest-content-link:hover,
+body.rasamala-dark #search-wraper .latest-content-link:focus {
+  background: var(--rasamala-accent) !important;
+  border-color: var(--rasamala-accent) !important;
+  color: #ffffff !important;
+  box-shadow: 0 8px 24px rgba(var(--theme-accent-rgb), 0.32) !important;
+}
+
+
+body.rasamala-dark #search-wraper .latest-content-link .latest-content-icon {
+  color: var(--rasamala-accent) !important;
+}
+
+
+body.rasamala-dark #search-wraper .latest-content-link:hover .latest-content-icon {
+  color: #ffffff !important;
+}
+
+
+body.rasamala-dark #search-wraper #search-form a[data-bs-target="#adv-modal"] {
+  background: transparent;
+  background-color: transparent;
+  color: #94a3b8;
+  border: none;
+  box-shadow: none;
+}
+
+body.rasamala-dark #search-wraper #search-form a[data-bs-target="#adv-modal"]:hover {
+  background: transparent;
+  background-color: transparent;
+  color: #ffffff;
+  box-shadow: none;
+}
+
+/* Dark Mode override for Search Button */
+body.rasamala-dark #search-wraper #search-form button[type="submit"] {
+  background: transparent;
+  background-color: transparent;
+  color: #60a5fa;
+  border: none;
+  box-shadow: none;
+}
+
+body.rasamala-dark #search-wraper #search-form button[type="submit"] .fa-search,
+body.rasamala-dark #search-wraper #search-form button[type="submit"] .fa-spinner {
+  color: #60a5fa;
+}
+
+body.rasamala-dark #search-wraper #search-form button[type="submit"]:hover {
+  background: transparent;
+  background-color: transparent;
+  color: #93c5fd;
+  box-shadow: none;
+}
+
+body.rasamala-dark #search-wraper #search-form button[type="submit"]:hover .fa-search {
+  color: #93c5fd;
+}
+
+
+body.rasamala-dark .detail-record {
+  background: #151921 !important;
+  border-color: rgba(255, 255, 255, 0.08) !important;
+  box-shadow: none !important;
+}
+
+
+body.rasamala-dark .detail-record dl.row dt,
+body.rasamala-dark .detail-record dl.row dd {
+  border-bottom: 1.5px solid rgba(255, 255, 255, 0.12) !important;
+}
+
+
+body.rasamala-dark .card,
+body.rasamala-dark .grid-item .card,
+body.rasamala-dark .slims-content .card {
+  border: 1px solid rgba(255, 255, 255, 0.06) !important;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2) !important;
+}
+
+body.rasamala-dark .rasamala-divider {
+  border-top-color: rgba(255, 255, 255, 0.08) !important;
+}
+
+
+body.rasamala-dark #slims-home section h4,
+body.rasamala-dark #slims-home .rasamala-home-section-title,
+body.rasamala-dark #slims-home .rasamala-home-content-title,
+body.rasamala-dark #slims-home .slims-book-card .card-text,
+body.rasamala-dark #slims-home .slims-book-card .parallel-title-home,
+body.rasamala-dark #slims-home .member-card .card-title,
+body.rasamala-dark #slims-home .home-library-name {
+  color: #f4f6f8 !important;
+}
+
+
+body.rasamala-dark #slims-home section h4 .subtitle-section,
+body.rasamala-dark #slims-home .subtitle-section,
+body.rasamala-dark #slims-home .rasamala-home-content-excerpt,
+body.rasamala-dark #slims-home .slims-book-card .parallel-title-alt,
+body.rasamala-dark #slims-home .member-card .card-title small,
+body.rasamala-dark #slims-home .member-card .card-text,
+body.rasamala-dark #slims-home .home-map-description,
+body.rasamala-dark #slims-home .home-map-description p,
+body.rasamala-dark #slims-home .home-map-description li {
+  color: #b6bec8 !important;
+}
+
+
+body.rasamala-dark #slims-home .rasamala-home-content-card {
+  color: #f4f6f8 !important;
+  border-color: rgba(255, 255, 255, 0.1) !important;
+  background: rgba(21, 25, 31, 0.78) !important;
+  box-shadow: 0 14px 34px rgba(0, 0, 0, 0.2) !important;
+}
+
+
+body.rasamala-dark #slims-home .rasamala-home-content-card:hover,
+body.rasamala-dark #slims-home .rasamala-home-content-card:focus {
+  border-color: rgba(var(--theme-accent-rgb), 0.5) !important;
+  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.26) !important;
+}
+
+
+body.rasamala-dark .result-search .col-md-3 > .card,
+body.rasamala-dark .biblio-list-card {
+  background: rgba(22, 26, 34, 0.94) !important;
+  border-color: rgba(255, 255, 255, 0.1) !important;
+  box-shadow: 0 18px 42px rgba(0, 0, 0, 0.24) !important;
+}
+
+
+body.rasamala-dark .result-search .col-md-3 > .card h5,
+body.rasamala-dark .result-search .search-found-info,
+body.rasamala-dark .biblio-list-notes {
+  color: #f4f6f8 !important;
+}
+
+
+body.rasamala-dark .result-search .wrapper .debug {
+  background: rgba(22, 26, 34, 0.86) !important;
+  border-color: rgba(var(--theme-accent-rgb), 0.34) !important;
+  color: #e7ebef !important;
+}
+
+
+body.rasamala-dark .result-search .wrapper .debug section {
+  background: rgba(12, 15, 20, 0.8) !important;
+}
+
+
+body.rasamala-dark .biblio-list-cover {
+  background: rgba(255, 255, 255, 0.06) !important;
+  box-shadow: 0 14px 30px rgba(0, 0, 0, 0.28) !important;
+}
+
+
+body.rasamala-dark .biblio-list-availability,
+body.rasamala-dark .biblio-list-basket,
+body.rasamala-dark .biblio-list-action-link {
+  background: transparent !important;
+  background-color: transparent !important;
+  border-color: rgba(255, 255, 255, 0.18) !important;
+  color: #ffffff !important;
+}
+
+
+body.rasamala-dark .biblio-list-availability-label {
+  color: #28a745 !important;
+}
+
+body.rasamala-dark .biblio-list-availability strong {
+  color: #ffffff !important;
+}
+
+body.rasamala-dark .biblio-list-quick-action {
+  color: #ffffff !important;
+}
+
+
+body.rasamala-dark .biblio-list-availability.is-unavailable .biblio-list-availability-label,
+body.rasamala-dark .biblio-list-availability.is-unavailable strong {
+  color: #ff6b6b !important;
+}
+
+
+body.rasamala-dark .biblio-list-quick-action.bg-success,
+body.rasamala-dark .biblio-list-quick-action.is-bookmarked {
+  background: rgba(255, 255, 255, 0.12) !important;
+  color: #ffffff !important;
+}
+
+
+body.rasamala-dark .biblio-list-basket:hover,
+body.rasamala-dark .biblio-list-basket:focus,
+body.rasamala-dark .biblio-list-action-link:hover,
+body.rasamala-dark .biblio-list-action-link:focus {
+  background: rgba(255, 255, 255, 0.1) !important;
+  border-color: rgba(255, 255, 255, 0.35) !important;
+  color: #ffffff !important;
+}
+
+
+/* Dark mode consistency pass */
+body.rasamala-dark {
+  --rasamala-dark-page: #101318;
+  --rasamala-dark-surface: #161a22;
+  --rasamala-dark-surface-strong: #141820;
+  --rasamala-dark-surface-soft: rgba(22, 26, 34, 0.72);
+  --rasamala-dark-border: rgba(255, 255, 255, 0.11);
+  --rasamala-dark-border-strong: rgba(255, 255, 255, 0.16);
+  --rasamala-dark-text: #f4f6f8;
+  --rasamala-dark-muted: #b6bec8;
+  background-color: var(--rasamala-dark-page) !important;
+  color: var(--rasamala-dark-text) !important;
+}
+
+
+body.rasamala-dark.rasamala-background-animation-active:not([class*="rasamala-background-style-image-"]) {
+  background-color: #000000 !important;
+  background-image: none !important;
+  background: #000000 !important;
+}
+
+
+body.rasamala-dark .rasamala-hero-section,
+body.rasamala-dark .rasamala-search-banner-section,
+body.rasamala-dark .rasamala-subpage-wrapper,
+body.rasamala-dark #slims-home,
+body.rasamala-dark .result-search,
+body.rasamala-dark .member-area,
+body.rasamala-dark.rasamala-home-hero-only:not([class*="rasamala-background-style-image-"]) {
+  background-color: var(--rasamala-dark-page) !important;
+  color: var(--rasamala-dark-text) !important;
+}
+
+
+body.rasamala-dark .rasamala-header-dark,
+body.rasamala-dark .c-header,
+body.rasamala-dark footer,
+body.rasamala-dark .mobile-bottom-nav,
+body.rasamala-dark .btn-floating-info,
+body.rasamala-dark .btn-color-mode-toggle,
+body.rasamala-dark .btn-back-to-top {
+  background: rgba(22, 26, 34, 0.96) !important;
+  border-color: var(--rasamala-dark-border) !important;
+  color: var(--rasamala-dark-text) !important;
+  box-shadow: 0 14px 34px rgba(0, 0, 0, 0.24) !important;
+}
+
+
+body.rasamala-dark .c-header {
+  border-bottom-color: var(--rasamala-dark-border) !important;
+}
+
+
+body.rasamala-dark .btn-floating-info:hover,
+body.rasamala-dark .btn-color-mode-toggle:hover,
+body.rasamala-dark .btn-back-to-top:hover {
+  background: rgba(var(--theme-accent-rgb), 0.24) !important;
+  border-color: rgba(var(--theme-accent-rgb), 0.44) !important;
+  color: #ffffff !important;
+}
+
+
+body.rasamala-dark footer {
+  border-top-color: var(--rasamala-dark-border) !important;
+}
+
+
+body.rasamala-dark .card,
+body.rasamala-dark .bg-light,
+body.rasamala-dark .bg-white,
+body.rasamala-dark .bg-rasamala-light,
+body.rasamala-dark .rasamala-main-content-card,
+body.rasamala-dark .card.item.border-0,
+body.rasamala-dark .desktop-sort-bar,
+body.rasamala-dark .slims-book-card,
+body.rasamala-dark .member-card,
+body.rasamala-dark .visitor-info-card,
+body.rasamala-dark .biblio-list-card,
+body.rasamala-dark .list-group-item,
+body.rasamala-dark #search-filter li.list-group-item,
+body.rasamala-dark #desktop-filter-container .card,
+body.rasamala-dark #mobileFilterModal .modal-content,
+body.rasamala-dark .modal-content,
+body.rasamala-dark .libinfo-modal-content,
+body.rasamala-dark .rasamala-subpage-wrapper .librarian.row-fluid,
+body.rasamala-dark .page-member-area .rasamala-main-content-card,
+body.rasamala-dark .member-area .rasamala-main-content-card,
+body.rasamala-dark #slims-home .rasamala-home-section-map {
+  background: rgba(22, 26, 34, 0.96) !important;
+  background-color: rgba(22, 26, 34, 0.96) !important;
+  border-color: var(--rasamala-dark-border) !important;
+  color: var(--rasamala-dark-text) !important;
+  box-shadow: 0 18px 44px rgba(0, 0, 0, 0.26) !important;
+}
+
+body.rasamala-dark #slims-home .home-map-contact {
+  background: transparent !important;
+  background-color: transparent !important;
+  border: 0 !important;
+  box-shadow: none !important;
+  backdrop-filter: none !important;
+  -webkit-backdrop-filter: none !important;
+}
+
+body.rasamala-dark #slims-home .home-library-name {
+  color: #f4f6f8 !important;
+}
+
+body.rasamala-dark #slims-home .home-map-description,
+body.rasamala-dark #slims-home .home-map-description p,
+body.rasamala-dark #slims-home .home-map-description li {
+  color: #b6bec8 !important;
+}
+
+body.rasamala-dark #slims-home .home-map-description a {
+  color: #60a5fa !important;
+}
+
+body.rasamala-dark #slims-home .home-map-social-links {
+  border-top-color: rgba(255, 255, 255, 0.1) !important;
+}
+
+body.rasamala-dark #slims-home .home-map-social-links .btn {
+  background-color: var(--theme-accent, #3b82f6) !important;
+  border-color: rgba(255, 255, 255, 0.15) !important;
+  color: #ffffff !important;
+  box-shadow: 0 4px 12px rgba(59, 130, 246, 0.3) !important;
+}
+
+body.rasamala-dark #slims-home .home-map-social-links .btn:hover {
+  background-color: color-mix(in srgb, var(--theme-accent, #3b82f6) 85%, #ffffff 15%) !important;
+  box-shadow: 0 6px 16px rgba(59, 130, 246, 0.45) !important;
+}
+
+
+body.rasamala-dark #search-wraper .card,
+body.rasamala-dark #section1 #search-wraper .card,
+body.rasamala-dark .advanced-wraper,
+body.rasamala-dark .latest-content-strip,
+body.rasamala-dark .latest-content-ticker,
+body.rasamala-dark #mobileFilterModal .modal-footer,
+body.rasamala-dark #mobileSortModal .modal-body,
+body.rasamala-dark .select2-dropdown,
+body.rasamala-dark .chosen-container .chosen-drop,
+body.rasamala-dark .bootstrap-select .dropdown-menu,
+body.rasamala-dark .choices__list--dropdown,
+body.rasamala-dark .choices__list[aria-expanded],
+body.rasamala-dark .selectize-dropdown,
+body.rasamala-dark .ts-dropdown,
+body.rasamala-dark .c-header .dropdown-menu,
+body.rasamala-dark .dropdown-menu {
+  background: rgba(22, 26, 34, 0.98) !important;
+  background-color: rgba(22, 26, 34, 0.98) !important;
+  border-color: var(--rasamala-dark-border-strong) !important;
+  color: var(--rasamala-dark-text) !important;
+  box-shadow: 0 20px 44px rgba(0, 0, 0, 0.3) !important;
+}
+
+
+body.rasamala-dark .slims-book-card .card-image,
+body.rasamala-dark .member-card .card-image-rounded,
+body.rasamala-dark .biblio-list-availability,
+body.rasamala-dark .biblio-list-basket,
+body.rasamala-dark .biblio-list-action-link,
+body.rasamala-dark .footer-social-btn,
+body.rasamala-dark .footer-search-input,
+body.rasamala-dark .footer-search-btn,
+body.rasamala-dark .footer-action-btn,
+body.rasamala-dark .btn-light,
+body.rasamala-dark .btn-modern-filter,
+body.rasamala-dark .btn-switcher:not(.active),
+body.rasamala-dark .search-type-btn.btn-light,
+body.rasamala-dark .form-control,
+body.rasamala-dark .custom-select,
+body.rasamala-dark select,
+body.rasamala-dark input,
+body.rasamala-dark textarea,
+body.rasamala-dark #desktop-filter-container label,
+body.rasamala-dark #mobile-filter-container label,
+body.rasamala-dark .filter-item label,
+body.rasamala-dark .SearchFilter label,
+body.rasamala-dark #search-filter .custom-control-label,
+body.rasamala-dark #search-filter .form-check-label,
+body.rasamala-dark .sort-chip,
+body.rasamala-dark #desktop-sort-chips .sort-chip,
+body.rasamala-dark #mobile-sort-options .list-group-item,
+body.rasamala-dark .latest-content-link,
+body.rasamala-dark #search-wraper .latest-content-link,
+body.rasamala-dark .detail-link-btn,
+body.rasamala-dark .authors a.btn-outline-secondary {
+  background: rgba(255, 255, 255, 0.07) !important;
+  background-color: rgba(255, 255, 255, 0.07) !important;
+  border-color: var(--rasamala-dark-border-strong) !important;
+  color: var(--rasamala-dark-text) !important;
+  box-shadow: none !important;
+}
+
+
+body.rasamala-dark .detail-record table,
+body.rasamala-dark .member-area table.table,
+body.rasamala-dark .table,
+body.rasamala-dark table {
+  background-color: rgba(22, 26, 34, 0.96) !important;
+  border-color: var(--rasamala-dark-border) !important;
+  color: var(--rasamala-dark-text) !important;
+}
+
+
+body.rasamala-dark .detail-record table th,
+body.rasamala-dark .member-area table.table th,
+body.rasamala-dark .member-area table.memberDetail td.key,
+body.rasamala-dark .table thead th,
+body.rasamala-dark table thead th {
+  background-color: rgba(255, 255, 255, 0.06) !important;
+  border-color: var(--rasamala-dark-border) !important;
+  color: var(--rasamala-dark-muted) !important;
+}
+
+
+body.rasamala-dark .detail-avail-popover,
+body.rasamala-dark .biblio-avail-popover,
+body.rasamala-dark .prayer-reminder-toast,
+body.rasamala-dark .result-search .wrapper .debug {
+  background: rgba(22, 26, 34, 0.98) !important;
+  border-color: var(--rasamala-dark-border-strong) !important;
+  color: var(--rasamala-dark-text) !important;
+}
+
+
+body.rasamala-dark .biblio-avail-popover::before {
+  background: rgba(22, 26, 34, 0.98) !important;
+  border-color: var(--rasamala-dark-border-strong) !important;
+}
+
+
+body.rasamala-dark .result-search .wrapper .debug section {
+  background: rgba(16, 19, 24, 0.72) !important;
+}
+
+
+body.rasamala-dark .detail-record dl.row dt,
+body.rasamala-dark .detail-record dl.row dd,
+body.rasamala-dark .detail-record table td,
+body.rasamala-dark .detail-record table th,
+body.rasamala-dark .member-area table.table td,
+body.rasamala-dark .member-area table.table th,
+body.rasamala-dark .member-area table.memberDetail td,
+body.rasamala-dark .table th,
+body.rasamala-dark .table td,
+body.rasamala-dark table th,
+body.rasamala-dark table td,
+body.rasamala-dark .rasamala-divider,
+body.rasamala-dark .border,
+body.rasamala-dark .border-top,
+body.rasamala-dark .border-right,
+body.rasamala-dark .border-bottom,
+body.rasamala-dark .border-left {
+  border-color: var(--rasamala-dark-border) !important;
+}
+
+
+body.rasamala-dark .text-dark,
+body.rasamala-dark h1,
+body.rasamala-dark h2,
+body.rasamala-dark h3,
+body.rasamala-dark h4,
+body.rasamala-dark h5,
+body.rasamala-dark h6,
+body.rasamala-dark .footer-section-title,
+body.rasamala-dark .footer-about-text,
+body.rasamala-dark .footer-library-name,
+body.rasamala-dark .detail-description,
+body.rasamala-dark .detail-record table td,
+body.rasamala-dark .detail-record dl.row dd,
+body.rasamala-dark .member-area table.table td,
+body.rasamala-dark .member-area table.memberDetail td.value,
+body.rasamala-dark .news-card-title,
+body.rasamala-dark .biblio-simple-title,
+body.rasamala-dark .card.item.border-0 h5 a.card-link,
+body.rasamala-dark .topic li span,
+body.rasamala-dark .result-search .col-md-3 > .card h5,
+body.rasamala-dark .result-search .search-found-info,
+body.rasamala-dark .biblio-list-notes,
+body.rasamala-dark .modal-body,
+body.rasamala-dark .modal-header .modal-title,
+body.rasamala-dark .libinfo-modal-desc {
+  color: var(--rasamala-dark-text) !important;
+}
+
+
+body.rasamala-dark .text-muted,
+body.rasamala-dark .footer-next-prayer,
+body.rasamala-dark .availability-summary-callnumber,
+body.rasamala-dark .availability-summary-statuses,
+body.rasamala-dark .detail-callnumber-label,
+body.rasamala-dark .detail-avail-more-btn,
+body.rasamala-dark .biblio-simple-author,
+body.rasamala-dark .biblio-simple-availability,
+body.rasamala-dark .parallel-title-alt,
+body.rasamala-dark .desktop-sort-title,
+body.rasamala-dark .member-area .memberLoanListInfo,
+body.rasamala-dark .page-member-area .loginInfo,
+body.rasamala-dark .visitor-label,
+body.rasamala-dark #search-filter .text-muted,
+body.rasamala-dark #desktop-filter-container .text-muted,
+body.rasamala-dark #mobile-filter-container .text-muted {
+  color: var(--rasamala-dark-muted) !important;
+}
+
+
+/* Dark mode contrast polish for accent-colored text */
+body.rasamala-dark {
+  --rasamala-dark-accent-text: #d8bc8c;
+  --rasamala-dark-accent-text-strong: #f2d7a6;
+  --rasamala-dark-accent-bg: rgba(var(--theme-accent-rgb), 0.24);
+  --rasamala-dark-accent-border: rgba(216, 188, 140, 0.48);
+}
+
+
+body.rasamala-dark .rasamala-breadcrumbs,
+body.rasamala-dark .rasamala-breadcrumb-link {
+  color: #cfd5de !important;
+}
+
+
+body.rasamala-dark .rasamala-breadcrumb-separator {
+  color: rgba(216, 188, 140, 0.72) !important;
+}
+
+
+body.rasamala-dark .rasamala-breadcrumb-current {
+  color: #ffffff !important;
+}
+
+body.rasamala-dark .rasamala-breadcrumb-link:hover,
+body.rasamala-dark .rasamala-breadcrumb-link:focus {
+  color: var(--rasamala-dark-accent-text-strong) !important;
+}
+
+
+body.rasamala-dark .detail-meta-row .detail-gmd-label,
+body.rasamala-dark .detail-gmd-label,
+body.rasamala-dark .detail-side-heading::before,
+body.rasamala-dark .avail-loc-name,
+body.rasamala-dark .availability-summary-count strong,
+body.rasamala-dark .biblio-simple-availability-count,
+body.rasamala-dark .footer-next-prayer strong,
+body.rasamala-dark .prayer-reminder-countdown,
+body.rasamala-dark .prayer-reminder-icon,
+body.rasamala-dark .prayer-reminder-close {
+  color: var(--rasamala-dark-accent-text-strong) !important;
+}
+
+
+body.rasamala-dark .prayer-reminder-icon,
+body.rasamala-dark .prayer-reminder-close {
+  background: rgba(var(--theme-accent-rgb), 0.3) !important;
+  border-color: var(--rasamala-dark-accent-border) !important;
+}
+
+
+body.rasamala-dark .detail-author-footer a {
+  background: transparent;
+  background-color: transparent;
+  border-color: var(--rasamala-dark-accent-border) !important;
+  color: var(--rasamala-dark-accent-text-strong) !important;
+}
+
+body.rasamala-dark .authors a.btn-outline-secondary {
+  background: var(--rasamala-dark-accent-bg) !important;
+  border-color: var(--rasamala-dark-accent-border) !important;
+  color: var(--rasamala-dark-accent-text-strong) !important;
+}
+
+
+body.rasamala-dark .detail-author-footer a:hover,
+body.rasamala-dark .detail-author-footer a:focus {
+  background: transparent;
+  background-color: transparent;
+  border-color: var(--rasamala-accent) !important;
+  color: var(--rasamala-accent) !important;
+}
+
+body.rasamala-dark .authors a.btn-outline-secondary:hover,
+body.rasamala-dark .authors a.btn-outline-secondary:focus {
+  background: rgba(var(--theme-accent-rgb), 0.38) !important;
+  border-color: rgba(242, 215, 166, 0.72) !important;
+  color: #fff7e6 !important;
+}
+
+
+body.rasamala-dark .detail-subject-inline a,
+body.rasamala-dark .detail-record [itemprop="associatedMedia"] a,
+body.rasamala-dark .file-attachment a,
+body.rasamala-dark .footer-powered-link code {
+  color: var(--rasamala-dark-accent-text-strong) !important;
+  text-decoration-color: rgba(242, 215, 166, 0.46) !important;
+}
+
+
+body.rasamala-dark .detail-subject-inline a:hover,
+body.rasamala-dark .detail-record [itemprop="associatedMedia"] a:hover,
+body.rasamala-dark .file-attachment a:hover,
+body.rasamala-dark .footer-powered-link:hover code {
+  color: #fff0c9 !important;
+  text-decoration-color: rgba(255, 240, 201, 0.78) !important;
+}
+
+
+body.rasamala-dark .detail-subject-separator {
+  color: rgba(207, 213, 222, 0.7) !important;
+}
+
+
+body.rasamala-dark .footer-link {
+  color: var(--rasamala-dark-accent-text-strong) !important;
+}
+
+
+body.rasamala-dark footer a:not(.btn),
+body.rasamala-dark footer .footer-link,
+body.rasamala-dark footer .footer-about-text a,
+body.rasamala-dark footer .footer-powered-link,
+body.rasamala-dark footer .footer-powered-link code {
+  color: var(--rasamala-chrome-text) !important;
+}
+
+
+body.rasamala-dark footer a:not(.btn):hover,
+body.rasamala-dark footer a:not(.btn):focus,
+body.rasamala-dark footer .footer-link:hover,
+body.rasamala-dark footer .footer-link:focus,
+body.rasamala-dark footer .footer-about-text a:hover,
+body.rasamala-dark footer .footer-about-text a:focus,
+body.rasamala-dark footer .footer-powered-link:hover,
+body.rasamala-dark footer .footer-powered-link:focus,
+body.rasamala-dark footer .footer-powered-link:hover code,
+body.rasamala-dark footer .footer-powered-link:focus code {
+  color: var(--rasamala-chrome-text) !important;
+}
+
+
+body.rasamala-dark .footer-link:hover,
+body.rasamala-dark .footer-link:focus,
+body.rasamala-dark .footer-action-btn:hover,
+body.rasamala-dark .footer-action-btn:focus,
+body.rasamala-dark .footer-social-btn:hover,
+body.rasamala-dark .footer-social-btn:focus {
+  color: var(--rasamala-dark-accent-text-strong) !important;
+  border-color: var(--rasamala-dark-accent-border) !important;
+}
+
+body.rasamala-dark footer .footer-action-btn .footer-support-heart,
+body.rasamala-dark footer .footer-action-btn:hover .footer-support-heart,
+body.rasamala-dark footer .footer-action-btn:focus .footer-support-heart {
+  color: #dc3545 !important;
+}
+
+
+body.rasamala-dark .footer-next-prayer,
+body.rasamala-dark .footer-about-text,
+body.rasamala-dark .footer-search-input::placeholder {
+  color: #c6ced8 !important;
+}
+
+
+body.rasamala-dark .detail-link-btn,
+body.rasamala-dark .btn-light,
+body.rasamala-dark .comment-form .btn,
+body.rasamala-dark .comments .btn {
+  color: #f4f6f8 !important;
+  border-color: var(--rasamala-dark-border-strong) !important;
+}
+
+
+body.rasamala-dark #search-wraper .card {
+  background: color-mix(in srgb, var(--theme-surface) 92%, transparent) !important;
+  border-color: color-mix(in srgb, var(--theme-muted) 28%, transparent) !important;
+  box-shadow: 0 16px 42px rgba(0, 0, 0, 0.22) !important;
+}
+
+
+body.rasamala-dark #search-wraper #search-input {
+  color: #f4f6f8 !important;
+}
+
+
+body.rasamala-dark #search-wraper #search-input::placeholder {
+  color: #c1cad5 !important;
+}
+
+
+body.rasamala-dark #search-wraper #search-form button[type="submit"] {
+  background: transparent;
+  background-color: transparent;
+  color: #60a5fa;
+  box-shadow: none;
+}
+
+body.rasamala-dark #search-wraper #search-form button[type="submit"] .fa-search,
+body.rasamala-dark #search-wraper #search-form button[type="submit"] .fa-spinner {
+  color: #60a5fa;
+}
+
+body.rasamala-dark #search-wraper #search-form button[type="submit"]:hover {
+  background: transparent;
+  background-color: transparent;
+  color: #93c5fd;
+  box-shadow: none;
+}
+
+
+body.rasamala-dark #search-wraper .latest-content-link {
+  background: color-mix(in srgb, var(--theme-surface) 82%, transparent) !important;
+  border-color: color-mix(in srgb, var(--theme-accent) 22%, var(--theme-muted) 16%, transparent) !important;
+  color: var(--theme-on-surface) !important;
+  box-shadow: none !important;
+}
+
+
+body.rasamala-dark #search-wraper .latest-content-link .latest-content-icon {
+  background: color-mix(in srgb, var(--theme-accent) 16%, transparent) !important;
+  color: var(--theme-accent) !important;
+}
+
+
+body.rasamala-dark #search-wraper .latest-content-link:hover,
+body.rasamala-dark #search-wraper .latest-content-link:focus {
+  background: color-mix(in srgb, var(--theme-accent) 18%, var(--theme-surface) 82%) !important;
+  border-color: color-mix(in srgb, var(--theme-accent) 44%, transparent) !important;
+  color: var(--theme-on-surface) !important;
+}
+
+
+body.rasamala-dark #search-wraper .latest-content-link:hover .latest-content-icon,
+body.rasamala-dark #search-wraper .latest-content-link:focus .latest-content-icon {
+  background: var(--theme-accent) !important;
+  color: var(--theme-on-accent) !important;
+}
+
+
+body.rasamala-dark.rasamala-search-panels-transparent .result-search .col-md-3 > .card,
+body.rasamala-dark.rasamala-search-panels-transparent .result-search .desktop-sort-bar,
+body.rasamala-dark.rasamala-search-panels-transparent .result-search .btn-modern-filter,
+body.rasamala-dark.rasamala-search-panels-transparent .result-search .search-toolbar-action,
+body.rasamala-dark.rasamala-search-panels-transparent .result-search .biblio-list-card,
+body.rasamala-dark.rasamala-search-panels-transparent .result-search .grid-item > .card,
+body.rasamala-dark.rasamala-search-panels-transparent .result-search .card.item.border-0,
+body.rasamala-dark.rasamala-search-panels-transparent #mobileFilterModal .modal-content,
+body.rasamala-dark.rasamala-search-panels-transparent #mobileSortModal .modal-content,
+body.rasamala-dark.rasamala-search-panels-transparent #mobileViewModal .modal-content {
+  background: rgba(22, 26, 34, 0.32) !important;
+  background-color: rgba(22, 26, 34, 0.32) !important;
+  border-color: rgba(255, 255, 255, 0.12) !important;
+  box-shadow: none !important;
+}
+
+
+body.rasamala-dark.rasamala-search-panels-transparent .result-search .col-md-3 > .card,
+body.rasamala-dark.rasamala-search-panels-transparent .result-search .desktop-sort-bar {
+  background: transparent !important;
+  background-color: transparent !important;
+  border-color: transparent !important;
+  box-shadow: none !important;
+  -webkit-backdrop-filter: none;
+  backdrop-filter: none;
+}
+
+
+body.rasamala-dark.rasamala-search-panels-transparent .result-search .biblio-simple-item {
+  background: transparent !important;
+  background-color: transparent !important;
+  border-bottom-color: rgba(255, 255, 255, 0.12) !important;
+}
+
+
+body.rasamala-dark.rasamala-search-panels-transparent .result-search .grid-item .p-5,
+body.rasamala-dark.rasamala-search-panels-transparent .result-search #search-filter li.list-group-item,
+body.rasamala-dark.rasamala-search-panels-transparent .result-search #desktop-filter-container .list-group-item,
+body.rasamala-dark.rasamala-search-panels-transparent #mobile-filter-container .list-group-item {
+  background: transparent !important;
+  background-color: transparent !important;
+}
+
+
+body.rasamala-dark.rasamala-search-panels-transparent .result-search .sort-chip,
+body.rasamala-dark.rasamala-search-panels-transparent .result-search .desktop-sort-bar .btn-light,
+body.rasamala-dark.rasamala-search-panels-transparent .result-search #desktop-filter-container label,
+body.rasamala-dark.rasamala-search-panels-transparent #mobile-filter-container label,
+body.rasamala-dark.rasamala-search-panels-transparent #mobile-sort-options .list-group-item,
+body.rasamala-dark.rasamala-search-panels-transparent .result-search .biblio-list-availability,
+body.rasamala-dark.rasamala-search-panels-transparent .result-search .biblio-list-basket,
+body.rasamala-dark.rasamala-search-panels-transparent .result-search .biblio-list-action-link {
+  background: rgba(255, 255, 255, 0.075) !important;
+  background-color: rgba(255, 255, 255, 0.075) !important;
+  border-color: rgba(255, 255, 255, 0.16) !important;
+  color: var(--rasamala-dark-text) !important;
+}
+
+
+body.rasamala-dark.rasamala-search-panels-transparent .result-search .sort-chip.active,
+body.rasamala-dark.rasamala-search-panels-transparent .result-search .sort-chip:hover,
+body.rasamala-dark.rasamala-search-panels-transparent .result-search .sort-chip:focus,
+body.rasamala-dark.rasamala-search-panels-transparent .result-search #desktop-filter-container input[type="checkbox"]:checked + label,
+body.rasamala-dark.rasamala-search-panels-transparent .result-search #desktop-filter-container input[type="radio"]:checked + label,
+body.rasamala-dark.rasamala-search-panels-transparent #mobile-filter-container input[type="checkbox"]:checked + label,
+body.rasamala-dark.rasamala-search-panels-transparent #mobile-filter-container input[type="radio"]:checked + label,
+body.rasamala-dark.rasamala-search-panels-transparent #mobile-sort-options .list-group-item.active,
+body.rasamala-dark.rasamala-search-panels-transparent #mobile-sort-options .list-group-item:hover,
+body.rasamala-dark.rasamala-search-panels-transparent #mobile-sort-options .list-group-item:focus {
+  background: rgba(var(--theme-accent-rgb), 0.38) !important;
+  background-color: rgba(var(--theme-accent-rgb), 0.38) !important;
+  border-color: var(--rasamala-dark-accent-border) !important;
+  color: #fff7e6 !important;
+}
+
+
+body.rasamala-dark.rasamala-search-panels-solid .result-search .biblio-simple-item {
+  background: rgba(22, 26, 34, 0.96) !important;
+  background-color: rgba(22, 26, 34, 0.96) !important;
+  border-color: var(--rasamala-dark-border) !important;
+  box-shadow: 0 18px 44px rgba(0, 0, 0, 0.26) !important;
+}
+
+
+body.rasamala-dark .whatsapp-modal-body {
+  background-color: var(--rasamala-dark-surface, #151a22) !important;
+  background-image: none !important;
+}
+
+body.rasamala-dark .chat-bubble-incoming {
+  background-color: rgba(255, 255, 255, 0.035) !important;
+  color: #e9edef !important;
+  border-color: rgba(255, 255, 255, 0.1) !important;
+  box-shadow: none !important;
+}
+
+body.rasamala-dark .chat-bubble-incoming::before {
+  display: none !important;
+}
+
+body.rasamala-dark .chat-bubble-text {
+  color: #e9edef !important;
+}
+
+body.rasamala-dark .chat-bubble-author {
+  color: #00a884 !important; /* WhatsApp bright green */
+}
+
+body.rasamala-dark .chat-bubble-hours-badge {
+  background: rgba(0, 168, 132, 0.12) !important;
+  color: #00a884 !important;
+}
+
+body.rasamala-dark .whatsapp-quick-reply-label {
+  color: #8696a0 !important;
+}
+
+body.rasamala-dark .chat-bubble-outgoing.whatsapp-quick-reply {
+  background-color: #005c4b !important;
+  border-color: rgba(0, 168, 132, 0.1) !important;
+}
+
+body.rasamala-dark .chat-bubble-outgoing.whatsapp-quick-reply::before {
+  border-color: #005c4b transparent transparent transparent !important;
+}
+
+body.rasamala-dark .chat-bubble-outgoing.whatsapp-quick-reply span {
+  color: #e9edef !important;
+}
+
+body.rasamala-dark .chat-bubble-outgoing.whatsapp-quick-reply i {
+  color: #00a884 !important;
+}
+
+body.rasamala-dark .chat-bubble-outgoing.whatsapp-quick-reply:hover {
+  background-color: #00a884 !important;
+  border-color: transparent !important;
+  box-shadow: 0 4px 12px rgba(0, 168, 132, 0.25) !important;
+}
+
+body.rasamala-dark .chat-bubble-outgoing.whatsapp-quick-reply:hover::before {
+  border-color: #00a884 transparent transparent transparent !important;
+}
+
+body.rasamala-dark .chat-bubble-outgoing.whatsapp-quick-reply:hover span,
+body.rasamala-dark .chat-bubble-outgoing.whatsapp-quick-reply:hover i {
+  color: #ffffff !important;
+}
+
+body.rasamala-dark .whatsapp-message-label {
+  color: #8696a0 !important;
+}
+
+body.rasamala-dark .whatsapp-message-input {
+  background-color: #111b21 !important;
+  color: #e9edef !important;
+  border-color: rgba(255, 255, 255, 0.14) !important;
+  box-shadow: none !important;
+}
+
+body.rasamala-dark .whatsapp-message-input::placeholder {
+  color: #8696a0 !important;
+}
+
+body.rasamala-dark .whatsapp-message-input:focus {
+  border-color: #00a884 !important;
+  box-shadow: 0 0 0 3px rgba(0, 168, 132, 0.2) !important;
+}
+
+body.rasamala-dark .whatsapp-message-input.is-invalid {
+  border-color: #ff6b6b !important;
+  box-shadow: 0 0 0 3px rgba(255, 107, 107, 0.18) !important;
+}
+
+body.rasamala-dark .whatsapp-send-button {
+  background: #008069 !important;
+  color: #ffffff !important;
+  box-shadow: none !important;
+}
+
+body.rasamala-dark .whatsapp-send-button:hover,
+body.rasamala-dark .whatsapp-send-button:focus {
+  color: #ffffff !important;
+  box-shadow: none !important;
+}
+
+/* Premium Dark Mode Description Box */
+body.rasamala-dark .detail-notes-box {
+  background: transparent;
+  background-color: transparent;
+  border-color: transparent;
+}
+
+/* Dark Mode Advanced Search Modal */
+body.rasamala-dark #adv-modal .modal-content {
+  background-color: var(--theme-surface) !important;
+  border-color: color-mix(in srgb, var(--theme-muted-on-surface) 18%, transparent) !important;
+  color: var(--theme-text) !important;
+}
+
+body.rasamala-dark #adv-modal .modal-header,
+body.rasamala-dark #adv-modal .modal-footer {
+  border-color: transparent !important;
+}
+
+body.rasamala-dark #adv-modal .modal-title {
+  color: var(--theme-text) !important;
+}
+
+body.rasamala-dark #adv-modal label {
+  color: var(--theme-muted) !important;
+}
+
+body.rasamala-dark #adv-modal .modal-close-btn,
+body.rasamala-dark #adv-modal .btn-close,
+body.rasamala-dark #adv-modal button.close {
+  color: #ffffff !important;
+  filter: invert(1) grayscale(100%) brightness(200%) !important;
+  opacity: 0.9 !important;
+}
+
+body.rasamala-dark #adv-modal .form-control,
+body.rasamala-dark #adv-modal .form-select,
+body.rasamala-dark #adv-modal select,
+body.rasamala-dark #adv-modal input,
+body.rasamala-dark #loginForm input.login_input,
+body.rasamala-dark .page-member-area .login_input input.form-control {
+  border-radius: 999px !important;
+  background-color: color-mix(in srgb, var(--theme-surface) 88%, var(--theme-background) 12%) !important;
+  border-color: color-mix(in srgb, var(--theme-muted-on-surface) 22%, transparent) !important;
+  color: var(--theme-text) !important;
+}
+
+body.rasamala-dark #adv-modal select option {
+  background-color: var(--theme-surface) !important;
+  color: var(--theme-text) !important;
+}
+
+body.rasamala-dark #adv-modal .form-control:focus,
+body.rasamala-dark #adv-modal .form-select:focus,
+body.rasamala-dark #adv-modal select:focus,
+body.rasamala-dark #adv-modal input:focus {
+  border-color: var(--rasamala-accent) !important;
+  box-shadow: 0 0 0 3px rgba(var(--theme-accent-rgb), 0.2) !important;
+}
+
+body.rasamala-dark .btn-color-mode-toggle-nav,
+body.rasamala-dark .btn-color-mode-toggle-nav:focus {
+  color: rgba(255, 255, 255, 0.78) !important;
+}
+
+body.rasamala-dark .btn-color-mode-toggle-nav:hover {
+  color: #ffffff !important;
+}
+
+body.rasamala-dark .c-header .navbar-nav .nav-link.btn-color-mode-toggle-desktop,
+body.rasamala-dark .c-header .navbar-nav .nav-link.btn-color-mode-toggle-desktop.active,
+body.rasamala-dark .c-header .navbar-nav .nav-link.btn-color-mode-toggle-desktop:focus {
+  color: rgba(255, 255, 255, 0.78) !important;
+}
+
+body.rasamala-dark .c-header .navbar-nav .nav-link.btn-color-mode-toggle-desktop:hover {
+  color: #ffffff !important;
+}
+
+/* Standarisasi Tombol Close (X) Modalnya di Dark Mode */
+body.rasamala-dark .btn-close {
+  filter: invert(1) grayscale(1) brightness(2) !important;
+  opacity: 0.65 !important;
+}
+
+body.rasamala-dark .btn-close:hover {
+  opacity: 1 !important;
+}
+
+body.rasamala-dark .close,
+body.rasamala-dark .mobile-more-menu-close,
+body.rasamala-dark .prayer-reminder-close {
+  color: #ffffff !important;
+  text-shadow: none !important;
+  opacity: 0.65 !important;
+}
+
+body.rasamala-dark .close:hover,
+body.rasamala-dark .mobile-more-menu-close:hover,
+body.rasamala-dark .prayer-reminder-close:hover {
+  color: var(--rasamala-accent) !important;
+  opacity: 1 !important;
+}
+
+/* Dark Mode Detail Information Grid Borders */
+body.rasamala-dark .detail-record dl.row dt,
+body.rasamala-dark .detail-record dl.row dd {
+  border-color: rgba(255, 255, 255, 0.08) !important;
+}
+
+body.rasamala-dark .detail-title-block,
+body.rasamala-dark .detail-section-heading,
+body.rasamala-dark .detail-callnumber-strip,
+body.rasamala-dark .detail-side-availability {
+  border-top-color: rgba(255, 255, 255, 0.1) !important;
+  border-bottom-color: rgba(255, 255, 255, 0.1) !important;
+}
+
+body.rasamala-dark .detail-record dl.row.detail-info-list,
+body.rasamala-dark .detail-record dl.row.detail-info-list > dt,
+body.rasamala-dark .detail-record dl.row.detail-info-list > dd {
+  border: 0 !important;
+}
+
+body.rasamala-dark .detail-record dl.row.detail-info-list > dt {
+  color: #ffffff !important;
+}
+
+body.rasamala-dark .detail-record dl.row.detail-info-list > dd {
+  color: #f4f6f8 !important;
+}
+
+/* Dark Mode Grid Item Enhancements */
+body.rasamala-dark .grid-item .bg-rasamala-light {
+  background-color: rgba(255, 255, 255, 0.02) !important;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06) !important;
+}
+
+body.rasamala-dark .grid-item .list-group-item {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08) !important;
+  color: #ffffff !important;
+}
+
+body.rasamala-dark .grid-item .list-group-item label,
+body.rasamala-dark .grid-item .list-group-item span {
+  color: #ffffff !important;
+  opacity: 1 !important;
+}
+
+body.rasamala-dark .grid-item .list-group-item:last-child {
+  border-bottom: none !important;
+}
+
+/* Search filter panel contrast normalization for active dark mode. */
+body.rasamala-dark .result-search .filter-panel-card,
+body.rasamala-dark #mobileFilterModal .modal-content {
+  background: rgba(22, 26, 34, 0.98) !important;
+  background-color: rgba(22, 26, 34, 0.98) !important;
+  color: var(--rasamala-dark-text, #f4f6f8) !important;
+  border: 1px solid var(--rasamala-dark-border, rgba(255, 255, 255, 0.12)) !important;
+  box-shadow: 0 18px 44px rgba(0, 0, 0, 0.28) !important;
+}
+
+body.rasamala-dark .result-search .filter-panel-title,
+body.rasamala-dark #mobileFilterModal .modal-title {
+  color: var(--rasamala-dark-text, #f4f6f8) !important;
+  border-bottom-color: var(--rasamala-dark-border, rgba(255, 255, 255, 0.12)) !important;
+}
+
+body.rasamala-dark .result-search .filter-panel-title i,
+body.rasamala-dark #mobileFilterModal .modal-title i {
+  color: var(--rasamala-dark-accent-text-strong, var(--rasamala-accent)) !important;
+}
+
+body.rasamala-dark #desktop-filter-container,
+body.rasamala-dark #mobile-filter-container,
+body.rasamala-dark #search-filter,
+body.rasamala-dark #search-filter li,
+body.rasamala-dark #search-filter li.list-group-item,
+body.rasamala-dark #desktop-filter-container .list-group-item,
+body.rasamala-dark #mobile-filter-container .list-group-item {
+  background: transparent !important;
+  background-color: transparent !important;
+  color: var(--rasamala-dark-text, #f4f6f8) !important;
+  border-color: var(--rasamala-dark-border, rgba(255, 255, 255, 0.12)) !important;
+}
+
+body.rasamala-dark #search-filter .cursor-pointer,
+body.rasamala-dark #search-filter .cursor-pointer strong,
+body.rasamala-dark #search-filter .row .px-3,
+body.rasamala-dark #search-filter a,
+body.rasamala-dark #search-filter span,
+body.rasamala-dark #search-filter small,
+body.rasamala-dark #search-filter .text-dark,
+body.rasamala-dark #search-filter .text-muted,
+body.rasamala-dark #desktop-filter-container .text-dark,
+body.rasamala-dark #desktop-filter-container .text-muted,
+body.rasamala-dark #mobile-filter-container .text-dark,
+body.rasamala-dark #mobile-filter-container .text-muted {
+  color: var(--rasamala-dark-text, #f4f6f8) !important;
+}
+
+body.rasamala-dark #search-filter .text-muted,
+body.rasamala-dark #desktop-filter-container .text-muted,
+body.rasamala-dark #mobile-filter-container .text-muted,
+body.rasamala-dark #search-filter small {
+  color: var(--rasamala-dark-muted, #b6bec8) !important;
+  opacity: 0.9 !important;
+}
+
+body.rasamala-dark #desktop-filter-container label,
+body.rasamala-dark #mobile-filter-container label,
+body.rasamala-dark .filter-item label,
+body.rasamala-dark .SearchFilter label,
+body.rasamala-dark #search-filter .custom-control-label,
+body.rasamala-dark #search-filter .form-check-label {
+  background: rgba(255, 255, 255, 0.075) !important;
+  background-color: rgba(255, 255, 255, 0.075) !important;
+  color: var(--rasamala-dark-text, #f4f6f8) !important;
+  border-color: rgba(255, 255, 255, 0.16) !important;
+}
+
+body.rasamala-dark #desktop-filter-container label:hover,
+body.rasamala-dark #mobile-filter-container label:hover,
+body.rasamala-dark .filter-item label:hover,
+body.rasamala-dark .SearchFilter label:hover,
+body.rasamala-dark #search-filter .custom-control-label:hover,
+body.rasamala-dark #search-filter .form-check-label:hover {
+  background: rgba(var(--theme-accent-rgb), 0.26) !important;
+  background-color: rgba(var(--theme-accent-rgb), 0.26) !important;
+  color: #ffffff !important;
+  border-color: rgba(var(--theme-accent-rgb), 0.48) !important;
+}
+
+body.rasamala-dark #desktop-filter-container input[type="checkbox"]:checked + label,
+body.rasamala-dark #desktop-filter-container input[type="radio"]:checked + label,
+body.rasamala-dark #mobile-filter-container input[type="checkbox"]:checked + label,
+body.rasamala-dark #mobile-filter-container input[type="radio"]:checked + label {
+  background: var(--rasamala-accent) !important;
+  background-color: var(--rasamala-accent) !important;
+  border-color: var(--rasamala-accent) !important;
+  color: #ffffff !important;
+}
+
+body.rasamala-dark #search-filter .js-input-from,
+body.rasamala-dark #search-filter .js-input-to,
+body.rasamala-dark #search-filter input[type="text"],
+body.rasamala-dark #search-filter input[type="number"],
+body.rasamala-dark #search-filter select,
+body.rasamala-dark #desktop-filter-container select,
+body.rasamala-dark #mobile-filter-container select {
+  background-color: rgba(255, 255, 255, 0.075) !important;
+  color: var(--rasamala-dark-text, #f4f6f8) !important;
+  border-color: rgba(255, 255, 255, 0.16) !important;
+}
+
+body.rasamala-dark #search-filter .js-input-from:focus,
+body.rasamala-dark #search-filter .js-input-to:focus,
+body.rasamala-dark #search-filter input[type="text"]:focus,
+body.rasamala-dark #search-filter input[type="number"]:focus,
+body.rasamala-dark #search-filter select:focus {
+  border-color: var(--rasamala-accent) !important;
+  box-shadow: 0 0 0 3px rgba(var(--theme-accent-rgb), 0.24) !important;
+}
+
+body.rasamala-dark #search-filter .irs-from,
+body.rasamala-dark #search-filter .irs-to,
+body.rasamala-dark #search-filter .irs-single,
+body.rasamala-dark #mobileFilterModal .irs-from,
+body.rasamala-dark #mobileFilterModal .irs-to,
+body.rasamala-dark #mobileFilterModal .irs-single {
+  background: color-mix(in srgb, var(--rasamala-accent) 62%, #05070a 38%) !important;
+  background-color: color-mix(in srgb, var(--rasamala-accent) 62%, #05070a 38%) !important;
+  color: #ffffff !important;
+  border: 1px solid rgba(255, 255, 255, 0.2) !important;
+  box-shadow: 0 4px 14px rgba(var(--theme-accent-rgb), 0.28) !important;
+  font-weight: 700 !important;
+  text-shadow: 0 1px 1px rgba(0, 0, 0, 0.42) !important;
+}
+
+body.rasamala-dark #search-filter .irs-from::after,
+body.rasamala-dark #search-filter .irs-to::after,
+body.rasamala-dark #search-filter .irs-single::after,
+body.rasamala-dark #mobileFilterModal .irs-from::after,
+body.rasamala-dark #mobileFilterModal .irs-to::after,
+body.rasamala-dark #mobileFilterModal .irs-single::after {
+  border-top-color: color-mix(in srgb, var(--rasamala-accent) 62%, #05070a 38%) !important;
+}
+
+body.rasamala-dark #search-filter .irs-min,
+body.rasamala-dark #search-filter .irs-max,
+body.rasamala-dark #search-filter .irs-grid-text,
+body.rasamala-dark #mobileFilterModal .irs-min,
+body.rasamala-dark #mobileFilterModal .irs-max,
+body.rasamala-dark #mobileFilterModal .irs-grid-text {
+  color: var(--rasamala-dark-muted, #c3cbd5) !important;
+  font-weight: 600 !important;
+  opacity: 1 !important;
+}
+
+body.rasamala-dark #search-filter .irs-line,
+body.rasamala-dark #search-filter .irs-grid-pol,
+body.rasamala-dark #mobileFilterModal .irs-line,
+body.rasamala-dark #mobileFilterModal .irs-grid-pol {
+  background-color: rgba(255, 255, 255, 0.22) !important;
+}
+
+body.rasamala-dark #search-filter .irs-handle,
+body.rasamala-dark #mobileFilterModal .irs-handle {
+  background-color: #f8fafc !important;
+  border-color: rgba(var(--theme-accent-rgb), 0.48) !important;
+  box-shadow: 0 3px 12px rgba(var(--theme-accent-rgb), 0.24) !important;
+}
+
+body.rasamala-dark.rasamala-search-panels-transparent .result-search .filter-panel-card,
+body.rasamala-dark.rasamala-search-panels-transparent #mobileFilterModal .modal-content,
+body.rasamala-dark.rasamala-search-panels-transparent .result-search .desktop-sort-bar,
+body.rasamala-dark.rasamala-search-panels-transparent .detail-record,
+body.rasamala-dark.rasamala-search-panels-transparent .news-list-card,
+body.rasamala-dark.rasamala-search-panels-transparent .rasamala-main-content-card,
+body.rasamala-dark.rasamala-search-panels-transparent .librarian.row-fluid,
+body.rasamala-dark.rasamala-search-panels-transparent #search-wraper .card {
+  background: rgba(22, 26, 34, 0.58) !important;
+  background-color: rgba(22, 26, 34, 0.58) !important;
+  border-color: rgba(255, 255, 255, 0.14) !important;
+  -webkit-backdrop-filter: blur(12px) !important;
+  backdrop-filter: blur(12px) !important;
+}
+
+/* Dark mode contrast guard for every theme color palette.
+   Primary colors can be too dark for text, so text uses the lighter accent token
+   while filled controls keep a darker primary-based background. */
+body.rasamala-dark {
+  --rasamala-dark-link: color-mix(in srgb, var(--theme-accent) 58%, #ffffff 42%);
+  --rasamala-dark-link-strong: color-mix(in srgb, var(--theme-accent) 38%, #ffffff 62%);
+  --rasamala-dark-action-bg: color-mix(in srgb, var(--theme-primary) 82%, #05070a 18%);
+  --rasamala-dark-action-hover-bg: color-mix(in srgb, var(--theme-primary) 82%, #ffffff 18%);
+  --rasamala-dark-action-border: color-mix(in srgb, var(--theme-accent) 46%, rgba(255, 255, 255, 0.22) 54%);
+  --rasamala-dark-accent-text: var(--rasamala-dark-link);
+  --rasamala-dark-accent-text-strong: var(--rasamala-dark-link-strong);
+  --rasamala-dark-accent-bg: color-mix(in srgb, var(--theme-primary) 30%, transparent 70%);
+  --rasamala-dark-accent-border: var(--rasamala-dark-action-border);
+}
+
+body.rasamala-dark a:not(.btn):not(.nav-link):not(.dropdown-item),
+body.rasamala-dark .text-primary,
+body.rasamala-dark .text-info,
+body.rasamala-dark .footer-next-prayer strong,
+body.rasamala-dark .footer-powered-link code,
+body.rasamala-dark .prayer-reminder-icon,
+body.rasamala-dark .prayer-reminder-close,
+body.rasamala-dark .prayer-reminder-countdown,
+body.rasamala-dark #search-wraper #search-form a[data-bs-target="#adv-modal"]:hover,
+body.rasamala-dark .biblio-list-availability-label,
+body.rasamala-dark .biblio-list-availability strong,
+body.rasamala-dark .biblio-list-quick-action,
+body.rasamala-dark .detail-gmd-label,
+body.rasamala-dark .detail-meta-row .detail-gmd-label,
+body.rasamala-dark .detail-side-heading::before,
+body.rasamala-dark .availability-summary-count strong,
+body.rasamala-dark .biblio-simple-availability-count,
+body.rasamala-dark .topic-icon-fa,
+body.rasamala-dark .topic li i,
+body.rasamala-dark .rasamala-subpage-wrapper .librarian.row-fluid .span8 .row-fluid .span3.key,
+body.rasamala-dark .latest-content-ticker-item .latest-content-icon {
+  color: var(--rasamala-dark-link) !important;
+}
+
+body.rasamala-dark a:not(.btn):not(.nav-link):not(.dropdown-item):hover,
+body.rasamala-dark a:not(.btn):not(.nav-link):not(.dropdown-item):focus,
+body.rasamala-dark .detail-subject-inline a,
+body.rasamala-dark .detail-record [itemprop="associatedMedia"] a,
+body.rasamala-dark .file-attachment a,
+body.rasamala-dark .footer-link,
+body.rasamala-dark footer a:not(.btn),
+body.rasamala-dark footer .footer-link,
+body.rasamala-dark footer .footer-about-text a,
+body.rasamala-dark footer .footer-powered-link,
+body.rasamala-dark footer .footer-powered-link code,
+body.rasamala-dark .rasamala-breadcrumb-current,
+body.rasamala-dark .rasamala-breadcrumb-link:hover,
+body.rasamala-dark .rasamala-breadcrumb-link:focus,
+body.rasamala-dark .c-header .navbar-nav .nav-link:hover,
+body.rasamala-dark .c-header .navbar-nav .nav-item.active .nav-link,
+body.rasamala-dark .c-header .navbar-nav .nav-link.active,
+body.rasamala-dark #member_content .nav-tabs .nav-link:hover,
+body.rasamala-dark #member_content .nav-tabs .nav-link.active,
+body.rasamala-dark .close:hover,
+body.rasamala-dark .mobile-more-menu-close:hover,
+body.rasamala-dark .prayer-reminder-close:hover {
+  color: var(--rasamala-dark-link-strong) !important;
+}
+
+body.rasamala-dark .rasamala-breadcrumb-separator,
+body.rasamala-dark .parallel-title-alt i,
+body.rasamala-dark .latest-content-icon {
+  color: var(--rasamala-dark-link) !important;
+}
+
+body.rasamala-dark .btn-primary,
+body.rasamala-dark .btn-info,
+body.rasamala-dark .btn-success,
+body.rasamala-dark .btn-secondary,
+body.rasamala-dark .search-type-btn.btn-primary,
+body.rasamala-dark .btn-news-readmore,
+body.rasamala-dark .btn-modal-action,
+body.rasamala-dark .libinfo-modal-btn,
+body.rasamala-dark .footer-social-btn:hover,
+body.rasamala-dark .pagingList b,
+body.rasamala-dark .pagination .page-item.active .page-link,
+body.rasamala-dark .sort-chip.active,
+body.rasamala-dark #desktop-sort-chips .sort-chip.active,
+body.rasamala-dark #mobile-sort-options .list-group-item.active,
+body.rasamala-dark #desktop-filter-container input[type="checkbox"]:checked + label,
+body.rasamala-dark #desktop-filter-container input[type="radio"]:checked + label,
+body.rasamala-dark #mobile-filter-container input[type="checkbox"]:checked + label,
+body.rasamala-dark #mobile-filter-container input[type="radio"]:checked + label,
+body.rasamala-dark .biblio-list-basket:hover,
+body.rasamala-dark .biblio-list-basket:focus,
+body.rasamala-dark .biblio-list-action-link:hover,
+body.rasamala-dark .biblio-list-action-link:focus {
+  background: var(--rasamala-dark-action-bg) !important;
+  background-color: var(--rasamala-dark-action-bg) !important;
+  border-color: var(--rasamala-dark-action-border) !important;
+  color: #ffffff !important;
+}
+
+body.rasamala-dark .btn-primary:hover,
+body.rasamala-dark .btn-primary:focus,
+body.rasamala-dark .btn-info:hover,
+body.rasamala-dark .btn-info:focus,
+body.rasamala-dark .btn-success:hover,
+body.rasamala-dark .btn-success:focus,
+body.rasamala-dark .btn-secondary:hover,
+body.rasamala-dark .btn-secondary:focus,
+body.rasamala-dark .search-type-btn.btn-primary:hover,
+body.rasamala-dark .search-type-btn.btn-primary:focus,
+body.rasamala-dark .btn-news-readmore:hover,
+body.rasamala-dark .btn-news-readmore:focus,
+body.rasamala-dark .btn-modal-action:hover,
+body.rasamala-dark .btn-modal-action:focus,
+body.rasamala-dark .libinfo-modal-btn:hover,
+body.rasamala-dark .libinfo-modal-btn:focus {
+  background: var(--rasamala-dark-action-hover-bg) !important;
+  background-color: var(--rasamala-dark-action-hover-bg) !important;
+  border-color: var(--rasamala-dark-link) !important;
+  color: #ffffff !important;
+}
+
+body.rasamala-dark .btn-outline-primary,
+body.rasamala-dark .btn-outline-secondary,
+body.rasamala-dark .detail-link-btn,
+body.rasamala-dark .authors a.btn-outline-secondary,
+body.rasamala-dark .detail-author-footer a,
+body.rasamala-dark .search-type-btn.btn-outline-primary,
+body.rasamala-dark .search-type-btn.btn-outline-secondary,
+body.rasamala-dark .biblio-list-basket,
+body.rasamala-dark .biblio-list-action-link,
+body.rasamala-dark .biblio-list-availability,
+body.rasamala-dark .footer-action-btn,
+body.rasamala-dark .footer-social-btn,
+body.rasamala-dark .pagination .page-link,
+body.rasamala-dark .pagingList a,
+body.rasamala-dark .sort-chip,
+body.rasamala-dark #desktop-sort-chips .sort-chip,
+body.rasamala-dark #mobile-sort-options .list-group-item {
+  border-color: var(--rasamala-dark-action-border) !important;
+  color: var(--rasamala-dark-text) !important;
+}
+
+body.rasamala-dark .btn-outline-primary:hover,
+body.rasamala-dark .btn-outline-primary:focus,
+body.rasamala-dark .btn-outline-secondary:hover,
+body.rasamala-dark .btn-outline-secondary:focus,
+body.rasamala-dark .detail-link-btn:hover,
+body.rasamala-dark .detail-link-btn:focus,
+body.rasamala-dark .authors a.btn-outline-secondary:hover,
+body.rasamala-dark .authors a.btn-outline-secondary:focus,
+body.rasamala-dark .detail-author-footer a:hover,
+body.rasamala-dark .detail-author-footer a:focus,
+body.rasamala-dark .search-type-btn.btn-outline-primary:hover,
+body.rasamala-dark .search-type-btn.btn-outline-primary:focus,
+body.rasamala-dark .search-type-btn.btn-outline-secondary:hover,
+body.rasamala-dark .search-type-btn.btn-outline-secondary:focus,
+body.rasamala-dark .pagingList a:hover,
+body.rasamala-dark .pagingList a:focus,
+body.rasamala-dark .pagination .page-link:hover,
+body.rasamala-dark .pagination .page-link:focus,
+body.rasamala-dark .sort-chip:hover,
+body.rasamala-dark .sort-chip:focus,
+body.rasamala-dark #desktop-sort-chips .sort-chip:hover,
+body.rasamala-dark #desktop-sort-chips .sort-chip:focus,
+body.rasamala-dark #mobile-sort-options .list-group-item:hover,
+body.rasamala-dark #mobile-sort-options .list-group-item:focus {
+  background: var(--rasamala-dark-accent-bg) !important;
+  background-color: var(--rasamala-dark-accent-bg) !important;
+  border-color: var(--rasamala-dark-action-border) !important;
+  color: var(--rasamala-dark-link-strong) !important;
+}
+
+body.rasamala-dark .form-control:focus,
+body.rasamala-dark .custom-select:focus,
+body.rasamala-dark select:focus,
+body.rasamala-dark input:focus,
+body.rasamala-dark textarea:focus,
+body.rasamala-dark #search-filter .js-input-from:focus,
+body.rasamala-dark #search-filter .js-input-to:focus,
+body.rasamala-dark #search-filter input[type="text"]:focus,
+body.rasamala-dark #search-filter input[type="number"]:focus,
+body.rasamala-dark #search-filter select:focus {
+  border-color: var(--rasamala-dark-link) !important;
+  box-shadow: 0 0 0 3px color-mix(in srgb, var(--rasamala-dark-link) 28%, transparent 72%) !important;
+}
+
+body.rasamala-dark #search-filter .irs-from,
+body.rasamala-dark #search-filter .irs-to,
+body.rasamala-dark #search-filter .irs-single,
+body.rasamala-dark #mobileFilterModal .irs-from,
+body.rasamala-dark #mobileFilterModal .irs-to,
+body.rasamala-dark #mobileFilterModal .irs-single {
+  background: var(--rasamala-dark-action-bg) !important;
+  background-color: var(--rasamala-dark-action-bg) !important;
+  border-color: var(--rasamala-dark-action-border) !important;
+  color: #ffffff !important;
+}
+
+body.rasamala-dark #search-filter .irs-from::after,
+body.rasamala-dark #search-filter .irs-to::after,
+body.rasamala-dark #search-filter .irs-single::after,
+body.rasamala-dark #mobileFilterModal .irs-from::after,
+body.rasamala-dark #mobileFilterModal .irs-to::after,
+body.rasamala-dark #mobileFilterModal .irs-single::after {
+  border-top-color: var(--rasamala-dark-action-bg) !important;
+}
+
+/* Final dark transparent panel override for search result surfaces. */
+body.rasamala-dark.rasamala-search-panels-transparent .result-search .filter-panel-card,
+body.rasamala-dark.rasamala-search-panels-transparent .result-search .biblio-simple-item,
+body.rasamala-dark.rasamala-search-panels-transparent .result-search .biblio-list-card,
+body.rasamala-dark.rasamala-search-panels-transparent .result-search .biblio-list-card > .card-body,
+body.rasamala-dark.rasamala-search-panels-transparent .result-search .card.item.border-0,
+body.rasamala-dark.rasamala-search-panels-transparent .result-search .card.item.border-0 > .card-body,
+body.rasamala-dark.rasamala-search-panels-transparent .result-search .grid-item > .card,
+body.rasamala-dark.rasamala-search-panels-transparent .result-search .grid-item > .card > .card-body,
+body.rasamala-dark.rasamala-search-panels-transparent .result-search .grid-item .bg-rasamala-light,
+body.rasamala-dark.rasamala-search-panels-transparent .result-search .grid-item .list-group,
+body.rasamala-dark.rasamala-search-panels-transparent .result-search .grid-item .list-group-item,
+body.rasamala-dark.rasamala-search-panels-transparent #mobileFilterModal .modal-content,
+body.rasamala-dark.rasamala-search-panels-transparent #mobileSortModal .modal-content,
+body.rasamala-dark.rasamala-search-panels-transparent #mobileViewModal .modal-content {
+  background: transparent !important;
+  background-color: transparent !important;
+  box-shadow: none !important;
+  -webkit-backdrop-filter: none !important;
+  backdrop-filter: none !important;
+}
+
+body.rasamala-dark.rasamala-search-panels-transparent .result-search .filter-panel-card,
+body.rasamala-dark.rasamala-search-panels-transparent .result-search .biblio-list-card,
+body.rasamala-dark.rasamala-search-panels-transparent .result-search .card.item.border-0,
+body.rasamala-dark.rasamala-search-panels-transparent .result-search .grid-item > .card,
+body.rasamala-dark.rasamala-search-panels-transparent .result-search .desktop-sort-bar {
+  border-color: rgba(255, 255, 255, 0.14) !important;
+}
+
+body.rasamala-dark.rasamala-search-panels-transparent .result-search .biblio-simple-item,
+body.rasamala-dark.rasamala-search-panels-transparent .result-search .grid-item .list-group-item {
+  border-bottom-color: rgba(255, 255, 255, 0.14) !important;
+}
+
+@media (max-width: 767.98px) {
+  body.rasamala-dark.rasamala-search-panels-transparent #mobileFilterModal .modal-content,
+  body.rasamala-dark.rasamala-search-panels-transparent #mobileSortModal .modal-content,
+  body.rasamala-dark.rasamala-search-panels-transparent #mobileViewModal .modal-content,
+  body.rasamala-dark.rasamala-search-panels-transparent #mobileFilterModal .modal-header,
+  body.rasamala-dark.rasamala-search-panels-transparent #mobileFilterModal .modal-body,
+  body.rasamala-dark.rasamala-search-panels-transparent #mobileFilterModal .modal-footer,
+  body.rasamala-dark.rasamala-search-panels-transparent #mobileSortModal .modal-header,
+  body.rasamala-dark.rasamala-search-panels-transparent #mobileSortModal .modal-body,
+  body.rasamala-dark.rasamala-search-panels-transparent #mobileSortModal .modal-footer,
+  body.rasamala-dark.rasamala-search-panels-transparent #mobileViewModal .modal-header,
+  body.rasamala-dark.rasamala-search-panels-transparent #mobileViewModal .modal-body,
+  body.rasamala-dark.rasamala-search-panels-transparent #mobileViewModal .modal-footer {
+    background: var(--rasamala-dark-surface) !important;
+    background-color: var(--rasamala-dark-surface) !important;
+    color: var(--rasamala-dark-text) !important;
+    border-color: var(--rasamala-dark-border) !important;
+    box-shadow: 0 18px 44px rgba(0, 0, 0, 0.42) !important;
+    -webkit-backdrop-filter: none !important;
+    backdrop-filter: none !important;
+  }
+
+  body.rasamala-dark.rasamala-search-panels-transparent #mobileFilterModal #search-filter,
+  body.rasamala-dark.rasamala-search-panels-transparent #mobileFilterModal #search-filter li,
+  body.rasamala-dark.rasamala-search-panels-transparent #mobileFilterModal #search-filter li.list-group-item,
+  body.rasamala-dark.rasamala-search-panels-transparent #mobileFilterModal #mobile-filter-container,
+  body.rasamala-dark.rasamala-search-panels-transparent #mobileFilterModal #mobile-filter-container .list-group,
+  body.rasamala-dark.rasamala-search-panels-transparent #mobileFilterModal #mobile-filter-container .list-group-item,
+  body.rasamala-dark.rasamala-search-panels-transparent #mobileSortModal #mobile-sort-options,
+  body.rasamala-dark.rasamala-search-panels-transparent #mobileSortModal #mobile-sort-options .list-group-item,
+  body.rasamala-dark.rasamala-search-panels-transparent #mobileViewModal .search-view-modal-options,
+  body.rasamala-dark.rasamala-search-panels-transparent #mobileViewModal .search-view-modal-options .list-group-item {
+    background: var(--rasamala-dark-surface) !important;
+    background-color: var(--rasamala-dark-surface) !important;
+    color: var(--rasamala-dark-text) !important;
+    border-color: var(--rasamala-dark-border) !important;
+    box-shadow: none !important;
+  }
+
+  body.rasamala-dark.rasamala-search-panels-transparent #mobileFilterModal #mobile-filter-container label,
+  body.rasamala-dark.rasamala-search-panels-transparent #mobileFilterModal #search-filter .custom-control-label,
+  body.rasamala-dark.rasamala-search-panels-transparent #mobileFilterModal #search-filter .form-check-label,
+  body.rasamala-dark.rasamala-search-panels-transparent #mobileSortModal #mobile-sort-options .list-group-item,
+  body.rasamala-dark.rasamala-search-panels-transparent #mobileViewModal .search-view-modal-options .list-group-item {
+    background: var(--rasamala-dark-surface-strong) !important;
+    background-color: var(--rasamala-dark-surface-strong) !important;
+    color: var(--rasamala-dark-text) !important;
+    border-color: var(--rasamala-dark-action-border) !important;
+  }
+
+  body.rasamala-dark.rasamala-search-panels-transparent #mobileFilterModal #search-filter input,
+  body.rasamala-dark.rasamala-search-panels-transparent #mobileFilterModal #search-filter select,
+  body.rasamala-dark.rasamala-search-panels-transparent #mobileFilterModal #search-filter .js-input-from,
+  body.rasamala-dark.rasamala-search-panels-transparent #mobileFilterModal #search-filter .js-input-to {
+    background: rgba(255, 255, 255, 0.075) !important;
+    background-color: rgba(255, 255, 255, 0.075) !important;
+    color: var(--rasamala-dark-text) !important;
+    border-color: var(--rasamala-dark-action-border) !important;
+  }
+}
+
+/* Final custom-palette contrast guard.
+   Keep this block last: older dark-mode rules above still contain fixed colors. */
+body.rasamala-dark {
+  --rasamala-dark-page: var(--theme-background);
+  --rasamala-dark-surface: var(--theme-surface);
+  --rasamala-dark-surface-strong: color-mix(in srgb, var(--theme-surface) 88%, var(--theme-background) 12%);
+  --rasamala-dark-surface-soft: color-mix(in srgb, var(--theme-surface) 72%, transparent);
+  --rasamala-dark-border: color-mix(in srgb, var(--theme-muted-on-surface) 30%, transparent);
+  --rasamala-dark-text: var(--theme-on-surface);
+  --rasamala-dark-page-text: var(--theme-on-background);
+  --rasamala-dark-muted: var(--theme-muted-on-surface);
+  --rasamala-dark-page-muted: var(--theme-muted-on-background);
+  --rasamala-dark-link: color-mix(in srgb, var(--theme-accent) 70%, var(--theme-on-background) 30%);
+  --rasamala-dark-link-strong: color-mix(in srgb, var(--theme-accent) 82%, var(--theme-on-background) 18%);
+  --rasamala-dark-action-bg: var(--theme-primary);
+  --rasamala-dark-action-hover-bg: var(--theme-primary-hover);
+  --rasamala-dark-action-border: color-mix(in srgb, var(--theme-primary) 46%, var(--theme-muted) 24%);
+  background: var(--theme-background) !important;
+  background-color: var(--theme-background) !important;
+  color: var(--theme-on-background) !important;
+}
+
+body.rasamala-dark.rasamala-background-animation-active:not([class*="rasamala-background-style-image-"]) {
+  background-color: #000000 !important;
+  background-image: none !important;
+  background: #000000 !important;
+}
+
+body.rasamala-dark .rasamala-hero-section,
+body.rasamala-dark .rasamala-search-banner-section,
+body.rasamala-dark .rasamala-subpage-wrapper,
+body.rasamala-dark #slims-home,
+body.rasamala-dark .result-search,
+body.rasamala-dark .member-area,
+body.rasamala-dark.rasamala-home-hero-only:not([class*="rasamala-background-style-image-"]) {
+  background: var(--theme-background) !important;
+  background-color: var(--theme-background) !important;
+  color: var(--theme-on-background) !important;
+}
+
+body.rasamala-dark h1,
+body.rasamala-dark h2,
+body.rasamala-dark h3,
+body.rasamala-dark h4,
+body.rasamala-dark h5,
+body.rasamala-dark h6,
+body.rasamala-dark .section-title,
+body.rasamala-dark .subtitle-section,
+body.rasamala-dark .search-found-info,
+body.rasamala-dark .breadcrumb,
+body.rasamala-dark .breadcrumb a {
+  color: var(--theme-on-background) !important;
+}
+
+body.rasamala-dark .card,
+body.rasamala-dark .bg-light,
+body.rasamala-dark .bg-white,
+body.rasamala-dark .bg-rasamala-light,
+body.rasamala-dark .rasamala-main-content-card,
+body.rasamala-dark .detail-record,
+body.rasamala-dark .card.item.border-0,
+body.rasamala-dark .desktop-sort-bar,
+body.rasamala-dark .slims-book-card,
+body.rasamala-dark .member-card,
+body.rasamala-dark .visitor-info-card,
+body.rasamala-dark .biblio-list-card,
+body.rasamala-dark .list-group-item,
+body.rasamala-dark #search-filter li.list-group-item,
+body.rasamala-dark #desktop-filter-container .card,
+body.rasamala-dark #mobileFilterModal .modal-content,
+body.rasamala-dark #mobileSortModal .modal-content,
+body.rasamala-dark .modal-content,
+body.rasamala-dark .libinfo-modal-content,
+body.rasamala-dark .palette-switcher-panel,
+body.rasamala-dark .rasamala-subpage-wrapper .librarian.row-fluid,
+body.rasamala-dark .page-member-area .rasamala-main-content-card,
+body.rasamala-dark .member-area .rasamala-main-content-card {
+  background: var(--theme-surface) !important;
+  background-color: var(--theme-surface) !important;
+  border-color: var(--rasamala-dark-border) !important;
+  color: var(--theme-on-surface) !important;
+}
+
+body.rasamala-dark .card h1,
+body.rasamala-dark .card h2,
+body.rasamala-dark .card h3,
+body.rasamala-dark .card h4,
+body.rasamala-dark .card h5,
+body.rasamala-dark .card h6,
+body.rasamala-dark .detail-record h1,
+body.rasamala-dark .detail-record h2,
+body.rasamala-dark .detail-record h3,
+body.rasamala-dark .detail-record h4,
+body.rasamala-dark .detail-record h5,
+body.rasamala-dark .detail-record h6,
+body.rasamala-dark .modal-content h1,
+body.rasamala-dark .modal-content h2,
+body.rasamala-dark .modal-content h3,
+body.rasamala-dark .modal-content h4,
+body.rasamala-dark .modal-content h5,
+body.rasamala-dark .modal-content h6,
+body.rasamala-dark .card a:not(.btn),
+body.rasamala-dark .detail-record a:not(.btn),
+body.rasamala-dark .modal-content a:not(.btn) {
+  color: var(--theme-on-surface) !important;
+}
+
+body.rasamala-dark.rasamala-search-panels-transparent .result-search .filter-panel-card,
+body.rasamala-dark.rasamala-search-panels-transparent .result-search .desktop-sort-bar,
+body.rasamala-dark.rasamala-search-panels-transparent .result-search .biblio-simple-item,
+body.rasamala-dark.rasamala-search-panels-transparent .result-search .biblio-list-card,
+body.rasamala-dark.rasamala-search-panels-transparent .result-search .biblio-list-card > .card-body,
+body.rasamala-dark.rasamala-search-panels-transparent .result-search .card.item.border-0,
+body.rasamala-dark.rasamala-search-panels-transparent .result-search .card.item.border-0 > .card-body,
+body.rasamala-dark.rasamala-search-panels-transparent .result-search .grid-item > .card,
+body.rasamala-dark.rasamala-search-panels-transparent .result-search .grid-item > .card > .card-body,
+body.rasamala-dark.rasamala-search-panels-transparent .result-search .grid-item .bg-rasamala-light,
+body.rasamala-dark.rasamala-search-panels-transparent .result-search .grid-item .list-group,
+body.rasamala-dark.rasamala-search-panels-transparent .result-search .grid-item .list-group-item {
+  background: transparent !important;
+  background-color: transparent !important;
+  color: var(--theme-on-background) !important;
+  box-shadow: none !important;
+  -webkit-backdrop-filter: none !important;
+  backdrop-filter: none !important;
+}
+
+body.rasamala-dark .text-muted,
+body.rasamala-dark .news-list-summary,
+body.rasamala-dark .news-list-date,
+body.rasamala-dark .small,
+body.rasamala-dark small,
+body.rasamala-dark .detail-label,
+body.rasamala-dark .detail-meta-label,
+body.rasamala-dark .filter-panel-card .small,
+body.rasamala-dark .filter-panel-card small {
+  color: var(--theme-muted-on-background) !important;
+}
+
+body.rasamala-dark .card .text-muted,
+body.rasamala-dark .card .small,
+body.rasamala-dark .card small,
+body.rasamala-dark .detail-record .text-muted,
+body.rasamala-dark .detail-record .small,
+body.rasamala-dark .detail-record small,
+body.rasamala-dark .modal-content .text-muted,
+body.rasamala-dark .modal-content .small,
+body.rasamala-dark .modal-content small,
+body.rasamala-dark .filter-panel-card .text-muted,
+body.rasamala-dark .filter-panel-card .small,
+body.rasamala-dark .filter-panel-card small,
+body.rasamala-dark .palette-switcher-panel .text-muted,
+body.rasamala-dark .palette-switcher-panel .small {
+  color: var(--theme-muted-on-surface) !important;
+}
+
+body.rasamala-dark .form-control,
+body.rasamala-dark .form-select,
+body.rasamala-dark .custom-select,
+body.rasamala-dark input,
+body.rasamala-dark select,
+body.rasamala-dark textarea,
+body.rasamala-dark .select2-selection,
+body.rasamala-dark .chosen-container .chosen-single,
+body.rasamala-dark .chosen-container .chosen-drop,
+body.rasamala-dark .dropdown-menu {
+  background: color-mix(in srgb, var(--theme-surface) 92%, var(--theme-background) 8%) !important;
+  background-color: color-mix(in srgb, var(--theme-surface) 92%, var(--theme-background) 8%) !important;
+  border-color: var(--rasamala-dark-border) !important;
+  color: var(--theme-on-surface) !important;
+}
+
+body.rasamala-dark .form-control::placeholder,
+body.rasamala-dark input::placeholder,
+body.rasamala-dark textarea::placeholder {
+  color: var(--theme-muted) !important;
+  opacity: 1 !important;
+}
+
+body.rasamala-dark option,
+body.rasamala-dark optgroup,
+body.rasamala-dark .dropdown-item,
+body.rasamala-dark .select2-results__option,
+body.rasamala-dark .chosen-container .chosen-results li {
+  background: var(--theme-surface) !important;
+  background-color: var(--theme-surface) !important;
+  color: var(--theme-on-surface) !important;
+}
+
+body.rasamala-dark .dropdown-item:hover,
+body.rasamala-dark .dropdown-item:focus,
+body.rasamala-dark .select2-results__option--highlighted,
+body.rasamala-dark .chosen-container .chosen-results li.highlighted {
+  background: var(--theme-primary) !important;
+  background-color: var(--theme-primary) !important;
+  color: var(--theme-on-primary) !important;
+}
+
+body.rasamala-dark .rasamala-header-dark,
+body.rasamala-dark .c-header,
+body.rasamala-dark footer,
+body.rasamala-dark .mobile-bottom-nav {
+  background: var(--rasamala-chrome-bg) !important;
+  background-color: var(--rasamala-chrome-bg) !important;
+  border-color: var(--rasamala-chrome-border) !important;
+  color: var(--rasamala-chrome-text) !important;
+}
+
+body.rasamala-dark .c-header a,
+body.rasamala-dark .c-header .nav-link,
+body.rasamala-dark .navbar-lib-name,
+body.rasamala-dark footer,
+body.rasamala-dark footer a,
+body.rasamala-dark footer .footer-powered-link,
+body.rasamala-dark footer .footer-powered-link code,
+body.rasamala-dark .mobile-bottom-nav .nav-item {
+  color: var(--rasamala-chrome-text) !important;
+}
+
+body.rasamala-dark .btn-primary,
+body.rasamala-dark .btn-success,
+body.rasamala-dark .btn-info,
+body.rasamala-dark .sort-chip.active,
+body.rasamala-dark .pagination .page-item.active .page-link,
+body.rasamala-dark .pagingList b,
+body.rasamala-dark #desktop-sort-chips .sort-chip.active,
+body.rasamala-dark #mobile-sort-options .list-group-item.active,
+body.rasamala-dark #mobile-filter-container input[type="checkbox"]:checked + label,
+body.rasamala-dark #mobile-filter-container input[type="radio"]:checked + label,
+body.rasamala-dark .btn-floating-info,
+body.rasamala-dark .btn-color-mode-toggle,
+body.rasamala-dark .btn-palette-switcher,
+body.rasamala-dark .btn-back-to-top,
+body.rasamala-dark .btn-floating-whatsapp {
+  background: var(--theme-primary) !important;
+  background-color: var(--theme-primary) !important;
+  border-color: var(--theme-primary) !important;
+  color: var(--theme-on-primary) !important;
+}
+
+body.rasamala-dark .btn-palette-switcher .palette-switcher-icon {
+  color: var(--theme-on-primary) !important;
+}
+
+body.rasamala-dark #search-filter .irs-from,
+body.rasamala-dark #search-filter .irs-to,
+body.rasamala-dark #search-filter .irs-single,
+body.rasamala-dark #mobileFilterModal .irs-from,
+body.rasamala-dark #mobileFilterModal .irs-to,
+body.rasamala-dark #mobileFilterModal .irs-single {
+  background: var(--theme-primary) !important;
+  background-color: var(--theme-primary) !important;
+  color: var(--theme-on-primary) !important;
+}
+
+body.rasamala-dark #search-filter .irs-from::after,
+body.rasamala-dark #search-filter .irs-to::after,
+body.rasamala-dark #search-filter .irs-single::after,
+body.rasamala-dark #mobileFilterModal .irs-from::after,
+body.rasamala-dark #mobileFilterModal .irs-to::after,
+body.rasamala-dark #mobileFilterModal .irs-single::after {
+  border-top-color: var(--theme-primary) !important;
+}
+
+/* Final custom-palette readability guard for dark mode. */
+body.rasamala-dark #slims-home .rasamala-home-section-title,
+body.rasamala-dark #slims-home section h4,
+body.rasamala-dark .rasamala-home-section .rasamala-home-section-title {
+  color: var(--theme-on-background) !important;
+}
+
+body.rasamala-dark #slims-home section h4 .subtitle-section,
+body.rasamala-dark #slims-home .subtitle-section,
+body.rasamala-dark .rasamala-home-section .subtitle-section {
+  color: var(--theme-muted) !important;
+}
+
+body.rasamala-dark .topic li,
+body.rasamala-dark #slims-home .topic li {
+  background: var(--theme-surface, #161a22) !important;
+  background-color: var(--theme-surface, #161a22) !important;
+  border-color: color-mix(in srgb, var(--theme-muted) 28%, transparent) !important;
+  color: var(--theme-on-surface) !important;
+}
+
+body.rasamala-dark .topic li a,
+body.rasamala-dark .topic li span,
+body.rasamala-dark #slims-home .topic li a,
+body.rasamala-dark #slims-home .topic li span {
+  color: var(--theme-on-surface) !important;
+}
+
+/* Dark Mode Palette-Driven Variations for Topic Icons (Strictly using Active Theme Palette Tokens) */
+body.rasamala-dark .topic li:nth-child(6n+1) .topic-icon-fa,
+body.rasamala-dark .topic li:nth-child(6n+1) i.topic-icon-fa {
+  background: color-mix(in srgb, var(--theme-dark-accent, #3b82f6) 18%, var(--theme-dark-surface, #1e293b) 82%) !important;
+  color: color-mix(in srgb, var(--theme-dark-accent, #3b82f6) 88%, #ffffff 12%) !important;
+}
+
+body.rasamala-dark .topic li:nth-child(6n+2) .topic-icon-fa,
+body.rasamala-dark .topic li:nth-child(6n+2) i.topic-icon-fa {
+  background: color-mix(in srgb, var(--theme-dark-primary, #60a5fa) 18%, var(--theme-dark-surface, #1e293b) 82%) !important;
+  color: color-mix(in srgb, var(--theme-dark-primary, #60a5fa) 88%, #ffffff 12%) !important;
+}
+
+body.rasamala-dark .topic li:nth-child(6n+3) .topic-icon-fa,
+body.rasamala-dark .topic li:nth-child(6n+3) i.topic-icon-fa {
+  background: color-mix(in srgb, var(--theme-dark-secondary, #94a3b8) 18%, var(--theme-dark-surface, #1e293b) 82%) !important;
+  color: color-mix(in srgb, var(--theme-dark-secondary, #94a3b8) 88%, #ffffff 12%) !important;
+}
+
+body.rasamala-dark .topic li:nth-child(6n+4) .topic-icon-fa,
+body.rasamala-dark .topic li:nth-child(6n+4) i.topic-icon-fa {
+  background: color-mix(in srgb, var(--theme-dark-accent, #3b82f6) 24%, var(--theme-dark-surface, #1e293b) 76%) !important;
+  color: color-mix(in srgb, var(--theme-dark-accent, #3b82f6) 95%, #ffffff 5%) !important;
+}
+
+body.rasamala-dark .topic li:nth-child(6n+5) .topic-icon-fa,
+body.rasamala-dark .topic li:nth-child(6n+5) i.topic-icon-fa {
+  background: color-mix(in srgb, var(--theme-dark-primary-hover, var(--theme-dark-primary)) 24%, var(--theme-dark-surface, #1e293b) 76%) !important;
+  color: color-mix(in srgb, var(--theme-dark-primary-hover, var(--theme-dark-primary)) 95%, #ffffff 5%) !important;
+}
+
+body.rasamala-dark .topic li:nth-child(6n+6) .topic-icon-fa,
+body.rasamala-dark .topic li:nth-child(6n+6) i.topic-icon-fa {
+  background: color-mix(in srgb, color-mix(in srgb, var(--theme-dark-primary) 50%, var(--theme-dark-accent) 50%) 20%, var(--theme-dark-surface) 80%) !important;
+  color: color-mix(in srgb, var(--theme-dark-primary) 50%, var(--theme-dark-accent) 50%) !important;
+}
+
+body.rasamala-dark #slims-home .member-card .card-title,
+body.rasamala-dark #slims-home .member-card .card-title span,
+body.rasamala-dark #slims-home .member-card .card-text b {
+  color: var(--theme-on-surface) !important;
+}
+
+body.rasamala-dark #slims-home .member-card .card-title small,
+body.rasamala-dark #slims-home .member-card .card-text,
+body.rasamala-dark #slims-home .member-card .text-secondary {
+  color: var(--theme-muted) !important;
+}
+
+body.rasamala-dark .footer-next-prayer {
+  color: var(--rasamala-chrome-text-muted) !important;
+}
+
+body.rasamala-dark .footer-next-prayer strong,
+body.rasamala-dark .footer-powered-link code {
+  color: var(--rasamala-chrome-text) !important;
+}
+
+body.rasamala-dark footer .footer-bottom.small,
+body.rasamala-dark footer .footer-bottom.small .footer-copyright,
+body.rasamala-dark footer .footer-bottom.small .footer-powered,
+body.rasamala-dark footer .footer-bottom.small .footer-powered-link,
+body.rasamala-dark footer .footer-bottom.small .footer-powered-link code {
+  color: var(--rasamala-chrome-text) !important;
+  font-weight: 600 !important;
+  opacity: 1 !important;
+  text-shadow: none !important;
+}
+
+body.rasamala-dark footer .footer-bottom.small {
+  background: transparent !important;
+  border-color: transparent !important;
+  box-shadow: none !important;
+}
+
+body.rasamala-dark footer .footer-bottom.small .footer-powered-link,
+body.rasamala-dark footer .footer-bottom.small .footer-powered-link code {
+  font-weight: 800 !important;
+  text-decoration: underline !important;
+  text-decoration-thickness: 1.5px !important;
+  text-underline-offset: 0.2em !important;
+  text-decoration-color: currentColor !important;
+}
+
+body.rasamala-dark .prayer-reminder-toast {
+  background:
+    radial-gradient(circle at 22px 14px, rgba(var(--theme-accent-rgb), 0.18), transparent 30px),
+    color-mix(in srgb, var(--theme-surface) 94%, transparent) !important;
+  border-color: color-mix(in srgb, var(--theme-accent) 36%, var(--theme-muted) 20%) !important;
+  color: var(--theme-on-surface) !important;
+  box-shadow: 0 16px 42px color-mix(in srgb, var(--theme-accent) 24%, transparent) !important;
+}
+
+body.rasamala-dark .prayer-reminder-icon {
+  background: var(--rasamala-accent) !important;
+  color: #ffffff !important;
+}
+
+body.rasamala-dark .prayer-reminder-text strong {
+  color: var(--theme-on-surface) !important;
+}
+
+body.rasamala-dark .prayer-reminder-countdown {
+  color: var(--rasamala-readable-accent) !important;
+}
+
+body.rasamala-dark .latest-content-ticker,
+body.rasamala-dark #search-wraper .latest-content-ticker {
+  background: var(--rasamala-chrome-bg) !important;
+  background-color: var(--rasamala-chrome-bg) !important;
+  border-color: var(--rasamala-chrome-border) !important;
+  color: var(--rasamala-chrome-text) !important;
+  box-shadow: 0 -10px 30px color-mix(in srgb, #000 32%, transparent) !important;
+}
+
+body.rasamala-dark #search-wraper .latest-content-ticker {
+  box-shadow: 0 8px 24px color-mix(in srgb, #000 24%, transparent) !important;
+}
+
+body.rasamala-dark .latest-content-ticker-item,
+body.rasamala-dark #search-wraper .latest-content-ticker-item,
+body.rasamala-dark .latest-content-ticker .latest-content-icon,
+body.rasamala-dark #search-wraper .latest-content-ticker .latest-content-icon {
+  color: var(--rasamala-chrome-text) !important;
+}
+
+body.rasamala-dark .latest-content-ticker-item:hover,
+body.rasamala-dark .latest-content-ticker-item:focus,
+body.rasamala-dark #search-wraper .latest-content-ticker-item:hover,
+body.rasamala-dark #search-wraper .latest-content-ticker-item:focus {
+  color: var(--rasamala-chrome-text) !important;
+  opacity: 0.86 !important;
+}
+
+body.rasamala-dark.rasamala-page-news .news-wrapper .opac-section-title {
+  border-bottom: 0 !important;
+  padding-bottom: 0 !important;
+}
+
+body.rasamala-dark.rasamala-page-news .news-wrapper a,
+body.rasamala-dark.rasamala-page-news .news-list-card .news-card-title a,
+body.rasamala-dark.rasamala-page-news .news-list-card .news-list-thumbnail,
+body.rasamala-dark.rasamala-page-news .news-list-footer .btn-news-readmore {
+  text-decoration: none !important;
+  text-decoration-line: none !important;
+  border-bottom: 0 !important;
+  box-shadow: none !important;
+  background-image: none !important;
+}
+
+body.rasamala-dark.rasamala-page-news .news-list-card .news-card-title a:hover,
+body.rasamala-dark.rasamala-page-news .news-list-card .news-card-title a:focus,
+body.rasamala-dark.rasamala-page-news .news-list-card .news-card-title a:focus-visible,
+body.rasamala-dark.rasamala-page-news .news-list-card .news-card-title a:active,
+body.rasamala-dark.rasamala-page-news .news-list-card .news-card-title a:visited {
+  text-decoration: none !important;
+  text-decoration-line: none !important;
+  border-bottom: 0 !important;
+  box-shadow: none !important;
+  background-image: none !important;
+}
+
+body.rasamala-dark.rasamala-page-news .news-list-summary,
+body.rasamala-dark.rasamala-page-news .news-list-date,
+body.rasamala-dark.rasamala-page-news .news-list-date i {
+  color: var(--theme-on-surface) !important;
+}
+
+body.rasamala-dark.rasamala-page-news .news-list-date {
+  background: transparent !important;
+  border: 0 !important;
+  box-shadow: none !important;
+  color: var(--theme-muted) !important;
+}
+
+body.rasamala-dark.rasamala-page-news .news-list-date i {
+  color: inherit !important;
+}
+
+body.rasamala-dark.rasamala-page-news .news-list-card .news-card-title,
+body.rasamala-dark.rasamala-page-news .news-list-card .news-card-title a {
+  color: var(--theme-on-surface) !important;
+}
+
+body.rasamala-dark #adv-modal .form-select {
+  background-color: color-mix(in srgb, var(--theme-surface) 92%, var(--theme-background) 8%) !important;
+  border-color: var(--rasamala-dark-border) !important;
+  color: var(--theme-on-surface) !important;
+}
+
+/* Pagination final token bridge: keep legacy paging and Bootstrap paging aligned. */
+body.rasamala-dark .pagingList a,
+body.rasamala-dark .pagination .page-link {
+  background: var(--rasamala-pagination-bg) !important;
+  background-color: var(--rasamala-pagination-bg) !important;
+  border-color: var(--rasamala-pagination-border) !important;
+  color: var(--rasamala-pagination-text) !important;
+}
+
+body.rasamala-dark .pagingList a:hover,
+body.rasamala-dark .pagingList a:focus,
+body.rasamala-dark .pagination .page-link:hover,
+body.rasamala-dark .pagination .page-link:focus {
+  background: var(--rasamala-pagination-hover-bg) !important;
+  background-color: var(--rasamala-pagination-hover-bg) !important;
+  border-color: var(--rasamala-pagination-hover-border) !important;
+  color: var(--rasamala-pagination-hover-text) !important;
+}
+
+body.rasamala-dark .pagingList b,
+body.rasamala-dark .pagination .page-item.active .page-link {
+  background: var(--rasamala-pagination-active-bg) !important;
+  background-color: var(--rasamala-pagination-active-bg) !important;
+  border-color: var(--rasamala-pagination-active-border) !important;
+  color: var(--rasamala-pagination-active-text) !important;
+  box-shadow: var(--rasamala-pagination-shadow) !important;
+}
+
+/* Keep filter facets and detail availability unframed in dark mode. */
+body.rasamala-dark .result-search .filter-panel-card {
+  box-shadow: 0 18px 40px color-mix(in srgb, #000 18%, transparent) !important;
+}
+
+body.rasamala-dark .result-search .filter-panel-card #search-filter,
+body.rasamala-dark .result-search .filter-panel-card #search-filter .list-group,
+body.rasamala-dark .result-search .filter-panel-card #search-filter .rasamala-filter-list,
+body.rasamala-dark .result-search .filter-panel-card #desktop-filter-container .list-group,
+body.rasamala-dark #mobile-filter-container #search-filter,
+body.rasamala-dark #mobile-filter-container #search-filter .list-group,
+body.rasamala-dark #mobile-filter-container #search-filter .rasamala-filter-list,
+body.rasamala-dark #mobile-filter-container .list-group {
+  border: 0 !important;
+  box-shadow: none !important;
+}
+
+body.rasamala-dark .rasamala-filter-list {
+  list-style: none !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  border: 0 !important;
+}
+
+body.rasamala-dark .rasamala-filter-facet {
+  background: transparent !important;
+  border: 0 !important;
+  border-bottom: 1px solid color-mix(in srgb, var(--rasamala-dark-muted, #b6bec8) 16%, transparent) !important;
+  border-radius: 0 !important;
+  box-shadow: none !important;
+}
+
+body.rasamala-dark .rasamala-filter-facet:last-child {
+  border-bottom-color: transparent !important;
+}
+
+body.rasamala-dark .result-search .filter-panel-card #search-filter .list-group,
+body.rasamala-dark .result-search .filter-panel-card #search-filter .list-group-flush,
+body.rasamala-dark .result-search .filter-panel-card #search-filter .list-group-item,
+body.rasamala-dark .result-search .filter-panel-card #search-filter .rasamala-filter-list,
+body.rasamala-dark .result-search .filter-panel-card #search-filter .rasamala-filter-facet,
+body.rasamala-dark .result-search .filter-panel-card #search-filter .collapse,
+body.rasamala-dark .result-search .filter-panel-card #search-filter .collapse > div,
+body.rasamala-dark .result-search .filter-panel-card #search-filter .cursor-pointer,
+body.rasamala-dark .result-search .filter-panel-card #search-filter .row,
+body.rasamala-dark #mobile-filter-container #search-filter .list-group,
+body.rasamala-dark #mobile-filter-container #search-filter .list-group-flush,
+body.rasamala-dark #mobile-filter-container #search-filter .list-group-item,
+body.rasamala-dark #mobile-filter-container #search-filter .rasamala-filter-list,
+body.rasamala-dark #mobile-filter-container #search-filter .rasamala-filter-facet,
+body.rasamala-dark #mobile-filter-container #search-filter .collapse,
+body.rasamala-dark #mobile-filter-container #search-filter .collapse > div,
+body.rasamala-dark #mobile-filter-container #search-filter .cursor-pointer,
+body.rasamala-dark #mobile-filter-container #search-filter .row {
+  border-left-color: transparent !important;
+  border-right-color: transparent !important;
+}
+
+body.rasamala-dark .result-search .filter-panel-card #search-filter li,
+body.rasamala-dark .result-search .filter-panel-card #search-filter li.list-group-item,
+body.rasamala-dark .result-search .filter-panel-card #desktop-filter-container .list-group-item,
+body.rasamala-dark #mobile-filter-container #search-filter li,
+body.rasamala-dark #mobile-filter-container #search-filter li.list-group-item,
+body.rasamala-dark #mobile-filter-container .list-group-item {
+  background: transparent !important;
+  border: 0 !important;
+  border-bottom: 1px solid color-mix(in srgb, var(--rasamala-dark-muted, #b6bec8) 16%, transparent) !important;
+  border-radius: 0 !important;
+  box-shadow: none !important;
+}
+
+body.rasamala-dark .result-search .filter-panel-card #search-filter li:last-child,
+body.rasamala-dark .result-search .filter-panel-card #search-filter li.list-group-item:last-child,
+body.rasamala-dark .result-search .filter-panel-card #desktop-filter-container .list-group-item:last-child,
+body.rasamala-dark #mobile-filter-container #search-filter li:last-child,
+body.rasamala-dark #mobile-filter-container #search-filter li.list-group-item:last-child,
+body.rasamala-dark #mobile-filter-container .list-group-item:last-child {
+  border-bottom-color: transparent !important;
+}
+
+body.rasamala-dark .detail-side-availability {
+  border: 0 !important;
+  box-shadow: none !important;
+}
+
+body.rasamala-dark .detail-side-availability {
+  margin-top: 18px !important;
+  padding-top: 16px !important;
+  border-top: 1px solid rgba(255, 255, 255, 0.1) !important;
+  border-bottom: none !important;
+  border-left: none !important;
+  border-right: none !important;
+  box-shadow: none !important;
+}
+
+body.rasamala-dark .detail-side-availability .availability-summary-card,
+body.rasamala-dark .detail-side-availability .availability-summary-list,
+body.rasamala-dark .availability-panel {
+  border: 0 !important;
+  box-shadow: none !important;
+}
+
+body.rasamala-dark .detail-avail-row {
+  background: transparent !important;
+  background-color: transparent !important;
+  border-top: none !important;
+  border-left: none !important;
+  border-right: none !important;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1) !important;
+  border-radius: 0 !important;
+  padding: 8px 2px !important;
+  margin-bottom: 2px !important;
+  box-shadow: none !important;
+}
+
+body.rasamala-dark .detail-avail-row:hover,
+body.rasamala-dark .detail-avail-row:focus-within {
+  background: transparent !important;
+  background-color: transparent !important;
+  border-top: none !important;
+  border-left: none !important;
+  border-right: none !important;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.22) !important;
+  border-radius: 0 !important;
+  box-shadow: none !important;
+}
+
+body.rasamala-dark .avail-loc-name {
+  color: var(--theme-on-surface) !important;
+}
+
+/* Dark Mode Skeleton Loading System */
+body.rasamala-dark .theme-skeleton-card,
+body.rasamala-dark .theme-skeleton-item {
+  background: #1e293b !important;
+  border-color: rgba(255, 255, 255, 0.08) !important;
+}
+
+body.rasamala-dark .theme-skeleton-block,
+body.rasamala-dark .theme-skeleton-badge-pill {
+  background: #334155 !important;
+}
+
+body.rasamala-dark .theme-skeleton-card::after,
+body.rasamala-dark .theme-skeleton-badge::after,
+body.rasamala-dark .theme-skeleton-item::after {
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.12), transparent) !important;
+}
+
+/* Dark Mode Keyboard Shortcut Badge */
+body.rasamala-dark .search-kbd-badge {
+  background-color: #334155 !important;
+  color: #cbd5e1 !important;
+  border-color: #475569 !important;
+}
+
+body.rasamala-dark .search-kbd-badge:hover {
+  background-color: #475569 !important;
+  color: #f8fafc !important;
+}
+
+/* Dark Mode Loading Overlay & Progress Bar */
+body.rasamala-dark .rasamala-page-progress-bar {
+  background: linear-gradient(90deg, var(--rasamala-dark-accent-border, #3b82f6), #60a5fa) !important;
+  box-shadow: 0 0 12px rgba(96, 165, 250, 0.8), 0 0 6px rgba(96, 165, 250, 0.6) !important;
+}
+
+body.rasamala-dark .result-search .wrapper.is-loading::before {
+  background: rgba(15, 23, 42, 0.72) !important;
+}
+
+body.rasamala-dark .result-search .wrapper.is-loading::after {
+  border-color: rgba(255, 255, 255, 0.15) !important;
+  border-top-color: #60a5fa !important;
+}
+
+/* Dark Mode Choice Card Modals (View Mode, Sort, Filter) */
+body.rasamala-dark .search-view-modal-options .list-group-item,
+body.rasamala-dark .search-sort-modal-options .list-group-item {
+  background: var(--theme-surface) !important;
+  background-color: var(--theme-surface) !important;
+  color: var(--theme-on-surface) !important;
+  border-color: color-mix(in srgb, var(--theme-muted-on-surface) 14%, transparent) !important;
+}
+
+body.rasamala-dark .search-view-modal-options .list-group-item:hover,
+body.rasamala-dark .search-sort-modal-options .list-group-item:hover {
+  background: color-mix(in srgb, var(--theme-surface) 92%, var(--theme-accent) 8%) !important;
+  background-color: color-mix(in srgb, var(--theme-surface) 92%, var(--theme-accent) 8%) !important;
+}
+
+body.rasamala-dark .search-view-modal-options .list-group-item.active,
+body.rasamala-dark .search-sort-modal-options .list-group-item.active {
+  background: color-mix(in srgb, var(--theme-surface) 86%, var(--theme-accent) 14%) !important;
+  background-color: color-mix(in srgb, var(--theme-surface) 86%, var(--theme-accent) 14%) !important;
+  border-color: color-mix(in srgb, var(--theme-accent) 30%, transparent) !important;
+}
+
+body.rasamala-dark .rasamala-sticky-toolbar {
+  background: color-mix(in srgb, var(--theme-surface) 94%, transparent) !important;
+  background-color: color-mix(in srgb, var(--theme-surface) 94%, transparent) !important;
+  border-color: color-mix(in srgb, var(--theme-muted-on-surface) 22%, transparent) !important;
+  box-shadow: none !important;
+}
+
+body.rasamala-dark .search-result-summary-card {
+  background-color: #1e293b !important;
+  border-color: rgba(255, 255, 255, 0.08) !important;
+}
+
+body.rasamala-dark .summary-icon-box {
+  background-color: rgba(59, 130, 246, 0.18) !important;
+  color: #60a5fa !important;
+}
+
+body.rasamala-dark .search-found-info {
+  color: var(--theme-on-surface) !important;
+}
+
+body.rasamala-dark .search-keyword-badge {
+  background: color-mix(in srgb, var(--theme-surface) 88%, var(--theme-accent) 12%) !important;
+  background-color: color-mix(in srgb, var(--theme-surface) 88%, var(--theme-accent) 12%) !important;
+  color: var(--theme-on-surface) !important;
+  border-color: color-mix(in srgb, var(--theme-muted-on-surface) 24%, transparent) !important;
+}
+
+body.rasamala-dark .text-theme-accent {
+  color: var(--rasamala-dark-accent-text-strong, #60a5fa) !important;
+}
+
+body.rasamala-dark .detail-side-heading i,
+body.rasamala-dark .detail-section-heading i,
+body.rasamala-dark .detail-notes-header i,
+body.rasamala-dark .detail-callnumber-label i,
+body.rasamala-dark .detail-callnumber-tag i,
+body.rasamala-dark .detail-gmd-label i,
+body.rasamala-dark .detail-qr-label i {
+  color: var(--rasamala-dark-accent-text-strong, #60a5fa) !important;
+}
+
+body.rasamala-dark .detail-subject-tag {
+  color: #ffffff !important;
+  border-color: rgba(255, 255, 255, 0.18) !important;
+  background: transparent !important;
+}
+
+body.rasamala-dark .detail-subject-tag:hover,
+body.rasamala-dark .detail-subject-tag:focus,
+body.rasamala-dark .detail-author-footer a:hover,
+body.rasamala-dark .detail-author-footer a:focus {
+  background: rgba(96, 165, 250, 0.14) !important;
+  border-color: rgba(96, 165, 250, 0.45) !important;
+  color: var(--rasamala-dark-accent-text-strong, #60a5fa) !important;
+}
+
+/* Keep the page-wide Background Style visible through late dark-mode shell
+   overrides while preserving opaque cards and controls. */
+body.rasamala-dark[class*="rasamala-background-style-"] .rasamala-hero-section,
+body.rasamala-dark[class*="rasamala-background-style-"] .rasamala-search-banner-section,
+body.rasamala-dark[class*="rasamala-background-style-"] #slims-home,
+body.rasamala-dark[class*="rasamala-background-style-"] .rasamala-subpage-wrapper,
+body.rasamala-dark[class*="rasamala-background-style-"] .result-search,
+body.rasamala-dark[class*="rasamala-background-style-"] .member-area {
+  background: transparent !important;
+  background-color: transparent !important;
+}
