@@ -1,0 +1,19 @@
+{
+  "name": "SLiMS Library OPAC",
+  "short_name": "SLiMS OPAC",
+  "description": "Library Management System OPAC Portal",
+  "start_url": "../../../index.php",
+  "scope": "../../../",
+  "display": "standalone",
+  "background_color": "#0f172a",
+  "theme_color": "#0f172a",
+  "orientation": "any",
+  "icons": [
+    {
+      "src": "../../../webicon.ico",
+      "sizes": "any",
+      "type": "image/x-icon",
+      "purpose": "any"
+    }
+  ]
+}
